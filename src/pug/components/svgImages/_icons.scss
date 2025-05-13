@@ -1,0 +1,128 @@
+.omnichain {
+  cursor: pointer;
+  .outer, .inner, .center, .line0, .line1, .line2, .line3 {
+    transform-origin: center;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  image {
+    transform-origin: center;
+    transform-box: fill-box;
+    transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .line-fill {
+    stroke-dasharray: 0 144;
+    transition: stroke-dasharray 0.6s ease;
+    pointer-events: none;
+  }
+
+  .center-fill {
+    stroke-dasharray: 220;
+    stroke-dashoffset: 220;
+    transition: stroke-dashoffset 0.4s ease;
+    pointer-events: none;
+  }
+  &:hover {
+    .outer {
+      transform: rotate(45deg);
+      image {
+        transform: rotate(-45deg);
+      }
+    }
+    .inner {
+      transform: rotate(-45deg);
+
+      image {
+        transform: rotate(45deg);
+      }
+    }
+
+    .center-fill {
+      stroke-dashoffset: 0;
+      transition-delay: 0s;
+    }
+
+    .line0-left,
+    .line0-right,
+    .line1-left,
+    .line1-right,
+    .line2-left,
+    .line2-right,
+    .line3-top,
+    .line3-bottom {
+      stroke-dasharray: 4 4;
+      transition-delay: 0.2s;
+    }
+  }
+
+}
+
+.sign {
+  cursor: pointer;
+
+  // линии
+  .line-fill {
+    pointer-events: none;
+    transition: stroke-dashoffset 0.6s ease;
+  }
+
+  .line-fill_top {
+    transition-delay: 0.0s;
+  }
+  .line-fill_center {
+    transition-delay: 0.0s;
+  }
+  .line-fill_bottom {
+    transition-delay: 0.0s;
+  }
+
+  // круг
+  .top, .bottom {
+    transition: stroke-dashoffset 0.4s ease;
+    transition-delay: 0.6s;
+  }
+
+  // начальные состояния
+  .top {
+    stroke-dashoffset: 110;
+  }
+  .bottom {
+    stroke-dashoffset: 0;
+  }
+
+  .line-fill_top {
+    stroke-dashoffset: 400;
+  }
+  .line-fill_center {
+    stroke-dashoffset: 246;
+  }
+  .line-fill_bottom {
+    stroke-dashoffset: 400;
+  }
+
+  // Ховер → проявление (с задержками на круг)
+  &:hover {
+    .line-fill_top {
+      stroke-dashoffset: 0;
+      transition-delay: 0.41s;
+    }
+    .line-fill_center {
+      stroke-dashoffset: 0;
+      transition-delay: 0.41s;
+    }
+    .line-fill_bottom {
+      stroke-dashoffset: 0;
+      transition-delay: 0.41s;
+    }
+
+    .top {
+      stroke-dashoffset: 55;
+      transition-delay: 0s;
+    }
+
+    .bottom {
+      stroke-dashoffset: 55;
+      transition-delay: 0s;
+    }
+  }
+}
+

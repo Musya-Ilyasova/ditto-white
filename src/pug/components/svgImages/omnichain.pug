@@ -1,0 +1,194 @@
+svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").omnichain
+  rect(width="491" height="306" )
+  rect(x="139.5" y="48.5" width="209" height="209" rx="104.5" stroke="#DEE2E6")
+  circle(cx="246" cy="153" r="146.5" stroke="#DEE2E6")
+  line.line0(x1="102" y1="153" x2="390" y2="153" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray="4 4")
+
+  line.line-fill.line0-left(
+    x1="102" y1="153" x2="246" y2="153"
+    stroke="url(#fade-left)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+
+  // правая линия (затухает вправо)
+  line.line-fill.line0-right(
+    x1="246" y1="153" x2="390" y2="153"
+    stroke="url(#fade-right)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line1(x1="143.707" y1="50.2929" x2="346.707" y2="253.293" stroke="url(#paint1_linear)" stroke-width="2" stroke-dasharray="4 4")
+  // line1 — диагональ сверху слева → вниз направо
+  line.line-fill.line1-left(
+    x1="143.707" y1="50.2929" x2="246" y2="153"
+    stroke="url(#fade-diag-left)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line-fill.line1-right(
+    x1="246" y1="153" x2="346.707" y2="253.293"
+    stroke="url(#fade-diag-right)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line2(x1="144.293" y1="254.293" x2="348.293" y2="50.2929" stroke="url(#paint2_linear)" stroke-width="2" stroke-dasharray="4 4")
+
+  // line2 — диагональ снизу слева → вверх направо
+  line.line-fill.line2-left(
+    x1="144.293" y1="254.293" x2="246" y2="153"
+    stroke="url(#fade-up-left)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line-fill.line2-right(
+    x1="246" y1="153" x2="348.293" y2="50.2929"
+    stroke="url(#fade-up-right)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line3(x1="246" y1="9" x2="246" y2="296" stroke="url(#paint3_linear)" stroke-width="2" stroke-dasharray="4 4")
+
+  // line3 — вертикаль сверху/снизу
+  line.line-fill.line3-top(
+    x1="246" y1="9" x2="246" y2="153"
+    stroke="url(#fade-top)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+  line.line-fill.line3-bottom(
+    x1="246" y1="153" x2="246" y2="296"
+    stroke="url(#fade-bottom)"
+    stroke-width="2"
+    stroke-dasharray="0 144"
+    stroke-linecap="butt"
+    shape-rendering="crispEdges"
+  )
+
+  g.outer
+    // Центр слева
+    rect(x="79.5" y="131.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="89" y="141" width="24" height="24" xlink:href="/img/icons/clipptic.svg")
+    // Центр справа
+    rect(x="373.5" y="131.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="383" y="141" width="24" height="24" xlink:href="/img/icons/sol.svg")
+
+  g.inner
+    // Верх справа
+    rect(x="296.5" y="60.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="306" y="70" width="24" height="24" xlink:href="/img/icons/arb.svg")
+
+    // Низ справа
+    rect(x="296.5" y="205.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="306" y="215" width="24" height="24" xlink:href="/img/icons/bera.svg")
+
+    // Верх слева
+    rect(x="152.5" y="60.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="162" y="70" width="24" height="24" xlink:href="/img/icons/eth.svg")
+
+    // Низ слева
+    rect(x="152.5" y="205.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    image(x="162" y="215" width="24" height="24" xlink:href="/img/icons/sonic.svg")
+
+  // Центр
+  rect.center(x="210" y="118" width="70" height="70" rx="35" fill="white" stroke="#DEE2E6" stroke-width="2")
+  rect.center-fill(
+    x="210" y="118"
+    width="70"
+    height="70"
+    rx="35"
+    fill="transparent"
+    stroke="#7AE99D"
+    stroke-width="2"
+    stroke-dasharray="220"
+    stroke-dashoffset="220"
+  )
+  image(x="234" y="140" width="24" height="24" xlink:href="/img/icons/ditto.svg")
+  defs
+    linearGradient#paint0_linear(x1="123.551" y1="154" x2="370.897" y2="153.656" gradientUnits="userSpaceOnUse")
+      stop(stop-color="#F8F9FA")
+      stop(offset="0.139812" stop-color="#DEE2E6")
+      stop(offset="0.856551" stop-color="#DEE2E6")
+      stop(offset="0.991754" stop-color="#F8F9FA")
+    linearGradient#paint1_linear(x1="142.922" y1="51.629" x2="346.318" y2="253.678" gradientUnits="userSpaceOnUse")
+      stop(stop-color="#F8F9FA")
+      stop(offset="0.139812" stop-color="#DEE2E6")
+      stop(offset="0.856551" stop-color="#DEE2E6")
+      stop(offset="0.991754" stop-color="#F8F9FA")
+    linearGradient#paint2_linear(x1="145.63" y1="255.077" x2="348.671" y2="50.6759" gradientUnits="userSpaceOnUse")
+      stop(stop-color="#F8F9FA")
+      stop(offset="0.139812" stop-color="#DEE2E6")
+      stop(offset="0.856551" stop-color="#DEE2E6")
+      stop(offset="0.991754" stop-color="#F8F9FA")
+    linearGradient#paint3_linear(x1="244.5" y1="9.38942" x2="245.452" y2="295.997" gradientUnits="userSpaceOnUse")
+      stop(stop-color="#F8F9FA")
+      stop(offset="0.139812" stop-color="#DEE2E6")
+      stop(offset="0.856551" stop-color="#DEE2E6")
+      stop(offset="0.991754" stop-color="#F8F9FA")
+    linearGradient#paint1-hover(x1="142.922" y1="51.629" x2="346.318" y2="253.678" gradientUnits="userSpaceOnUse")
+      stop(offset="0%" stop-color="rgba(248,249,250,1)")
+      stop(offset="25%" stop-color="rgba(122,233,157,1)")
+      stop(offset="75%" stop-color="rgba(122,233,157,1)")
+      stop(offset="100%" stop-color="rgba(248,249,250,1)")
+    linearGradient#paint2-hover(x1="145.63" y1="255.077" x2="348.671" y2="50.6759" gradientUnits="userSpaceOnUse")
+      stop(offset="0%" stop-color="rgba(248,249,250,1)")
+      stop(offset="25%" stop-color="rgba(122,233,157,1)")
+      stop(offset="75%" stop-color="rgba(122,233,157,1)")
+      stop(offset="100%" stop-color="rgba(248,249,250,1)")
+    linearGradient#paint3-hover(x1="244.5" y1="9.38942" x2="245.452" y2="295.997" gradientUnits="userSpaceOnUse")
+      stop(offset="0%" stop-color="rgba(248,249,250,1)")
+      stop(offset="25%" stop-color="rgba(122,233,157,1)")
+      stop(offset="75%" stop-color="rgba(122,233,157,1)")
+      stop(offset="100%" stop-color="rgba(248,249,250,1)")
+
+    // line1 — диагональ сверху слева → центр
+    linearGradient#fade-diag-left(x1="246" y1="153" x2="143.707" y2="50.2929" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    // line1 — диагональ центр → вниз направо
+    linearGradient#fade-diag-right(x1="246" y1="153" x2="346.707" y2="253.293" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    // line2 — диагональ снизу слева → центр
+    linearGradient#fade-up-left(x1="246" y1="153" x2="144.293" y2="254.293" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    // line2 — диагональ центр → вверх направо
+    linearGradient#fade-up-right(x1="246" y1="153" x2="348.293" y2="50.2929" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    // line3 — вертикаль сверху → центр
+    linearGradient#fade-top(x1="246" y1="153" x2="246" y2="9" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    // line3 — вертикаль центр → вниз
+    linearGradient#fade-bottom(x1="246" y1="153" x2="246" y2="296" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    linearGradient#fade-left(x1="246" y1="153" x2="102" y2="153" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")
+
+    linearGradient#fade-right(x1="246" y1="153" x2="390" y2="153" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="rgba(122, 233, 157, 0)")

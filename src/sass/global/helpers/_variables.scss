@@ -1,0 +1,27 @@
+$font-family-main: 'DM Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+$font-family-title: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+
+//SIZE
+$font-size-main: 16px;
+$font-size-h1: 28px;
+$font-size-h2: 20px;
+//COLORS
+$black: #000;
+$white: #fff;
+$main: #7AE99D;
+
+$breakpoints: ("320": 320px, "768": 768px, "1024": 1024px, "1280": 1280px, "1440": 1440px, "1600": 1600px);
+//width container
+$max-width: 1640px;
+
+:root {
+  --bg-color: #DEE2E6;
+  --title: #212529;
+  --text-color: #6C757D;
+}
+
+body.dark {
+  --bg-color: #22262A;
+  --title: #FFFFFF;
+  --text-color: #6C757D;
+}
