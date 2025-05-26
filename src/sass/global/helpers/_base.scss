@@ -19,16 +19,17 @@ html {
 body {
   font-family: $font-family-main;
   font-size: $font-size-main;
-  line-height: 1.2;
+  @include line-height(24, 16);
   font-weight: 400;
-  color: $black;
+  color: var(--textColor);
   //Flexbox
   display: flex;
   flex-flow: column;
   min-height: 100vh;
   overflow-anchor: auto;
   scroll-behavior: smooth;
-  text-rendering: auto; 
+  text-rendering: auto;
+  background: var(--bgColor);
 
   /*&::-webkit-scrollbar {
     background-color: $gray-dark;
@@ -36,6 +37,15 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: $red;
   }*/
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+main {
+  flex: 1 0 auto;
+  //временно, убрать!
+  padding-bottom: 100px;
 }
 
 img,
@@ -81,7 +91,7 @@ a {
   color: inherit;
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #e4f1fd7a;
+    box-shadow: none;
   }
   &:not([class]) {
     text-decoration-skip-ink: auto;
@@ -93,7 +103,6 @@ button {
   cursor: pointer;
   &:focus {
     outline: 0;
-    box-shadow: 0 0 0 2px #e4f1fd7a;
   }
 }
 
@@ -101,7 +110,11 @@ button {
   background-color: #e4f1fd;
 }
 
-// media for users with vestibular disorders 
+section {
+  border: 1px solid var(--globalBr);
+}
+
+// media for users with vestibular disorders
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;
@@ -109,4 +122,4 @@ button {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-} 
+}

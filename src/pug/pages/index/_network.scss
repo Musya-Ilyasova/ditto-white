@@ -1,0 +1,112 @@
+.network {
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  @include mq('768') {
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+  &__title {
+    text-align: center;
+    max-width: 295px;
+    margin: 0 auto 28px;
+    color: var(--title);
+    @include mq('768') {
+      max-width: none;
+      font-size: 24px;
+      margin: 0 0 40px;
+      text-align: left;
+    }
+    @include mq('1024') {
+      font-size: 28px;
+    }
+  }
+  &__content {
+    flex: 1;
+    @include mq('768') {
+      padding: 24px;
+      background-image: repeating-linear-gradient(
+        -45deg,
+        var(--blockLines),
+        var(--blockLines) 0.5px,
+        transparent 1px,
+        transparent 8px
+      );
+      border-right: 1px solid var(--globalBr);
+      display: flex;
+      flex-direction: column;
+    }
+    @include mq('1024') {
+      padding: 32px;
+
+    }
+  }
+  &__img {
+    aspect-ratio: 295 / 384;
+    background: var(--networkImgBg);
+    border: 1px solid var(--globalBr);
+    border-radius: 12px;
+    @include mq('768') {
+      aspect-ratio: 493 / 643;
+      max-width: 493px;
+    }
+    @include mq('1024') {
+      margin-top: auto;
+    }
+  }
+}
+
+.network-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  flex: 1;
+  @include mq('768') {
+    gap: 0;
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: background 0.2s ease-in-out;
+    cursor: pointer;
+    @include mq('768') {
+      gap: 8px;
+      padding: 24px;
+    }
+    @include mq('1024') {
+      gap: 20px;
+      padding: 32px;
+
+    }
+    &:hover, .active {
+      background: var(--networkItemBgHover);
+      .network-list__title {
+        color: var(--title);
+
+      }
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--globalBr);
+    }
+  }
+  &__title {
+    color: var(--title);
+    font-weight: 500;
+    font-size: 20px;
+    transition: color 0.2s ease-in-out;
+    @include line-height(34, 20);
+    @include mq('768') {
+      font-size: 18px;
+      color: var(--textColor);
+    }
+    @include mq('1024') {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+
+  }
+
+}

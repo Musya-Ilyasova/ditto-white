@@ -1,0 +1,58 @@
+.cta {
+  padding: 86px 24px;
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--blockLines),
+    var(--blockLines) 0.5px,
+    transparent 1px,
+    transparent 8px
+  );
+  text-align: center;
+  @include mq('768') {
+    padding: 59px;
+
+  }
+
+
+}
+
+.cta-list {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  @include mq('768') {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    background: var(--ctaItemBg);
+    width: 259px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid var(--globalBr);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include mq('768') {
+      padding: 0 24px;
+      height: 48px;
+      line-height: 48px;
+      width: fit-content;
+    }
+    &:last-child {
+      padding: 0;
+    }
+  }
+  .btn {
+    width: 100%;
+    @include mq('768') {
+      width: 260px;
+    }
+  }
+
+}

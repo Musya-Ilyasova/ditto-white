@@ -1,0 +1,58 @@
+
+
+.stats-list {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    var(--blockLines),
+    var(--blockLines) 0.5px,
+    transparent 1px,
+    transparent 8px
+  );
+  display: flex;
+  flex-direction: column;
+  @include mq('768') {
+    flex-direction: row;
+  }
+
+
+  &__item {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--globalBr);
+    }
+    @include mq('768') {
+      text-align: left;
+      padding: 32px 24px;
+      flex: 1;
+      &:not(:last-child) {
+        border-right: 1px solid var(--globalBr);
+        border-bottom: none;
+      }
+    }
+    @include mq('1024') {
+      padding: 48px 32px;
+    }
+  }
+  &__title {
+    font-size: 12px;
+    @include line-height(24, 12);
+    text-transform: uppercase;
+    font-weight: 500;
+    @include mq('1024') {
+      font-size: 16px;
+    }
+  }
+  &__value {
+    font-size: 28px;
+    font-weight: 500;
+    @include line-height(40, 28);
+    color: var(--statsValue);
+    @include mq('1024') {
+      font-size: 40px;
+    }
+  }
+}

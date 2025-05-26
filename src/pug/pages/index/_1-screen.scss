@@ -1,1 +1,43 @@
-//
+//.fr-screen
+
+.fr-screen {
+  padding-top: 119px;
+  border-top: none;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 43px;
+  @include mq('768') {
+    height: 100vh;
+    gap: 76px;
+  }
+  &__content {
+    padding: 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 619px;
+  }
+  &__btns {
+    padding-top: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    @include mq('375') {
+      flex-direction: row;
+      gap: 16px;
+    }
+    @include mq('768') {
+      gap: 16px;
+    }
+  }
+  &__img {
+    background: var(--globalBr);
+    width: 100%;
+    aspect-ratio: 343/169;
+  }
+}

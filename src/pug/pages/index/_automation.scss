@@ -1,0 +1,354 @@
+.automation {
+  display: flex;
+  flex-wrap: wrap;
+  &__content {
+    width: 100%;
+    padding: 90px 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    text-align: center;
+    border-bottom: 1px solid var(--globalBr);
+    @media (min-width: 768px) {
+      padding: 98px 59px;
+    }
+  }
+  &__title {
+    max-width: 623px;
+    margin: 0 auto;
+    line-height: 48px;
+    @media (max-width: 768px) {
+      line-height: 40px;
+    }
+  }
+  &__text {
+    max-width: 478px;
+    margin: 0 auto;
+  }
+  &__btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 12px;
+    @media (min-width: 375px) {
+      flex-direction: row;
+      gap: 16px;
+    }
+    @media (min-width: 768px) {
+      gap: 16px;
+    }
+  }
+  &__wrap {
+    width: 100%;
+  }
+  &__tab-list {
+    padding: 0;
+    border-bottom: 1px solid var(--globalBr);
+    display: none;
+    @include mq('768') {
+      display: flex;
+    }
+  }
+  &__tab-item {
+    padding: 48px 32px;
+    flex: 1;
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--tabsTitleColor);
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+    text-transform: uppercase;
+    &:not(:last-child) {
+      border-right: 1px solid var(--globalBr);
+    }
+    &.active {
+      color: var(--tabsTitleActiveColor);
+      background: var(--tabsTitleActiveBg);
+    }
+  }
+  &__tab-content {
+    padding-top: 36px;
+    padding-bottom: 24px;
+    @include mq('768') {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}
+
+.tab-panel {
+  display: flex;
+  height: auto;
+  opacity: 1;
+  overflow: hidden;
+  transition: opacity 0.5s ease, height 0.5s ease;
+  @media screen and(max-width: 767px) {
+    height: auto!important;
+  }
+  @include mq('768') {
+    height: 0;
+    opacity: 0;
+  }
+  &.active {
+    opacity: 1;
+    height: auto;
+  }
+  &__left {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      var(--blockLines),
+      var(--blockLines) 0.5px,
+      transparent 1px,
+      transparent 8px
+    );
+    border-right: 1px solid var(--globalBr);
+    display: none;
+    @include mq ('1024') {
+      display: block;
+    }
+  }
+  &__left, &__right {
+    flex: 1;
+    padding: 0 24px;
+    margin-bottom: 12px;
+    @include mq ('768') {
+      padding: 24px;
+      margin-bottom: 0;
+    }
+    @include mq ('1024') {
+      padding: 32px 32px 79px;
+    }
+  }
+
+  &__title {
+    font-size: 28px;
+    @include line-height(40, 28);
+    color: var(--title);
+    font-weight: 500;
+  }
+  &__subtitle {
+    color: var(--textColor);
+    font-size: 14px;
+    line-height: 56px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border: 1px solid var(--globalBr);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.2s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      color: var(--title);
+      .icon {
+        stroke: var(--title);
+      }
+    }
+    &.active {
+      color: var(--title);
+      .icon {
+        stroke: var(--title);
+        transform: rotate(-180deg);
+      }
+    }
+    .icon {
+      stroke: var(--textColor);
+      transform-origin: center;
+      transition: 0.2s ease-in-out;
+      width: 25px;
+      height: 25px;
+    }
+    @include mq('768') {
+      color: var(--title);
+      margin-bottom: 40px;
+      font-size: 16px;
+      @include line-height(24, 16);
+      border: none;
+      pointer-events: none;
+      justify-content: flex-start;
+      .icon {
+        display: none;
+      }
+    }
+  }
+
+  &__mob {
+    overflow: hidden;
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease, padding-top 0.5s ease;
+    &.active {
+      opacity: 1;
+      max-height: 700px;
+      padding-top: 28px;
+      @include mq('768') {
+        max-height: none;
+        padding-top: 0;
+      }
+    }
+    @include mq('768') {
+      opacity: 1;
+      max-height: none;
+      padding-top: 0;
+    }
+  }
+  &__img {
+    aspect-ratio: 295 / 250;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    max-height: 500px;
+    margin: 0 auto;
+    filter: contrast(100%);
+    @include mq ('1024') {
+      margin: 0;
+      aspect-ratio: 491 / 498;
+    }
+  }
+  &:first-child .tab-panel__img{
+    background-image: var(--tabs1Img);
+  }
+  &:nth-child(2) .tab-panel__img{
+    background-image: var(--tabs2Img);
+  }
+  &:nth-child(3) .tab-panel__img{
+    background-image: var(--tabs3Img);
+  }
+  &:nth-child(4) .tab-panel__img{
+    background-image: var(--tabs4Img);
+  }
+}
+
+.code-block {
+  &__wrapper {
+    margin-top: 64px;
+    max-width: 100%;
+    position: relative;
+    background: var(--bgColor);
+    border-radius: 12px;
+    border: 1px solid var(--globalBr);
+    overflow: hidden;
+  }
+
+  &__top {
+    background: var(--codeTopBg);
+    display: flex;
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--globalBr);
+  }
+
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    .icon {
+      width: 14px;
+      height: 14px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    padding: 16px;
+  }
+
+  &__line-numbers {
+    margin: 0;
+    padding: 0 8px 0 0;
+    color: var(--codeNum);
+    user-select: none;
+    text-align: left;
+    min-width: 17px;
+    line-height: 1.5;
+    font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
+    font-size: 14px;
+  }
+
+  &__pre {
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    background: transparent !important;
+    flex: 1;
+  }
+
+  &__code {
+    font-size: 14px;
+    line-height: 1.5;
+    display: block;
+  }
+
+  &__copy-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    cursor: pointer;
+    background: transparent;
+    transition: background 0.3s ease;
+    font-size: 0;
+    box-shadow: none;
+    border: none;
+    border-radius: 4px;
+
+    .icon-copy {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      stroke: var(--tabsTitleColor);
+    }
+
+    &:hover {
+      background: var(--codeTopBg);
+      .icon-copy {
+        stroke: var(--tabsTitleActiveColor);
+      }
+    }
+    &.copied {
+      background: var(--primaryBtnBg);
+      .icon-copy {
+        stroke: var(--primaryBtnColor);
+      }
+    }
+  }
+
+  &__copy-text {
+    display: inline-block;
+  }
+}
+
+// Стили для Prism.js
+.language-typescript {
+  color: var(--codeString) !important;
+  text-shadow: none !important;
+  font-size: 14px !important;
+  padding: 0!important;
+  margin: 0!important;
+  .token.keyword {
+    color: #F193E7;
+  }
+  .token.function {
+    color: var(--codeString);
+  }
+  .token.string {
+    color: var(--codeString);
+  }
+  .token.punctuation {
+    color: var(--codePunctuation);
+  }
+  .token.number {
+    color: #6FD28E;
+  }
+  .token.operator {
+    background: transparent;
+    color: var(--codeString);
+  }
+}
+

@@ -1,0 +1,40 @@
+.btn-theme {
+  display: flex;
+  padding: 3px 0;
+  border: 1px solid var(--themeBtnWrapperBr);
+  border-radius: 100px;
+  width: 100px;
+  overflow: hidden;
+  button {
+    background: transparent;
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    box-shadow: none;
+    outline: none;
+    transition: background 0.2s ease-in-out;
+
+    .icon {
+      fill: var(--themeBtnIconStroke);
+    }
+    &:hover {
+      background: var(--themeBtnHover);
+    }
+  }
+  &__icon {
+    padding: 8px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--themeBtnHover);
+    .icon {
+      fill: var(--themePcIconStroke);
+    }
+
+  }
+  .icon {
+    width: 100%;
+    height: 100%;
+  }
+}

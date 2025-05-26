@@ -1,0 +1,58 @@
+section.automation
+  .automation__content
+    h2.automation__title Ship automation. Not scripts.
+    p.automation__text Create fully automated, omnichain workflows without writing contracts. dApp execution infrastructure without writing contracts.
+    .automation__btns
+      a.btn.btn_primary(href="#")
+        | Start Building
+        +icon('arrow')
+      a.btn.btn_secondary(href="#")
+        | Become a Restaker
+  .automation__wrap
+    .automation__tabs
+      ul.automation__tab-list
+        li.automation__tab-item.active(data-tab="tab1")  01 / Define an Intent
+        li.automation__tab-item(data-tab="tab2") 02 / Add Conditions
+        li.automation__tab-item(data-tab="tab3") 03 / Push to Kepler
+        li.automation__tab-item(data-tab="tab4") 04 / Ditto Executes
+    .automation__tab-content
+      .tab-panel.active(data-tab="tab1")
+        .tab-panel__left
+          h3.tab-panel__title Start with the outcome.
+          include ./code/1
+        .tab-panel__right
+          h3.tab-panel__subtitle.active  01 / Define an Intent
+            +icon('chevron')
+          .tab-panel__mob.active
+            p.tab-panel__text Want to rebalance a portfolio or auto-liquidate a loan? Just describe what should happen — Ditto handles how and where.
+            .tab-panel__img
+      .tab-panel(data-tab="tab2")
+        .tab-panel__left
+          h3.tab-panel__title Start with the outcome.
+          include ./code/2
+        .tab-panel__right
+          h3.tab-panel__subtitle  02 / Add Conditions
+            +icon('chevron')
+          .tab-panel__mob
+            p.tab-panel__text Want to rebalance a portfolio or auto-liquidate a loan? Just describe what should happen — Ditto handles how and where.
+            .tab-panel__img
+      .tab-panel(data-tab="tab3")
+        .tab-panel__left
+          h3.tab-panel__title Start with the outcome.
+          include ./code/3
+        .tab-panel__right
+          h3.tab-panel__subtitle  03 / Push to Kepler
+            +icon('chevron')
+          .tab-panel__mob
+            p.tab-panel__text Want to rebalance a portfolio or auto-liquidate a loan? Just describe what should happen — Ditto handles how and where.
+            .tab-panel__img
+      .tab-panel(data-tab="tab4")
+        .tab-panel__left
+          h3.tab-panel__title Start with the outcome.
+          include ./code/3
+        .tab-panel__right
+          h3.tab-panel__subtitle  04 / Ditto Executes
+            +icon('chevron')
+          .tab-panel__mob
+            p.tab-panel__text Want to rebalance a portfolio or auto-liquidate a loan? Just describe what should happen — Ditto handles how and where.
+            .tab-panel__img

@@ -1,8 +1,7 @@
 import $ from "../config/plagins.js";
-
 const svg = () => {
   return (
-    app.src("src/svg/*.svg")
+    app.src("src/svg/**/*.svg")
       .pipe($.replace("&gt;", ">"))
       .pipe(
         $.svgSprite({

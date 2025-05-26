@@ -1,2 +1,74 @@
 //header
-header
+header.header
+  .container
+    a.logo(href="#") Logo ditto
+      +icon('logo')
+    button.burger menu
+      span
+      span
+      span
+      span
+      span
+      span
+    .header__menu.menu
+      nav
+        ul.menu-list
+          li.menu-list__item
+            span.menu-list__title Participate
+              +icon('chevron')
+            ul.menu-submenu(data-title='Participate')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Developers
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Executors
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Restakers
+                  +icon('arrow')
+          li.menu-list__item
+            span.menu-list__title Solutions
+              +icon('chevron')
+            ul.menu-submenu.big(data-title='Solutions')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For AI Agents builders
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For dApps builders
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For Asset Managers
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For Fintech Apps
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For advanced DeFi users
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") For Web3 DevOps teams
+                  +icon('arrow')
+          li.menu-list__item
+            span.menu-list__title Resources
+              +icon('chevron')
+            ul.menu-submenu.big(data-title='Resources')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Blog
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Twitter
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Discord
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") Medium
+                  +icon('arrow')
+              li.menu-submenu__item
+                a.menu-submenu__link(href="") GitHub
+                  +icon('arrow')
+      .header__btns
+        a.btn.btn_primary(href="#")
+          | Docs
+        a.btn.btn_secondary(href="#")
+          | Build on Ditto

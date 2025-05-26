@@ -1,7 +1,7 @@
-svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").omnichain
+svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").svgImg.omnichain
   rect(width="491" height="306" )
-  rect(x="139.5" y="48.5" width="209" height="209" rx="104.5" stroke="#DEE2E6")
-  circle(cx="246" cy="153" r="146.5" stroke="#DEE2E6")
+  rect(x="139.5" y="48.5" width="209" height="209" rx="104.5" stroke="var(--svglines)")
+  circle(cx="246" cy="153" r="146.5" stroke="var(--svglines)")
   line.line0(x1="102" y1="153" x2="390" y2="153" stroke="url(#paint0_linear)" stroke-width="2" stroke-dasharray="4 4")
 
   line.line-fill.line0-left(
@@ -81,31 +81,31 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
 
   g.outer
     // Центр слева
-    rect(x="79.5" y="131.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="79.5" y="131.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="89" y="141" width="24" height="24" xlink:href="/img/icons/clipptic.svg")
     // Центр справа
-    rect(x="373.5" y="131.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="373.5" y="131.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="383" y="141" width="24" height="24" xlink:href="/img/icons/sol.svg")
 
   g.inner
     // Верх справа
-    rect(x="296.5" y="60.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="296.5" y="60.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="306" y="70" width="24" height="24" xlink:href="/img/icons/arb.svg")
 
     // Низ справа
-    rect(x="296.5" y="205.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="296.5" y="205.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="306" y="215" width="24" height="24" xlink:href="/img/icons/bera.svg")
 
     // Верх слева
-    rect(x="152.5" y="60.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="152.5" y="60.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="162" y="70" width="24" height="24" xlink:href="/img/icons/eth.svg")
 
     // Низ слева
-    rect(x="152.5" y="205.5" width="43" height="43" rx="21.5" fill="white" stroke="#DEE2E6")
+    rect(x="152.5" y="205.5" width="43" height="43" rx="21.5" fill="var(--bgColor)" stroke="var(--svglines)")
     image(x="162" y="215" width="24" height="24" xlink:href="/img/icons/sonic.svg")
 
   // Центр
-  rect.center(x="210" y="118" width="70" height="70" rx="35" fill="white" stroke="#DEE2E6" stroke-width="2")
+  rect.center(x="210" y="118" width="70" height="70" rx="35" fill="var(--bgColor)" stroke="var(--svglines)" stroke-width="2")
   rect.center-fill(
     x="210" y="118"
     width="70"
@@ -117,28 +117,31 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
     stroke-dasharray="220"
     stroke-dashoffset="220"
   )
-  image(x="234" y="140" width="24" height="24" xlink:href="/img/icons/ditto.svg")
+  g.icon-ditto(transform="translate(234, 140)")
+    svg(width="24" height="24" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(d="M9.40618 19.321C9.39405 19.321 9.41831 19.321 9.40618 19.321L16.2074 19.3211C21.4224 19.3211 25.65 14.9814 25.65 9.62823C25.65 4.68755 22.0393 0.610252 17.3829 0.0111829C16.675 -0.0798902 16.0352 0.394945 15.7938 1.08409L14.2708 5.43282H16.2074C18.4646 5.43282 20.2945 7.31117 20.2945 9.62823C20.2945 11.9453 18.4646 13.8236 16.2074 13.8236H12.5209C11.8075 13.8236 11.1708 14.2832 10.9294 14.9723L9.40618 19.321Z", fill="var(--svgditto)")
+    path(d="M14.2708 5.43282H9.44258C4.22759 5.43282 0 9.77245 0 15.1257C0 19.2876 2.55534 22.8368 6.14335 24.2104C6.93046 24.5117 7.75971 24.0216 8.04394 23.2101L9.40618 19.321C7.16569 19.3009 5.35549 17.4303 5.35549 15.1257C5.35549 12.8086 7.18534 10.9302 9.44258 10.9302H11.1561C11.8695 10.9302 12.5061 10.4707 12.7475 9.7816L14.2708 5.43282Z", fill="var(--svgditto)")
   defs
     linearGradient#paint0_linear(x1="123.551" y1="154" x2="370.897" y2="153.656" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#F8F9FA")
-      stop(offset="0.139812" stop-color="#DEE2E6")
-      stop(offset="0.856551" stop-color="#DEE2E6")
-      stop(offset="0.991754" stop-color="#F8F9FA")
+      stop(stop-color="var(--bgColor)")
+      stop(offset="0.139812" stop-color="var(--svglines)")
+      stop(offset="0.856551" stop-color="var(--svglines)")
+      stop(offset="0.991754" stop-color="var(--bgColor)")
     linearGradient#paint1_linear(x1="142.922" y1="51.629" x2="346.318" y2="253.678" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#F8F9FA")
-      stop(offset="0.139812" stop-color="#DEE2E6")
-      stop(offset="0.856551" stop-color="#DEE2E6")
-      stop(offset="0.991754" stop-color="#F8F9FA")
+      stop(stop-color="var(--bgColor)")
+      stop(offset="0.139812" stop-color="var(--svglines)")
+      stop(offset="0.856551" stop-color="var(--svglines)")
+      stop(offset="0.991754" stop-color="var(--bgColor)")
     linearGradient#paint2_linear(x1="145.63" y1="255.077" x2="348.671" y2="50.6759" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#F8F9FA")
-      stop(offset="0.139812" stop-color="#DEE2E6")
-      stop(offset="0.856551" stop-color="#DEE2E6")
-      stop(offset="0.991754" stop-color="#F8F9FA")
+      stop(stop-color="var(--bgColor)")
+      stop(offset="0.139812" stop-color="var(--svglines)")
+      stop(offset="0.856551" stop-color="var(--svglines)")
+      stop(offset="0.991754" stop-color="var(--bgColor)")
     linearGradient#paint3_linear(x1="244.5" y1="9.38942" x2="245.452" y2="295.997" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#F8F9FA")
-      stop(offset="0.139812" stop-color="#DEE2E6")
-      stop(offset="0.856551" stop-color="#DEE2E6")
-      stop(offset="0.991754" stop-color="#F8F9FA")
+      stop(stop-color="var(--bgColor)")
+      stop(offset="0.139812" stop-color="var(--svglines)")
+      stop(offset="0.856551" stop-color="var(--svglines)")
+      stop(offset="0.991754" stop-color="var(--bgColor)")
     linearGradient#paint1-hover(x1="142.922" y1="51.629" x2="346.318" y2="253.678" gradientUnits="userSpaceOnUse")
       stop(offset="0%" stop-color="rgba(248,249,250,1)")
       stop(offset="25%" stop-color="rgba(122,233,157,1)")

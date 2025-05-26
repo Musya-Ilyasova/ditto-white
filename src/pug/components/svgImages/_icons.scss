@@ -1,5 +1,10 @@
-.omnichain {
+.svgImg {
+  width: 100%;
+  height: auto;
   cursor: pointer;
+}
+
+.omnichain {
   .outer, .inner, .center, .line0, .line1, .line2, .line3 {
     transform-origin: center;
     transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
@@ -57,8 +62,6 @@
 }
 
 .sign {
-  cursor: pointer;
-
   // линии
   .line-fill {
     pointer-events: none;
@@ -67,36 +70,29 @@
 
   .line-fill_top {
     transition-delay: 0.0s;
+    stroke-dashoffset: 400;
   }
   .line-fill_center {
     transition-delay: 0.0s;
+    stroke-dashoffset: 246;
   }
   .line-fill_bottom {
     transition-delay: 0.0s;
+    stroke-dashoffset: 400;
   }
 
   // круг
   .top, .bottom {
     transition: stroke-dashoffset 0.4s ease;
+    stroke-dasharray: 110 110;
     transition-delay: 0.6s;
   }
-
   // начальные состояния
   .top {
     stroke-dashoffset: 110;
   }
   .bottom {
     stroke-dashoffset: 0;
-  }
-
-  .line-fill_top {
-    stroke-dashoffset: 400;
-  }
-  .line-fill_center {
-    stroke-dashoffset: 246;
-  }
-  .line-fill_bottom {
-    stroke-dashoffset: 400;
   }
 
   // Ховер → проявление (с задержками на круг)
@@ -125,4 +121,71 @@
     }
   }
 }
+
+.conditional {
+}
+
+.module {
+}
+
+body.light {
+  .codeDark{
+    display: none;
+  }
+  .codeLight {
+    display: block;
+  }
+}
+body.dark {
+  .codeLight {
+    display: none;
+  }
+  .codeDark{
+    display: block;
+  }
+}
+
+
+.security {
+  background-image:
+    linear-gradient(to right, var(--svgSecurityIconsBr) 0.5px, transparent 0.5px),
+    linear-gradient(to bottom, var(--svgSecurityIconsBr) 0.5px, transparent 0.5px);
+  background-size: 26px 26px;
+  -webkit-mask-image:
+    linear-gradient(to top, transparent, black 20%),
+    linear-gradient(to bottom, transparent, black 20%),
+    linear-gradient(to left, transparent, black 20%),
+    linear-gradient(to right, transparent, black 20%);
+  mask-image:
+    linear-gradient(to top, transparent, black 20%),
+    linear-gradient(to bottom, transparent, black 20%),
+    linear-gradient(to left, transparent, black 20%),
+    linear-gradient(to right, transparent, black 20%);
+
+  -webkit-mask-composite: destination-in, destination-in, destination-in, destination-in;
+  mask-composite: intersect;
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: 100% 100%;
+
+  .eigen, .symbiotic {
+    fill: transparent;
+    transition: fill 0.4s ease-in-out;
+  }
+  &:hover {
+    .eigen{
+      fill: #4A19DE;
+    }
+    .symbiotic {
+      fill: #B7EF5C
+    }
+    .center-shape {
+      fill: url(#paint1_linear_33752_32916);
+    }
+    .right-shape {
+      fill: url(#paint4_linear_33752_32916);
+    }
+  }
+}
+
 

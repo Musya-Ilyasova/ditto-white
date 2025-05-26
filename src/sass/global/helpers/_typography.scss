@@ -1,8 +1,31 @@
 h1 {
   font-size: $font-size-h1;
   font-weight: 500;
+  @include line-height(40, 28);
+  color: var(--title);
+  @include mq('768') {
+    font-weight: 600;
+    font-size: 38px;
+  }
+  @include mq('1024') {
+    font-size: 60px;
+    @include line-height(72, 60);
+  }
+
 }
 
 h2 {
+  color: var(--title);
   font-size: $font-size-h2;
+  @include line-height(34, 20);
+  @include mq('768') {
+    font-size: 28px;
+    @include line-height(40, 28);
+  }
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  font-size: 0;
 }

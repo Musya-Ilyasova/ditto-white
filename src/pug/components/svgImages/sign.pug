@@ -1,19 +1,24 @@
-svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").sign
+svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").svgImg.sign
   g(clip-path="url(#clip0_8_11208)")
     rect(width="491" height="306")
     rect(x="11" y="139" width="101" height="27" fill="url(#paint0_linear_8_11208)" fill-opacity="0.1")
-
     //линии слева
-
     line(x1="-11" y1="138" x2="115" y2="138" stroke="url(#paint1_linear_8_11208)" stroke-width="2")
     line(x1="-11" y1="166" x2="112" y2="166" stroke="url(#paint2_linear_8_11208)" stroke-width="2")
-
+    text(
+      x="49"
+      y="155"
+      fill="var(--svgditto)"
+      font-size="12"
+      font-family='DM Sans'
+      font-weight="500"
+    ) Sign
     //стрелка
-    path(d="M83.6667 148.667L87 152M83.6667 155.333L87 152M87 152H79" stroke="#1F3526" stroke-linecap="round" stroke-linejoin="round")
+    path(d="M83.6667 148.667L87 152M83.6667 155.333L87 152M87 152H79" stroke="var(--svgditto)" stroke-linecap="round" stroke-linejoin="round")
 
     //справа сверху
 
-    path.line(d="M398.5 82H270.089C257.496 82 245.366 86.752 236.124 95.3064L204.376 124.694C195.134 133.248 183.004 138 170.411 138H109" stroke="#DEE2E6" stroke-width="2")
+    path.line(d="M398.5 82H270.089C257.496 82 245.366 86.752 236.124 95.3064L204.376 124.694C195.134 133.248 183.004 138 170.411 138H109" stroke="var(--svglines)" stroke-width="2")
     path.line-fill.line-fill_top(
       d="M109 138H170.411C183.004 138 195.134 133.248 204.376 124.694L236.124 95.3064C245.366 86.752 257.496 82 270.089 82H398.5"
       stroke="url(#lineFadeTop)"
@@ -22,11 +27,24 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
       stroke-dashoffset="400"
     )
 
-    image(x="364" y="60" width="98" height="48" xlink:href="/img/icons/aave.svg")
+    // Aave
+
+    rect(x="382.5" y="61.5" width="97" height="47" rx="3.5" fill="var(--svgSignIconsBg)")
+    rect(x="382.5" y="61.5" width="97" height="47" rx="3.5" stroke="var(--svglines)")
+    text(
+      x="426"
+      y="91"
+      fill="var(--textColor)"
+      font-size="18"
+      font-family='DM Sans'
+      font-weight="500"
+    ) Aave
+    image(x="396" y="73" width="24" height="24" xlink:href="/img/icons/aave.svg")
+
 
     //справа центр
 
-    line.line(x1="158" y1="152" x2="404" y2="152" stroke="#DEE2E6" stroke-width="2")
+    line.line(x1="158" y1="152" x2="404" y2="152" stroke="var(--svglines)" stroke-width="2")
     line.line-fill.line-fill_center(
       x1="158" y1="152" x2="404" y2="152"
       stroke="url(#lineFadeCenter)"
@@ -35,11 +53,24 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
       stroke-dashoffset="246"
     )
 
-    image(x="355" y="128" width="107" height="48" xlink:href="/img/icons/curve.svg")
+    //Curve
+
+    rect(x="373.5" y="129.5" width="106" height="47" rx="3.5" fill="var(--svgSignIconsBg)")
+    rect(x="373.5" y="129.5" width="106" height="47" rx="3.5" stroke="var(--svglines)")
+    text(
+      x="418"
+      y="159"
+      fill="var(--textColor)"
+      font-size="18"
+      font-weight="500"
+      font-family='DM Sans'
+    ) Curve
+
+    image(x="384" y="141" width="24" height="24" xlink:href="/img/icons/curve.svg")
 
     //справа снизу
 
-    path.line(d="M369 225H273.99C260.869 225 248.273 219.842 238.92 210.638L208.155 180.362C198.802 171.158 186.206 166 173.084 166H111" stroke="#DEE2E6" stroke-width="2")
+    path.line(d="M369 225H273.99C260.869 225 248.273 219.842 238.92 210.638L208.155 180.362C198.802 171.158 186.206 166 173.084 166H111" stroke="var(--svglines)" stroke-width="2")
     path.line-fill.line-fill_bottom(
       d="M111 166H173.084C186.206 166 198.802 171.158 208.155 180.362L238.92 210.638C248.273 219.842 260.869 225 273.99 225H369"
       stroke="url(#lineFadeBottom)"
@@ -47,19 +78,30 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
       stroke-dasharray="400"
       stroke-dashoffset="400"
     )
-    image(x="334" y="200" width="128" height="48" xlink:href="/img/icons/uni.svg")
+
+    //uni
+    rect(x="352.5" y="197.5" width="127" height="47" rx="3.5" fill="var(--svgSignIconsBg)")
+    rect(x="352.5" y="197.5" width="127" height="47" rx="3.5" stroke="var(--svglines)")
+
+    text(
+      x="398"
+      y="227"
+      fill="var(--textColor)"
+      font-size="18"
+      font-weight="500"
+      font-family='DM Sans'
+    ) Uniswap
+    image(x="365" y="208" width="24" height="24" xlink:href="/img/icons/uni.svg")
 
     // Нижний градиентный круг
     circle.bg(
       cx="141" cy="153"
       r="35"
-      fill="white"
+      fill="var(--bgColor)"
       stroke="url(#paint3_linear_8_11208)"
       stroke-width="2"
     )
 
-
-    // 2. Верхняя половина зелёной обводки
     circle.top(
       cx="141" cy="153"
       r="35"
@@ -71,7 +113,7 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
       transform="rotate(-90 141 153)"
     )
 
-    // 3. Нижняя половина зелёной обводки
+    // Нижняя половина круга (начинает с правой стороны)
     circle.bottom(
       cx="141" cy="153"
       r="35"
@@ -79,32 +121,35 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
       stroke="#7AE99D"
       stroke-width="2"
       stroke-dasharray="110 110"
-      stroke-dashoffset="220"
+      stroke-dashoffset="0"
       transform="rotate(90 141 153)"
     )
 
 
     //центр лого
-    image(x="129" y="140" width="24" height="24" xlink:href="/img/icons/ditto.svg")
+    g.icon-ditto(transform="translate(129, 140)")
+      svg(width="24" height="24" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+      path(d="M9.40618 19.321C9.39405 19.321 9.41831 19.321 9.40618 19.321L16.2074 19.3211C21.4224 19.3211 25.65 14.9814 25.65 9.62823C25.65 4.68755 22.0393 0.610252 17.3829 0.0111829C16.675 -0.0798902 16.0352 0.394945 15.7938 1.08409L14.2708 5.43282H16.2074C18.4646 5.43282 20.2945 7.31117 20.2945 9.62823C20.2945 11.9453 18.4646 13.8236 16.2074 13.8236H12.5209C11.8075 13.8236 11.1708 14.2832 10.9294 14.9723L9.40618 19.321Z", fill="var(--svgditto)")
+      path(d="M14.2708 5.43282H9.44258C4.22759 5.43282 0 9.77245 0 15.1257C0 19.2876 2.55534 22.8368 6.14335 24.2104C6.93046 24.5117 7.75971 24.0216 8.04394 23.2101L9.40618 19.321C7.16569 19.3009 5.35549 17.4303 5.35549 15.1257C5.35549 12.8086 7.18534 10.9302 9.44258 10.9302H11.1561C11.8695 10.9302 12.5061 10.4707 12.7475 9.7816L14.2708 5.43282Z", fill="var(--svgditto)")
 
   defs
     linearGradient#paint0_linear_8_11208(x1="11" y1="152.5" x2="106.319" y2="152.5" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#F8F9FA")
+      stop(stop-color="var(--svglines)")
       stop(offset="0.5" stop-color="#86FAAA")
     linearGradient#paint1_linear_8_11208(x1="-11" y1="139" x2="148.05" y2="137.13" gradientUnits="userSpaceOnUse")
-      stop(offset="0.127762" stop-color="#F8F9FA")
+      stop(offset="0.127762" stop-color="var(--svglines)")
       stop(offset="1" stop-color="#7AE99D")
 
     linearGradient#paint2_linear_8_11208(x1="-11" y1="167" x2="144.264" y2="165.218" gradientUnits="userSpaceOnUse")
-      stop(offset="0.127762" stop-color="#F8F9FA")
+      stop(offset="0.127762" stop-color="var(--svglines)")
       stop(offset="1" stop-color="#7AE99D")
 
     linearGradient#paint3_linear_8_11208(x1="177" y1="153" x2="105" y2="153" gradientUnits="userSpaceOnUse")
-      stop(stop-color="#DEE2E6")
+      stop(stop-color="var(--svglines)")
       stop(offset="1" stop-color="#86E8A6")
 
     clipPath#clip0_8_11208
-      rect(width="491" height="306" fill="white")
+      rect(width="491" height="306" fill="var(--bgColor)")
 
     // верхняя кривая — справа сверху
     linearGradient#lineFadeTop(x1="109" y1="138" x2="398.5" y2="82" gradientUnits="userSpaceOnUse")
