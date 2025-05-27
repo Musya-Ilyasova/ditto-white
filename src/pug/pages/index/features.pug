@@ -36,12 +36,13 @@ section.features
     li.features-list__item.features-list__item_security
       .features-list__img
         include ../../components/svgImages/security
-      span.features-list__subtitle
-        +icon('lock')
-        | Security
-      h3.features-list__title Secured by EigenLayer &amp; Symbiotic.
-      p.features-list__text Restaking-backed execution. Trustless, verifiable, and built for scale.
-      a.btn.btn_secondary(href="") Become a Restaker
+      .features-list__content
+        span.features-list__subtitle
+          +icon('lock')
+          | Security
+        h3.features-list__title Secured by EigenLayer &amp; Symbiotic.
+        p.features-list__text Restaking-backed execution. Trustless, verifiable, and built for scale.
+        a.btn.btn_secondary(href="") Become a Restaker
     li.features-list__item
       span.features-list__subtitle
         +icon('briefcase')

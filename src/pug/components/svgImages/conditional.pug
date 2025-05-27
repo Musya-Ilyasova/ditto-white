@@ -2,6 +2,7 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
   rect(width="491" height="306" )
   rect(x="99" y="110" width="294" height="87" rx="3" fill="var(--svgIconsBg)")
   rect(x="99" y="110" width="294" height="87" rx="3" stroke="var(--svglines)" stroke-width="2")
+  rect.progressBr(x="99" y="110" width="294" height="87" rx="3" stroke="var(--svglines)" stroke-width="2")
 
 
   image(x="123" y="128" width="24" height="24" xlink:href="/img/icons/comp.svg")
@@ -14,7 +15,6 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
     font-weight="500"
   ) Compound
 
-  // Пример других текстовых блоков
   text(
     x="124"
     y="177"
@@ -70,3 +70,14 @@ svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www
   // Линии
   path(d="M27 81V103C27 130.614 49.3858 153 77 153H98" stroke="var(--svglines)" stroke-width="2" stroke-dasharray="4 4")
   path(d="M461 226V203C461 175.386 438.614 153 411 153H394" stroke="var(--svglines)" stroke-width="2" stroke-dasharray="4 4")
+  path.line-left(d="M27 81V103C27 130.614 49.3858 153 77 153H98" stroke="var(--svglines)" stroke-width="2" stroke-dasharray="4 4")
+  path.line-right(d="M461 226V203C461 175.386 438.614 153 411 153H394" stroke="var(--svglines)" stroke-width="2" stroke-dasharray="4 4")
+  defs
+    linearGradient#gradientLeft(x1="0%" y1="0%" x2="100%" y2="0%")
+      stop(offset="0%" style="stop-color: var(--globalBr);")
+      stop(offset="25%" style="stop-color: #7AE99D;")
+      stop(offset="100%" style="stop-color: #7AE99D;")
+    linearGradient#gradientRight(x1="0%" y1="0%" x2="100%" y2="0%")
+      stop(offset="0%" style="stop-color: #7AE99D;")
+      stop(offset="75%" style="stop-color: #7AE99D;")
+      stop(offset="100%" style="stop-color: var(--globalBr);")

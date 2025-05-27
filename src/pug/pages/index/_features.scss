@@ -29,8 +29,15 @@
         margin-top: 20px;
       }
       @include mq('768') {
+        flex-direction: row;
         grid-area: 3/1/4/3;
       }
+      .features-list__img {
+        @include mq('768') {
+          order: 1;
+        }
+      }
+
     }
   }
   &__subtitle {
