@@ -133,7 +133,7 @@
     stroke-dashoffset: $perimeter;
     transition: stroke 0.3s ease, stroke-dashoffset 1s ease;
   }
-  .line-left {
+  .line-left, .line-right {
     stroke: var(--svglines);
     stroke-width: 2;
     stroke-dasharray: 0 150;
@@ -141,19 +141,13 @@
     stroke-dasharray: $pathLength;
     stroke-dashoffset: $pathLength;
     transition: stroke 0.3s ease, stroke-dasharray 0.5s ease;
+  }
+  .line-left {
     stroke: url(#gradientLeft);
   }
 
   .line-right {
-    stroke: var(--svglines);
-    stroke-width: 2;
-    stroke-dasharray: 0 150;
-    $pathLength: 150;
-    stroke-dasharray: $pathLength;
-    stroke-dashoffset: $pathLength;
-    transition: stroke 0.3s ease, stroke-dasharray 0.5s ease;
     stroke: url(#gradientRight);
-
   }
 
   &:hover {
@@ -161,12 +155,7 @@
       stroke: $main;
       stroke-dashoffset: 0;
     }
-    .line-left {
-      stroke-dasharray: 4 4;
-      transition-delay: 0.41s;
-    }
-
-    .line-right {
+    .line-left, .line-right  {
       stroke-dasharray: 4 4;
       transition-delay: 0.41s;
     }
@@ -204,6 +193,41 @@
     }
   }
 }
+
+.smart {
+  .smart-ring {
+    stroke-dasharray: 195;
+    stroke-dashoffset: 195;
+    transition: stroke 0.3s ease, stroke-dashoffset 1s ease;
+  }
+
+  .smart-line {
+    stroke: var(--svglines);
+    stroke-width: 2;
+    stroke-dasharray: 0 364;
+    $pathLength: 364;
+    stroke-dasharray: $pathLength;
+    stroke-dashoffset: -$pathLength;
+    transition: stroke 0.3s ease, stroke-dasharray 0.5s ease;
+  }
+
+  .line1 { stroke: url(#paint0_linear_33753_32953) }
+  .line2 { stroke: url(#paint1_linear_33753_32953) }
+  .line3 { stroke: url(#paint2_linear_33753_32953) }
+  .line4 { stroke: url(#paint3_linear_33753_32953) }
+
+  &:hover {
+    .smart-ring {
+      stroke-dashoffset: 0;
+    }
+
+    .smart-line {
+      stroke-dasharray: 4 4;
+      transition-delay: 0.41s;
+    }
+  }
+}
+
 
 body.light {
   .codeDark{
@@ -258,4 +282,17 @@ body.dark {
   }
 }
 
+.tech {
+  image {
+    filter: grayscale(142%);
+    transition: filter 0.2s ease;
+  }
+  &:hover {
+    image {
+      filter: grayscale(0);
+    }
+
+  }
+
+}
 

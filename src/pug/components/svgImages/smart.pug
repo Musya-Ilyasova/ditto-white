@@ -1,10 +1,20 @@
 svg(fill="none" height="306" viewBox="0 0 491 306" width="491" xmlns="http://www.w3.org/2000/svg").svgImg.smart
   rect(fill="var(--bgColor)" height="306" width="491")
   //lines
-  path(d="M245 213V213C245 194.373 229.899 179.272 211.272 179.272H106.272C84.0304 179.272 66 161.242 66 139V139V4.5" stroke="url(#paint0_linear_33753_32953)" stroke-dasharray="4 4" stroke-width="2")
-  path(d="M203.5 179.272V179.272C192.73 179.272 184 170.542 184 159.772V139V5" stroke="url(#paint1_linear_33753_32953)" stroke-dasharray="4 4" stroke-width="2")
-  path(d="M287 179.272V179.272C297.77 179.272 306.5 170.542 306.5 159.772V139V6.5" stroke="url(#paint2_linear_33753_32953)" stroke-dasharray="4 4" stroke-width="2")
-  path(d="M245 213V213C245 194.373 260.101 179.272 278.728 179.272H383.728C405.97 179.272 424 161.242 424 139V139V4.5" stroke="url(#paint3_linear_33753_32953)" stroke-dasharray="4 4" stroke-width="2")
+  path(d="M245 213V213C245 194.373 229.899 179.272 211.272 179.272H106.272C84.0304 179.272 66 161.242 66 139V139V4.5" stroke="var(--svglines)" stroke-dasharray="4 4" stroke-width="2")
+
+  path(d="M203.5 179.272V179.272C192.73 179.272 184 170.542 184 159.772V139V5" stroke="var(--svglines)" stroke-dasharray="4 4" stroke-width="2")
+
+  path(d="M287 179.272V179.272C297.77 179.272 306.5 170.542 306.5 159.772V139V6.5" stroke="var(--svglines)" stroke-dasharray="4 4" stroke-width="2")
+
+  path(d="M245 213V213C245 194.373 260.101 179.272 278.728 179.272H383.728C405.97 179.272 424 161.242 424 139V139V4.5" stroke="var(--svglines)" stroke-dasharray="4 4" stroke-width="2")
+
+  // Дубликаты линий для анимации
+  path.smart-line.line1(d="M245 213V213C245 194.373 229.899 179.272 211.272 179.272H106.272C84.0304 179.272 66 161.242 66 139V139V4.5 " stroke="url(#paint0_linear_33753_32953)"  stroke-dasharray="4 4" stroke-width="2")
+  path.smart-line.line2(d="M203.5 179.272V179.272C192.73 179.272 184 170.542 184 159.772V139V5" stroke="url(#paint1_linear_33753_32953)"  stroke-dasharray="4 4" stroke-width="2")
+  path.smart-line.line3(d="M287 179.272V179.272C297.77 179.272 306.5 170.542 306.5 159.772V139V6.5" stroke="url(#paint2_linear_33753_32953)"  stroke-dasharray="4 4" stroke-width="2")
+  path.smart-line.line4(d="M245 213V213C245 194.373 260.101 179.272 278.728 179.272H383.728C405.97 179.272 424 161.242 424 139V139V4.5" stroke="url(#paint3_linear_33753_32953)"  stroke-dasharray="4 4" stroke-width="2")
+
 
   rect(fill="var(--svgIconsBg)" height="47" rx="3.5" width="110" x="1" y="91.5")
   rect(height="47" rx="3.5" stroke="var(--svglines)" width="110" x="1" y="91.5")
@@ -54,6 +64,7 @@ svg(fill="none" height="306" viewBox="0 0 491 306" width="491" xmlns="http://www
 
   rect(fill="var(--svgIconsBg)" height="62" rx="31" width="62" x="214" y="214")
   rect(height="62" rx="31" stroke="var(--svglines)" stroke-width="2" width="62" x="214" y="214")
+  rect.smart-ring(height="62" rx="31" stroke="#7AE99D" stroke-width="2" width="62" x="214" y="214")
 
   g.icon-ditto(transform="translate(233, 233)")
     svg(width="24" height="24" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg")
@@ -62,17 +73,20 @@ svg(fill="none" height="306" viewBox="0 0 491 306" width="491" xmlns="http://www
 
   defs
     linearGradient#paint0_linear_33753_32953(x1="155.5" y1="90.5" x2="155.5" y2="4.5" gradientUnits="userSpaceOnUse")
-      stop(offset="0" stop-color="var(--svglines)")
-      stop(offset="1" stop-color="var(--bgColor)")
-
+      stop(offset="0%" stop-color="#7AE99D")
+      stop(offset="50%" stop-color="var(--bgColor)")
+      stop(offset="100%" stop-color="var(--bgColor)")
     linearGradient#paint1_linear_33753_32953(x1="193.75" y1="76.882" x2="193.75" y2="5" gradientUnits="userSpaceOnUse")
-      stop(offset="0" stop-color="var(--svglines)")
-      stop(offset="1" stop-color="var(--bgColor)")
-
+      stop(offset="0%" stop-color="#7AE99D")
+      stop(offset="50%" stop-color="var(--bgColor)")
+      stop(offset="100%" stop-color="var(--bgColor)")
     linearGradient#paint2_linear_33753_32953(x1="296.75" y1="77.7633" x2="296.75" y2="6.5" gradientUnits="userSpaceOnUse")
-      stop(offset="0" stop-color="var(--svglines)")
-      stop(offset="1" stop-color="var(--bgColor)")
-
+      stop(offset="0%" stop-color="#7AE99D")
+      stop(offset="50%" stop-color="var(--bgColor)")
+      stop(offset="100%" stop-color="var(--bgColor)")
     linearGradient#paint3_linear_33753_32953(x1="334.5" y1="90.5" x2="334.5" y2="4.5" gradientUnits="userSpaceOnUse")
-      stop(offset="0" stop-color="var(--svglines)")
-      stop(offset="1" stop-color="var(--bgColor)")
+      stop(offset="0%" stop-color="#7AE99D")
+      stop(offset="50%" stop-color="var(--bgColor)")
+      stop(offset="100%" stop-color="var(--bgColor)")
+
+

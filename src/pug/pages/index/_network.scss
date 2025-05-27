@@ -45,8 +45,8 @@
   }
   &__img {
     aspect-ratio: 295 / 384;
-    background: var(--networkImgBg);
-    border: 1px solid var(--globalBr);
+    // background: var(--networkImgBg);
+    // border: 1px solid var(--globalBr);
     border-radius: 12px;
     @include mq('768') {
       aspect-ratio: 493 / 643;

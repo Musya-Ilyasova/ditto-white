@@ -1,0 +1,4 @@
+{
+  "buildCommand": "npm rebuild node-sass && gulp build",
+  "outputDirectory": "dist"
+}
