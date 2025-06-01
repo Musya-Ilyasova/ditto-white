@@ -108,7 +108,7 @@ const heroSvg = () => {
       const anim = animations[nextIndex];
       animatePathSet(anim);
 
-      const delay = Math.random() * 800 + 800;
+      const delay = Math.random() * 800 + 1500;
       setTimeout(triggerAnimation, delay);
     };
 

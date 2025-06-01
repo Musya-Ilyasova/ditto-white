@@ -3,62 +3,64 @@ footer.footer
   .footer__block
     .container
       .footer__top
-        a.footer__link(href="") logo ditto
+        a.footer__link(href=process.env.MAIN_LINK) logo ditto
           +icon('ditto')
         .footer__linksblockWrap
           .footer__linksblock
             span.footer__title Participate
             ul.footer-linklist
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Developers
+                a.footer-linklist__link(href=process.env.LINK_ACCOUNT_SDK target="_blank") Developers
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Executors
+                a.footer-linklist__link(href=process.env.LINK_OPERATORS_FORM target="_blank") Executors
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Restakers
+                a.footer-linklist__link(href=process.env.LINK_RESTAKE target="_blank") Restakers
 
           .footer__linksblock
             span.footer__title Solutions
             ul.footer-linklist
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For AI Agents builders
+                a.footer-linklist__link(href=process.env.LINK_AI_AGENTS_BUILDERS target="_blank") For AI Agents builders
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For dApps builders
+                a.footer-linklist__link(href=process.env.LINK_DAPPS_BUILDERS target="_blank") For dApps builders
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For Asset Managers
+                a.footer-linklist__link(href=process.env.LINK_ASSET_MANAGERS target="_blank") For Asset Managers
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For Fintech Apps
+                a.footer-linklist__link(href=process.env.LINK_FINTECH_APPS target="_blank") For Fintech Apps
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For advanced DeFi users
+                a.footer-linklist__link(href=process.env.LINK_ADVANCED_DEFI_USERS target="_blank") For advanced DeFi users
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") For Web3 DevOps teams
+                a.footer-linklist__link(href=process.env.LINK_WEB3_DEVOPS_TEAMS target="_blank") For Web3 DevOps teams
+
           .footer__linksblock
             span.footer__title Resources
             ul.footer-linklist
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Blog
+                a.footer-linklist__link(href=process.env.LINK_BLOG target="_blank") Blog
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Documentation
+                a.footer-linklist__link(href=process.env.LINK_DOCKS target="_blank") Documentation
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Terms and Conditions
+                a.footer-linklist__link(href=process.env.LINK_TERMS_CONDITIONS target="_blank") Terms and Conditions
               li.footer-linklist__item
-                a.footer-linklist__link(href="#") Privacy Policy
+                a.footer-linklist__link(href=process.env.LINK_PRIVACY_POLICY target="_blank") Privacy Policy
+
           .footer__linksblock
             span.footer__title Social
             ul.footer-linklist
               li.footer-linklist__item
-                a.footer-linklist__link(href="#")
+                a.footer-linklist__link(href=process.env.SOC_TWITTER target="_blank")
                   +icon('x')
-                  |  Twitter
+                  | Twitter
               li.footer-linklist__item
-                a.footer-linklist__link(href="#")
+                a.footer-linklist__link(href=process.env.SOC_GITHUB target="_blank")
                   +icon('git')
                   | GitHub
               li.footer-linklist__item
-                a.footer-linklist__link(href="#")
+                a.footer-linklist__link(href=process.env.SOC_DISCORD target="_blank")
                   +icon('discord')
                   | Discord
               li.footer-linklist__item
-                a.footer-linklist__link(href="#")
+                a.footer-linklist__link(href=process.env.SOC_MEDIUM target="_blank")
                   +icon('medium')
                   | Medium
   .footer__block
@@ -66,13 +68,10 @@ footer.footer
       .footer__bottom
         p.copy &copy; 2025 Ditto. All rights reserved.
         .btn-theme
-          button.btn-theme__dark(data-set='dark')
+          button.btn-theme__dark(data-set='dark') dark
             +icon('dark')
-          button.btn-theme__light(data-set='light')
+          button.btn-theme__light(data-set='light') light
             +icon('light')
           .btn-theme__icon
             +icon('pc')
-
-
-
 

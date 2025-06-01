@@ -22,11 +22,18 @@
       }
     }
     @include mq('1024') {
-      padding: 64px 32px;
+      padding: 64px 32px 56px;
     }
     &_security {
+      @include mq('1024') {
+        padding-bottom: 50px;
+      }
       .btn {
         margin-top: 20px;
+        @include mq('768') {
+          margin-top: 37px;
+
+        }
       }
       @include mq('768') {
         flex-direction: row;
@@ -35,6 +42,7 @@
       .features-list__img {
         @include mq('768') {
           order: 1;
+          margin-top: 0;
         }
       }
 
@@ -50,6 +58,9 @@
       width: 24px;
       height: 24px;
     }
+    @include mq('1024') {
+      margin-bottom: 40px;
+    }
   }
   &__title {
     color: var(--title);
@@ -59,9 +70,9 @@
     letter-spacing: -1px;
     margin-bottom: 12px;
     @include mq('1024') {
-      font-size: 20px;
+      font-size: 28px;
       @include line-height(40,28);
-
+      margin-bottom: 20px;
     }
   }
   &__text {

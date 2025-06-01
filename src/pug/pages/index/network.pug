@@ -1,26 +1,26 @@
 section.network
-  .network__content
+  .network__content.wow.bounceInUp(data-wow-delay="0.2s")
     h2.network__title Powered by Decentralized Network.
     .network__img
       include ../../components/svgImages/layes
 
-  ul.network-list
+  ul.network-list.wow.bounceInUp(data-wow-delay="0.2s")
     li.network-list__item
       span.network-list__title 01 / Abstraction Layer
       p.network-list__text Builders design and deploy powerful, modular workflows that enable seamless cross-chain automation.
-      a.btn.btn_secondary(href="#")
+      a.btn.btn_secondary(href=process.env.LINK_DITTO_BUILD target="_blank")
         | Start Building
         +icon('arrow')
     li.network-list__item
       span.network-list__title 02 / Execution Layer
       p.network-list__text Executors run and coordinate real-time automation tasks across multiple blockchains, ensuring fast and reliable execution under validator consensus.
-      a.btn.btn_secondary(href="#")
+      a.btn.btn_secondary(href=process.env.LINK_OPERATORS_FORM target="_blank")
         | Become an Executor
         +icon('arrow')
     li.network-list__item
       span.network-list__title 03 / Restaking Layer
       p.network-list__text Restakers secure the network by delegating capital to validators, enabling economic guarantees and slashing-based accountability.
-      a.btn.btn_secondary(href="#")
+      a.btn.btn_secondary(href=process.env.LINK_RESTAKE target="_blank")
         | Become a Restaker
         +icon('arrow')
 

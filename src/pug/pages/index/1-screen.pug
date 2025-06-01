@@ -1,13 +1,13 @@
 //first-screen
 section.fr-screen
-  .fr-screen__content
-    h1 Execute without limits
-    p The ultimate execution layer. Seamless, autonomous, and smart workflows across chains and protocols.
+  .fr-screen__content.wow.bounceInUp(data-wow-delay="0.2s")
+    h1.fr-screen__title Execute without limits
+    p.fr-screen__text The ultimate execution layer. Seamless, autonomous, and smart workflows across chains and protocols.
     .fr-screen__btns
-      a.btn.btn_primary(href="#")
+      a.btn.btn_primary(href=process.env.LINK_DITTO_BUILD target="_blank")
         | Start Building
         +icon('arrow')
-      a.btn.btn_secondary(href="#")
+      a.btn.btn_secondary(href=process.env.LINK_RESTAKE target="_blank")
         | Become a Restaker
   .fr-screen__img
     include ../../components/svgImages/hero

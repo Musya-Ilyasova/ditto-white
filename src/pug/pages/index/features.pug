@@ -1,7 +1,7 @@
 section.features
   h2.hidden Key Features
   ul.features-list
-    li.features-list__item
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('circleArrow')
         | Intent-Centric Execution
@@ -9,7 +9,7 @@ section.features
       p.features-list__text Users declare what they want to happen. Ditto handles how, when, and where across chains with a single signed intent.
       .features-list__img
         include ../../components/svgImages/sign
-    li.features-list__item
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('dashboard')
         | Omnichain by Default
@@ -17,7 +17,7 @@ section.features
       p.features-list__text Ditto validators orchestrate secure execution across all supported networks. Ethereum, Arbitrum, Polygon, Base — handled seamlessly in a chain abstracted way.
       .features-list__img
         include ../../components/svgImages/omnichain
-    li.features-list__item
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('circleCheck')
         | Conditional, Reactive Execution
@@ -25,7 +25,7 @@ section.features
       p.features-list__text Ditto workflows react to real-time states: prices, gas, on-chain calls, and custom events. Define your logic once, and Ditto handles the rest - no manual intervention needed.
       .features-list__img
         include ../../components/svgImages/conditional
-    li.features-list__item
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('box')
         | Runtime Composability
@@ -33,7 +33,7 @@ section.features
       p.features-list__text Design logic flows using pre-built or custom modular actions. Trigger from events, conditions, or time. No need to redeploy contracts.
       .features-list__img
         include ../../components/svgImages/module
-    li.features-list__item.features-list__item_security
+    li.features-list__item.features-list__item_security.wow.bounceInUp(data-wow-delay="0.2s")
       .features-list__img
         include ../../components/svgImages/security
       .features-list__content
@@ -42,8 +42,8 @@ section.features
           | Security
         h3.features-list__title Secured by EigenLayer &amp; Symbiotic.
         p.features-list__text Restaking-backed execution. Trustless, verifiable, and built for scale.
-        a.btn.btn_secondary(href="") Become a Restaker
-    li.features-list__item
+        a.btn.btn_secondary(href=process.env.LINK_RESTAKE target="_blank") Become a Restaker
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('briefcase')
         | Native to Smart Accounts
@@ -51,7 +51,7 @@ section.features
       p.features-list__text Ditto supports ERC-4337, 7579, and emerging standards. Bundle complex workflows into a single UserOp. Fully programmable and gas abstracted.
       .features-list__img
         include ../../components/svgImages/smart
-    li.features-list__item
+    li.features-list__item.wow.bounceInUp(data-wow-delay="0.2s")
       span.features-list__subtitle
         +icon('edit')
         | Developer-friendly Tech Stack

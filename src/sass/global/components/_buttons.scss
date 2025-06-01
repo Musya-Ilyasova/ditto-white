@@ -19,13 +19,26 @@
   border-radius: 4px;
   width: fit-content;
   white-space: nowrap;
+  position: relative; // для псевдоэлемента анимации
+  overflow: hidden; // чтобы "волна" не выходила за пределы
   @include mq('768') {
     font-size: 16px;
     height: 48px;
     line-height: 48px;
+    padding: 0 24px;
   }
 
   &:focus {
+    box-shadow: none;
+  }
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  &:active {
+    transform: translateY(0);
     box-shadow: none;
   }
 }
@@ -34,10 +47,31 @@
   background: var(--primaryBtnBg);
   color: var(--primaryBtnColor);
   border: none;
+  position: relative;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+
   .icon {
     width: 24px;
     height: 24px;
     stroke: var(--primaryBtnColor);
+    transition: stroke 0.3s ease;
+  }
+
+  &:hover {
+    background: var(--primaryBtnColor);
+    color: var(--primaryBtnBg);
+    box-shadow: 0 0 9px 0px var(--primaryBtnBg);
+    border: 1px solid var(--primaryBtnBg);
+
+
+    .icon {
+      stroke: var(--primaryBtnBg);
+    }
+  }
+
+  &:active {
+    box-shadow: 0 0 9px 0px var(--primaryBtnColor);
   }
 }
 
@@ -45,9 +79,16 @@
   background: var(--secondaryBtnBg);
   color: var(--secondaryBtnColor);
   border: 1px solid var(--secondaryBtnBr);
-  .icon {
-    width: 24px;
-    height: 24px;
-    stroke: var(--secondaryBtnColor);
+  position: relative;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: var(--secondaryBtnColor);
+    color: var(--secondaryBtnBg);
+    box-shadow: 0 0 9px 0px var(--secondaryBtnColor);
+  }
+
+  &:active {
+    box-shadow: 0 0 9px 0px var(--secondaryBtnColor);
   }
 }

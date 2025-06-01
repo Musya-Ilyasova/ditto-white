@@ -1,14 +1,14 @@
 section.automation
-  .automation__content
+  .automation__content.wow.bounceInUp(data-wow-delay="0.2s")
     h2.automation__title Ship automation. Not scripts.
     p.automation__text Create fully automated, omnichain workflows without writing contracts. dApp execution infrastructure without writing contracts.
     .automation__btns
-      a.btn.btn_primary(href="#")
+      a.btn.btn_primary(href=process.env.LINK_DITTO_BUILD target="_blank")
         | Start Building
         +icon('arrow')
-      a.btn.btn_secondary(href="#")
+      a.btn.btn_secondary(href=process.env.LINK_RESTAKE target="_blank")
         | Become a Restaker
-  .automation__wrap
+  .automation__wrap.wow.bounceInUp(data-wow-delay="0.2s")
     .automation__tabs
       ul.automation__tab-list
         li.automation__tab-item.active(data-tab="tab1")  01 / Define an Intent

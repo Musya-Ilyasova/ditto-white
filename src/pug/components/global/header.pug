@@ -1,7 +1,7 @@
 //header
 header.header
   .container
-    a.logo(href="#") Logo ditto
+    a.logo(href=process.env.MAIN_LINK) Logo ditto
       +icon('logo')
     button.burger menu
       span
@@ -18,57 +18,57 @@ header.header
               +icon('chevron')
             ul.menu-submenu(data-title='Participate')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Developers
+                a.menu-submenu__link(href=process.env.LINK_ACCOUNT_SDK target="_blank") Developers
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Executors
+                a.menu-submenu__link(href=process.env.LINK_OPERATORS_FORM target="_blank") Executors
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Restakers
+                a.menu-submenu__link(href=process.env.LINK_RESTAKE target="_blank") Restakers
                   +icon('arrow')
           li.menu-list__item
             span.menu-list__title Solutions
               +icon('chevron')
             ul.menu-submenu.big(data-title='Solutions')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For AI Agents builders
+                a.menu-submenu__link(href=process.env.LINK_AI_AGENTS_BUILDERS target="_blank") For AI Agents builders
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For dApps builders
+                a.menu-submenu__link(href=process.env.LINK_DAPPS_BUILDERS target="_blank") For dApps builders
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For Asset Managers
+                a.menu-submenu__link(href=process.env.LINK_ASSET_MANAGERS target="_blank") For Asset Managers
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For Fintech Apps
+                a.menu-submenu__link(href=process.env.LINK_FINTECH_APPS target="_blank") For Fintech Apps
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For advanced DeFi users
+                a.menu-submenu__link(href=process.env.LINK_ADVANCED_DEFI_USERS target="_blank") For advanced DeFi users
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") For Web3 DevOps teams
+                a.menu-submenu__link(href=process.env.LINK_WEB3_DEVOPS_TEAMS target="_blank") For Web3 DevOps teams
                   +icon('arrow')
           li.menu-list__item
             span.menu-list__title Resources
               +icon('chevron')
             ul.menu-submenu.big(data-title='Resources')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Blog
+                a.menu-submenu__link(href=process.env.LINK_BLOG target="_blank") Blog
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Twitter
+                a.menu-submenu__link(href=process.env.SOC_TWITTER target="_blank") Twitter
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Discord
+                a.menu-submenu__link(href=process.env.SOC_DISCORD target="_blank") Discord
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") Medium
+                a.menu-submenu__link(href=process.env.SOC_MEDIUM target="_blank") Medium
                   +icon('arrow')
               li.menu-submenu__item
-                a.menu-submenu__link(href="") GitHub
+                a.menu-submenu__link(href=process.env.SOC_GITHUB target="_blank") GitHub
                   +icon('arrow')
       .header__btns
-        a.btn.btn_primary(href="#")
+        a.btn.btn_secondary(href=process.env.LINK_DOCKS target="_blank")
           | Docs
-        a.btn.btn_secondary(href="#")
+        a.btn.btn_primary(href=process.env.LINK_DITTO_BUILD target="_blank")
           | Build on Ditto

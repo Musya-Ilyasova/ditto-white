@@ -9,8 +9,12 @@
   );
   text-align: center;
   @include mq('768') {
-    padding: 59px;
-
+    padding: 59px 59px 57px;
+  }
+  &__title {
+    max-width: 623px;
+    margin: 0 auto;
+    letter-spacing: -1px;
   }
 
 
@@ -26,6 +30,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 38px;
   }
   &__item {
     background: var(--ctaItemBg);

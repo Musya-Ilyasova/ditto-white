@@ -13,18 +13,27 @@
     @media (min-width: 768px) {
       padding: 98px 59px;
     }
+    @media (min-width: 1024px) {
+      padding: 104px 59px 97px;
+      gap: 20px;
+    }
   }
   &__title {
     max-width: 623px;
     margin: 0 auto;
     line-height: 48px;
-    @media (max-width: 768px) {
+    @include mq('768') {
       line-height: 40px;
+      font-size: 40px;
     }
   }
   &__text {
     max-width: 478px;
     margin: 0 auto;
+    @include mq('768') {
+      font-size: 18px;
+
+    }
   }
   &__btns {
     display: flex;
@@ -33,12 +42,14 @@
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
-    @media (min-width: 375px) {
+    @include mq('375') {
       flex-direction: row;
       gap: 16px;
     }
-    @media (min-width: 768px) {
+
+    @include mq('768') {
       gap: 16px;
+      margin-top: 9px;
     }
   }
   &__wrap {
@@ -53,7 +64,7 @@
     }
   }
   &__tab-item {
-    padding: 48px 32px;
+    padding: 47px 32px;
     flex: 1;
     cursor: pointer;
     font-weight: 500;
@@ -127,6 +138,7 @@
     @include line-height(40, 28);
     color: var(--title);
     font-weight: 500;
+    letter-spacing: -1px;
   }
   &__subtitle {
     color: var(--textColor);
@@ -225,7 +237,7 @@
 
 .code-block {
   &__wrapper {
-    margin-top: 64px;
+    margin-top: 60px;
     max-width: 100%;
     position: relative;
     background: var(--bgColor);
@@ -299,8 +311,8 @@
     border-radius: 4px;
 
     .icon-copy {
-      width: 16px;
-      height: 16px;
+      width: 20px;
+      height: 20px;
       display: inline-block;
       stroke: var(--tabsTitleColor);
     }

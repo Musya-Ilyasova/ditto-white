@@ -55,6 +55,19 @@
     @include mq('1024') {
       margin-top: auto;
     }
+    .step-1, .step-2, .step-3 {
+      transition: stroke 0.2s ease-in-out;
+      & + text {
+        transition: fill 0.2s ease-in-out;
+      }
+    }
+    .active {
+      stroke: $main;
+      & + text {
+        fill: $main;
+      }
+
+    }
   }
 }
 

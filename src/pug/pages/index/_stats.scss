@@ -34,7 +34,8 @@
       }
     }
     @include mq('1024') {
-      padding: 48px 32px;
+      gap: 30px;
+      padding: 43px 32px 43px;
     }
   }
   &__title {
