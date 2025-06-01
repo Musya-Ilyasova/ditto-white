@@ -36,8 +36,66 @@
     }
   }
   &__img {
-    background: var(--globalBr);
+    // background: var(--globalBr);
     width: 100%;
     aspect-ratio: 343/169;
+    svg {
+      width: 100%;
+      height: auto;
+    }
+
   }
 }
+
+.hero-svg {
+  // Начальные стили для всех линий
+  .step1, .step2 {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    opacity: 0;
+    transition: none;
+  }
+
+  // Плавные переходы для circle
+  circle {
+    transition: r 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+  }
+
+  // Появление линии
+  .step1.active, .step2.active {
+    animation: lineEnter 1s ease-in-out forwards;
+  }
+
+  // Новый класс для "стирания" линии
+  .step1.exit, .step2.exit {
+    animation: lineExit 1s ease-in-out forwards;
+  }
+
+  // Анимация рисования линии (появление)
+  @keyframes lineEnter {
+    0% {
+      stroke-dashoffset: 1000;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+  }
+
+  // Анимация стирания линии (исчезновение через другой конец)
+  @keyframes lineExit {
+    0% {
+      stroke-dashoffset: 0;
+      opacity: 1;
+    }
+    100% {
+      stroke-dashoffset: -1000;
+      opacity: 0;
+    }
+  }
+}
+
