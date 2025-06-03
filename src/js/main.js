@@ -22,7 +22,9 @@ document.addEventListener("DOMContentLoaded",  () => {
   initTabs();
   addCopy();
   mobMenu();
-  subMenu();
+  if (window.innerWidth <= 979) {
+    subMenu();
+  };
   heroSvg();
   layersSvg();
   wow.init();

@@ -13,6 +13,16 @@
     padding-top: 119px;
     height: 100vh;
     gap: 76px;
+    // max-height: 950px;
+  }
+  @include mq('980') {
+    max-height: 1050px;
+  }
+  @include mq('1024') {
+    max-height: 1080px;
+  }
+  @include mq('1440') {
+    min-height: 1080px;
   }
   &__content {
     padding: 0 24px;

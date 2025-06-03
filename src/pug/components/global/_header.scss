@@ -205,7 +205,7 @@
     &:last-child .menu-list__title{
       border-bottom: none;
     }
-    &:hover {
+    &.active {
       .menu-submenu {
         border-top: none;
         opacity: 1;
@@ -214,18 +214,24 @@
         .menu-submenu__item {
           opacity: 1;
         }
-        @include mq('980') {
+      }
+    }
+
+    @include mq('980') {
+      &:hover {
+        .menu-submenu {
+          opacity: 1;
+          pointer-events: all;
           max-height: 266px;
           border-top: 1px solid var(--globalBr);
+          .menu-submenu__item {
+            opacity: 1;
+          }
         }
-      }
-      &::before {
-        @include mq('980') {
+        &::before {
           display: block;
         }
-      }
-      .menu-list__title:after {
-        @include mq('980') {
+        .menu-list__title:after {
           display: block;
         }
       }

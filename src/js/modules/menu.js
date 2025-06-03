@@ -15,10 +15,22 @@ export const subMenu = () => {
 
   titles.forEach(title => {
     title.addEventListener('click', () => {
-      titles.forEach(i => {i.classList.remove('active')});
-      lists.forEach(i => {i.classList.remove('show')});
-      title.classList.add('active');
-      title.closest('.menu-list__item').querySelector('.menu-submenu').classList.add('show');
-    })
-  })
-}
+      const item = title.closest('.menu-list__item');
+      const submenu = item.querySelector('.menu-submenu');
+      const isActive = item.classList.contains('active');
+
+      // Если уже активен — закрываем
+      if (isActive) {
+        item.classList.remove('active');
+        submenu.classList.remove('show');
+      } else {
+        // Иначе закрываем все и открываем текущий
+        titles.forEach(i => i.closest('.menu-list__item').classList.remove('active'));
+        lists.forEach(i => i.classList.remove('show'));
+
+        item.classList.add('active');
+        submenu.classList.add('show');
+      }
+    });
+  });
+};
