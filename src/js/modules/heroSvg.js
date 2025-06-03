@@ -2,120 +2,158 @@ const heroSvg = () => {
   const animations = [
     {
       name: 'anim1',
-      steps: [
-        { line: '.anim1-line1', circles: '.anim1-circle1' },
-        { line: '.anim1-line2', circles: '.anim1-circle2' },
-      ],
+      step1: '.anim1-line1',
+      circle1: '.anim1-circle1',
+      step2: '.anim1-line2',
+      circle2: '.anim1-circle2',
     },
     {
       name: 'anim2',
-      steps: [
-        { line: '.anim2-line1', circles: '.anim2-circle1' },
-      ],
+      step1: '.anim2-line1',
+      circle1: '.anim2-circle1',
     },
     {
       name: 'anim3',
-      steps: [
-        { line: '.anim3-line1', circles: '.anim3-circle1' },
-        { line: '.anim3-line2', circles: '.anim3-circle2' },
-      ],
+      step1: '.anim3-line1',
+      circle1: '.anim3-circle1',
+      step2: '.anim3-line2',
+      circle2: '.anim3-circle2',
     },
     {
       name: 'anim4',
-      steps: [
-        { line: '.anim4-line1', circles: '.anim4-circle1' },
-        { line: '.anim4-line2', circles: '.anim4-circle2' },
-      ],
+      step1: '.anim4-line1',
+      circle1: '.anim4-circle1',
     },
     {
       name: 'anim5',
-      steps: [
-        { line: '.anim5-line1', circles: '.anim5-circle1' },
-        { line: '.anim5-line2', circles: '.anim5-circle2' },
-      ],
+      step1: '.anim5-line1',
+      circle1: '.anim5-circle1',
+      step2: '.anim5-line2',
+      circle2: '.anim5-circle2',
     },
   ];
 
-  function activateCircle(circleGroup) {
-    if (!circleGroup || circleGroup.length < 2) return;
-
-    const [outer, inner] = circleGroup;
+  function activateCircle(elGroup, enlarge = false) {
+    if (!elGroup || elGroup.length < 2) return;
+    const [outer, inner] = elGroup;
 
     outer.setAttribute('stroke', '#7AE99D');
-    outer.setAttribute('r', '22');
+    outer.setAttribute('r', enlarge ? '22' : '13.5');
+    if (enlarge) {
+      outer.setAttribute('fill', 'rgba(31, 53, 38, 1)');
+    } else {
+      outer.setAttribute('fill', 'var(--svgIconsBg)');
+    }
 
     inner.setAttribute('fill', '#7AE99D');
-    inner.setAttribute('r', '9');
+    inner.setAttribute('r', enlarge ? '9' : '6');
   }
 
-  function deactivateCircle(circleGroup) {
-    if (!circleGroup || circleGroup.length < 2) return;
+  function deactivateCircle(elGroup) {
+    if (!elGroup || elGroup.length < 2) return;
+    const [outer, inner] = elGroup;
 
-    const [outer, inner] = circleGroup;
     outer.setAttribute('stroke', 'var(--globalBr)');
     outer.setAttribute('r', '13.5');
+    outer.setAttribute('fill', 'var(--svgIconsBg)'); // вернуть прозрачную/исходную
 
     inner.setAttribute('fill', 'var(--globalBr)');
     inner.setAttribute('r', '6');
   }
 
-  function animatePathSet({ steps }) {
-    const runStep = (index) => {
-      if (index >= steps.length) return;
+  function applyLineClass(selector, className) {
+    const el = document.querySelector(selector);
+    if (el) el.classList.add(className);
+  }
 
-      const currentStep = steps[index];
-      const lineEl = document.querySelector(currentStep.line);
-      const circleEls = document.querySelectorAll(currentStep.circles);
+  function removeLineClass(selector, className) {
+    const el = document.querySelector(selector);
+    if (el) el.classList.remove(className);
+  }
 
-      if (lineEl) {
-        lineEl.classList.remove('exit');
-        lineEl.classList.add('active');
+  function animateFullSet(onComplete) {
+    // Step 1: Activate all step1 lines
+    animations.forEach(anim => {
+      if (anim.step1) {
+        removeLineClass(anim.step1, 'exit');
+        applyLineClass(anim.step1, 'active');
       }
+    });
 
-      setTimeout(() => {
-        activateCircle(circleEls);
-      }, 300);
-
-      setTimeout(() => {
-        if (lineEl) {
-          lineEl.classList.remove('active');
-          lineEl.classList.add('exit');
+    // Step 2: Activate all circle1 (only green fill, no enlarge)
+    setTimeout(() => {
+      animations.forEach(anim => {
+        if (anim.circle1) {
+          const group = document.querySelectorAll(anim.circle1);
+          activateCircle(group, false);
         }
+      });
+    }, 600);
 
-        deactivateCircle(circleEls);
+    // Step 3: Deactivate all step1, Activate step2
+    setTimeout(() => {
+      animations.forEach(anim => {
+        if (anim.step1) {
+          removeLineClass(anim.step1, 'active');
+          applyLineClass(anim.step1, 'exit');
+        }
+        if (anim.step2) {
+          removeLineClass(anim.step2, 'exit');
+          applyLineClass(anim.step2, 'active');
+        }
+      });
 
-        setTimeout(() => {
-          if (lineEl) lineEl.classList.remove('exit');
-          runStep(index + 1);
-        }, 1000);
-      }, 1000);
-    };
+      // Отложенное увеличение circle2 (например, +200 мс после начала step2)
+      setTimeout(() => {
+        animations.forEach(anim => {
+          if (anim.circle2) {
+            const group = document.querySelectorAll(anim.circle2);
+            activateCircle(group, true); // enlarge
+          }
+        });
+      }, 400); // задержка для эффекта "позже"
+    }, 2000);
 
-    runStep(0);
+    // Step 4: Reset everything
+    setTimeout(() => {
+      animations.forEach(anim => {
+        if (anim.step2) {
+          removeLineClass(anim.step2, 'active');
+          applyLineClass(anim.step2, 'exit');
+        }
+        if (anim.circle1) {
+          const group1 = document.querySelectorAll(anim.circle1);
+          deactivateCircle(group1);
+        }
+        if (anim.circle2) {
+          const group2 = document.querySelectorAll(anim.circle2);
+          deactivateCircle(group2);
+        }
+      });
+
+      setTimeout(() => {
+        animations.forEach(anim => {
+          if (anim.step1) removeLineClass(anim.step1, 'exit');
+          if (anim.step2) removeLineClass(anim.step2, 'exit');
+        });
+
+        if (typeof onComplete === 'function') onComplete();
+      }, 1600);
+    }, 4000);
   }
 
-  function startRandomAnimationLoop() {
-    let lastIndex = -1;
 
-    const triggerAnimation = () => {
-      let nextIndex;
-      do {
-        nextIndex = Math.floor(Math.random() * animations.length);
-      } while (nextIndex === lastIndex && animations.length > 1);
-
-      lastIndex = nextIndex;
-
-      const anim = animations[nextIndex];
-      animatePathSet(anim);
-
-      const delay = Math.random() * 800 + 1500;
-      setTimeout(triggerAnimation, delay);
+  function startLoop() {
+    const loop = () => {
+      animateFullSet(() => {
+        const delay = Math.random() * 1600 + 3000;
+        setTimeout(loop, delay);
+      });
     };
-
-    triggerAnimation();
+    loop();
   }
 
-  startRandomAnimationLoop();
+  startLoop();
 };
 
 export default heroSvg;

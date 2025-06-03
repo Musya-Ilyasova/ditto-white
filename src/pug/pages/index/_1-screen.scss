@@ -64,7 +64,6 @@
 }
 
 .hero-svg {
-  // Начальные стили для всех линий
   .step1, .step2 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
@@ -72,22 +71,19 @@
     transition: none;
   }
 
-  // Плавные переходы для circle
   circle {
-    transition: r 0.3s ease-in-out, fill 0.3s ease-in-out, stroke 0.3s ease-in-out;
+    // circle-переходы тоже замедляем
+    transition: r 0.6s ease-in-out, fill 0.6s ease-in-out, stroke 0.6s ease-in-out;
   }
 
-  // Появление линии
   .step1.active, .step2.active {
-    animation: lineEnter 1s ease-in-out forwards;
+    animation: lineEnter 2s ease-in-out forwards; // Было 1s
   }
 
-  // Новый класс для "стирания" линии
   .step1.exit, .step2.exit {
-    animation: lineExit 1s ease-in-out forwards;
+    animation: lineExit 2s ease-in-out forwards; // Было 1s
   }
 
-  // Анимация рисования линии (появление)
   @keyframes lineEnter {
     0% {
       stroke-dashoffset: 1000;
@@ -102,7 +98,6 @@
     }
   }
 
-  // Анимация стирания линии (исчезновение через другой конец)
   @keyframes lineExit {
     0% {
       stroke-dashoffset: 0;
@@ -114,4 +109,5 @@
     }
   }
 }
+
 
