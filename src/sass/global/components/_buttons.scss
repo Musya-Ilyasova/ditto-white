@@ -28,6 +28,13 @@
     padding: 0 24px;
   }
 
+  .icon {
+    stroke: currentColor;
+    width: 24px;
+    height: 24px;
+    transition: stroke 0.3s ease;
+  }
+
   &:focus {
     box-shadow: none;
   }

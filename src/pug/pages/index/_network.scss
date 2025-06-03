@@ -1,9 +1,10 @@
 .network {
-  padding: 36px 24px;
+  padding: 36px 24px 33px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 24px;
   @include mq('768') {
+    padding: 36px 24px;
     flex-direction: row;
     padding: 0;
     gap: 0;
@@ -13,6 +14,7 @@
     max-width: 295px;
     margin: 0 auto 28px;
     color: var(--title);
+    letter-spacing: -1px;
     @include mq('768') {
       max-width: none;
       font-size: 24px;
@@ -21,10 +23,11 @@
     }
     @include mq('1024') {
       font-size: 28px;
+      letter-spacing: -1px;
+      margin: 0 0 60px;
     }
   }
   &__content {
-    flex: 1;
     @include mq('768') {
       padding: 24px;
       background-image: repeating-linear-gradient(
@@ -40,20 +43,25 @@
     }
     @include mq('1024') {
       padding: 32px;
-
+      width: 50%;
     }
   }
   &__img {
     aspect-ratio: 295 / 384;
-    // background: var(--networkImgBg);
-    // border: 1px solid var(--globalBr);
     border-radius: 12px;
     @include mq('768') {
       aspect-ratio: 493 / 643;
       max-width: 493px;
+      width: 100%;
     }
     @include mq('1024') {
       margin-top: auto;
+    }
+    @include mq('1280') {
+      width: 493px;
+    }
+    svg {
+      width: 100%;
     }
     .step-1, .step-2, .step-3 {
       transition: stroke 0.2s ease-in-out;
@@ -66,8 +74,14 @@
       & + text {
         fill: $main;
       }
-
     }
+  }
+  .btn {
+    width: 100%;
+    @include mq('768') {
+      width: fit-content;
+    }
+
   }
 }
 
@@ -75,9 +89,12 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  flex: 1;
   @include mq('768') {
     gap: 0;
+  }
+  @include mq('1024') {
+    width: 50%;
+    flex: 1;
   }
   &__item {
     display: flex;
@@ -91,8 +108,7 @@
     }
     @include mq('1024') {
       gap: 20px;
-      padding: 32px;
-
+      padding: 30px 32px 34px;
     }
     &:hover, .active {
       background: var(--networkItemBgHover);
@@ -111,14 +127,24 @@
     font-size: 20px;
     transition: color 0.2s ease-in-out;
     @include line-height(34, 20);
+    letter-spacing: -1px;
     @include mq('768') {
       font-size: 18px;
       color: var(--textColor);
     }
     @include mq('1024') {
-      font-size: 20px;
+      font-size: 16px;
+      @include line-height(24, 16);
       margin-bottom: 20px;
     }
+
+  }
+  &__text {
+    @include mq('1024') {
+      // max-width: 400px;
+      font-size: 18px;
+    }
+
 
   }
 

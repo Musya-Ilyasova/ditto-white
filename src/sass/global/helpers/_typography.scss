@@ -3,10 +3,11 @@ h1 {
   font-weight: 500;
   @include line-height(40, 28);
   color: var(--title);
-  letter-spacing: -1.2px;
+  letter-spacing: -1px;
   @include mq('768') {
     font-weight: 600;
     font-size: 38px;
+    letter-spacing: -1.2px;
   }
   @include mq('1024') {
     font-size: 60px;

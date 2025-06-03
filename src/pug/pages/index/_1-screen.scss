@@ -1,7 +1,7 @@
 //.fr-screen
 
 .fr-screen {
-  padding-top: 119px;
+  padding-top: 116px;
   border-top: none;
   text-align: center;
   display: flex;
@@ -10,6 +10,7 @@
   justify-content: flex-end;
   gap: 43px;
   @include mq('768') {
+    padding-top: 119px;
     height: 100vh;
     gap: 76px;
   }
@@ -17,8 +18,11 @@
     padding: 0 24px;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 14px;
     max-width: 660px;
+    @include mq('768') {
+      gap: 16px;
+    }
   }
   &__btns {
     padding-top: 12px;
@@ -28,20 +32,29 @@
     flex-direction: column;
     gap: 12px;
     @include mq('375') {
+      padding-top: 15px;
       flex-direction: row;
       gap: 16px;
     }
   }
   &__text {
+    padding: 0 10px;
+    font-weight: 500;
+    letter-spacing: 0;
     @include mq('768') {
       font-size: 18px;
       padding: 0 80px;
     }
   }
   &__img {
-    // background: var(--globalBr);
     width: 100%;
+    height: fit-content;
     aspect-ratio: 343/169;
+    overflow: hidden;
+    @include mq('768') {
+
+    }
+
     svg {
       width: 100%;
       height: auto;

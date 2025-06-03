@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   &__content {
     width: 100%;
-    padding: 90px 16px;
+    padding: 90px 16px 87px;
     background-image: repeating-linear-gradient(
       -45deg,
       var(--blockLines),
@@ -14,15 +14,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 28px;
+    gap: 30px;
     text-align: center;
     @include mq('768') {
       padding: 59px;
-      gap: 40px;
+      gap: 39px;
     }
   }
   &__title {
-    max-width: 623px;
+    max-width: 468px;
+    letter-spacing: -0.8px;
     margin: 0 auto;
   }
   &__btns {
@@ -30,13 +31,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 12px;
-    @include mq('375') {
+    gap: 13px;
+    width: 100%;
+    padding: 0 26px;
+    @include mq('768') {
       flex-direction: row;
       gap: 16px;
     }
-    @include mq('768') {
-      gap: 16px;
+    .btn {
+      width: 100%;
+      @include mq('768') {
+        width: fit-content;
+      }
     }
   }
 }
@@ -50,12 +56,13 @@
   }
 
   &__item {
-    padding: 32px;
+    padding: 31px 23px;
     border-top: 1px solid var(--globalBr);
     cursor: pointer;
     transition: background 0.2s ease-in-out;
     @include mq('768') {
       width: 50%;
+      padding: 30px 32px 34px;
     }
     &:hover {
       background: var(--blogBgHover);
@@ -66,14 +73,29 @@
     display: block;
     font-weight: 500;
     line-height: 28px;
+    font-size: 18px;
+    max-width: 400px;
+    @include mq('768') {
+      font-weight: 700;
+    }
+
   }
   &__text {
     line-height: 28px;
+    font-size: 18px;
+    @include mq('768') {
+      margin-top: 2px;
+      display: block;
+    }
   }
   &__content {
     padding-left: 68px;
     position: relative;
     margin-top: 20px;
+    @include mq('768') {
+      margin-top: 17px;
+
+    }
     &:before{
       content: "";
       width: 48px;

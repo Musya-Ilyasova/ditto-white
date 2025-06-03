@@ -49,12 +49,12 @@ export const sassBuild = () =>{
           extname: ".min.css",
         })
       )
-      .pipe($.hash())
+      // .pipe($.hash())
       .pipe(app.dest("dist/css"))
-      .pipe($.hash.manifest('./assets.json', {
-        sourceDir: app.dest("./dist/css/")
-      }))
-      .pipe(app.dest('./dist'))
+      // .pipe($.hash.manifest('./assets.json', {
+      //   sourceDir: app.dest("./dist/css/")
+      // }))
+      // .pipe(app.dest('./dist'))
       .pipe(
         app.reload({
           stream: true,

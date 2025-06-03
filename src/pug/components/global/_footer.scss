@@ -1,13 +1,15 @@
 .footer {
-  // position: fixed;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
   width: 100%;
   background: var(--bgColor);
   border-top: 1px solid var(--globalBr);
   @include mq('768') {
     border: none;
+  }
+
+  .btn-theme {
+    @include mq('1024') {
+      margin-right: 10px;
+    }
   }
 
   &__link {
@@ -32,7 +34,7 @@
     display: flex;
     flex-direction: column-reverse;
     gap: 16px;
-    padding: 27px 0;
+    padding: 10px 0;
     @include mq('768') {
       flex-direction: row;
       justify-content: space-between;
@@ -42,12 +44,12 @@
       border-right: 1px solid var(--globalBr);
     }
     @include mq('1024') {
-      padding: 29px 40px;
+      padding: 27px 32px;
     }
   }
 
   &__top {
-    padding: 27px 0;
+    padding: 40px 0 27px;
     display: flex;
     flex-direction: column;
 
@@ -57,7 +59,7 @@
       border-right: 1px solid var(--globalBr);
     }
     @include mq('1024') {
-      padding: 52px 40px;
+      padding: 52px 30px;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -94,7 +96,7 @@
     &:last-child {
       @include mq('1024') {
         width: auto;
-        min-width: 85px;
+        min-width: 107px;
       }
     }
   }
@@ -104,11 +106,17 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  @include mq('1024') {
+    gap: 8px;
+  }
   &__link {
     transition: color 0.2s ease-in-out;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 8px;
+    @include mq('768') {
+      gap: 6px;
+    }
     &:hover {
       color: var(--footerlinkHover)
     }

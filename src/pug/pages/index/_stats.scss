@@ -16,7 +16,7 @@
 
 
   &__item {
-    padding: 24px;
+    padding: 23px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -52,6 +52,7 @@
     font-weight: 500;
     @include line-height(40, 28);
     color: var(--statsValue);
+    letter-spacing: -1px;
     @include mq('1024') {
       font-size: 40px;
     }

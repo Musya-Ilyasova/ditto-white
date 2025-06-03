@@ -13,19 +13,16 @@
   @include mq('768') {
     flex-direction: row;
   }
-
-
   &__item {
-    padding: 24px;
+    padding: 34px 24px 35px;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    text-align: center;
+    text-align: left;
     &:not(:last-child) {
       border-bottom: 1px solid var(--globalBr);
     }
     @include mq('768') {
-      text-align: left;
       padding: 32px 24px;
       flex: 1;
       &:not(:last-child) {
@@ -34,19 +31,20 @@
       }
     }
     @include mq('1024') {
-      padding: 48px 32px;
+      padding: 48px 32px 45px;
+      gap: 8px;
     }
   }
   &__title {
     font-size: 20px;
     @include line-height(34, 20);
     font-weight: 500;
-    letter-spacing: -0.2px;
+    letter-spacing: -1px;
     color: var(--title);
     @include mq('1024') {
       font-size: 28px;
       @include line-height(40, 28);
-      letter-spacing: -0.28px;
+      letter-spacing: -1px;
     }
   }
   &__text {

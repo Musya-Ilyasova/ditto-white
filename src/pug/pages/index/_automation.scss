@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   &__content {
     width: 100%;
-    padding: 90px 16px;
+    padding: 96px 16px 95px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -21,7 +21,9 @@
   &__title {
     max-width: 623px;
     margin: 0 auto;
-    line-height: 48px;
+    line-height: 40px;
+    font-size: 28px;
+    letter-spacing: -1px;
     @include mq('768') {
       line-height: 40px;
       font-size: 40px;
@@ -42,7 +44,7 @@
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
-    @include mq('375') {
+    @include mq('768') {
       flex-direction: row;
       gap: 16px;
     }
@@ -140,20 +142,28 @@
     font-weight: 500;
     letter-spacing: -1px;
   }
+  &__text {
+    @include mq('768') {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+
+  }
   &__subtitle {
     color: var(--textColor);
     font-size: 14px;
-    line-height: 56px;
-    text-transform: uppercase;
+    line-height: 54px;
     font-weight: 500;
     border: 1px solid var(--globalBr);
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 7px;
     transition: color 0.2s ease-in-out;
     cursor: pointer;
+    text-transform: uppercase;
     &:hover {
       color: var(--title);
       .icon {
@@ -182,6 +192,7 @@
       border: none;
       pointer-events: none;
       justify-content: flex-start;
+      text-transform: none;
       .icon {
         display: none;
       }
@@ -197,7 +208,9 @@
       opacity: 1;
       max-height: 700px;
       padding-top: 28px;
+      margin-bottom: 18px;
       @include mq('768') {
+        margin-bottom: 0;
         max-height: none;
         padding-top: 0;
       }

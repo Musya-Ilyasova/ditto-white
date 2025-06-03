@@ -1,5 +1,5 @@
 .header {
-  padding: 25px 0;
+  padding: 20px 0 26px;
   border-bottom: 1px solid var(--globalBr);
   position: fixed;
   top: 0;
@@ -8,17 +8,25 @@
   width: 100%;
   background: var(--bgColor);
   z-index: 1000;
+  @include mq('768') {
+    padding: 25px 0;
+  }
   @include mq('980') {
     padding: 18px 0 24px;
   }
   .logo {
     display: block;
-    width: 89px;
-    height: 25px;
+    width: 63px;
+    height: 18px;
     font-size: 0;
     position: relative;
     z-index: 100;
     margin-top: 7px;
+    @include mq('768') {
+      width: 89px;
+      height: 25px;
+
+    }
 
     .icon {
       width: 100%;
@@ -71,15 +79,16 @@
   height: 24px;
   transform: rotate(0deg);
   background: transparent;
-  padding: 0;
+  padding: 7px 4px;
   z-index: 100;
+
   @include mq('980') {
     display: none;
   }
 
   span {
     background: var(--title);
-    width: 12px;
+    width: 9px;
     height: 1.5px;
     position: absolute;
     cursor: pointer;
@@ -88,32 +97,32 @@
     transform: rotate(0deg);
 
     &:nth-child(1), &:nth-child(2) {
-      top: 0px;
+      top: 10px;
     }
 
     &:nth-child(3), &:nth-child(4) {
-      top: 11px;
+      top: 15px;
     }
 
     &:nth-child(5), &:nth-child(6) {
-      top: 22px;
+      top: 20px;
     }
     &:nth-child(even) {
       left: 50%;
     }
     &:nth-child(odd) {
-      left: 0px;
+      left: 4px;
     }
   }
   &.open {
     span {
       &:nth-child(1) {
-        left: 2px;
-        top: 8px;
+        left: 6px;
+        top: 11px;
       }
       &:nth-child(2) {
         left: calc(50% - 2px);
-        top: 8px;
+        top: 11px;
       }
       &:nth-child(3) {
         left: -50%;
@@ -124,11 +133,11 @@
         opacity: 0;
       }
       &:nth-child(5) {
-        left: 2px;
+        left: 5px;
         top: 16px;
       }
       &:nth-child(6) {
-        left: calc(50% - 2px);
+        left: calc(50% - 1px);
         top: 16px;
       }
       &:nth-child(1), &:nth-child(6) {
@@ -138,7 +147,7 @@
         transform: rotate(-45deg);
       }
       &:nth-child(3), &:nth-child(4) {
-        top: 11px;
+        top: 15px;
       }
     }
   }

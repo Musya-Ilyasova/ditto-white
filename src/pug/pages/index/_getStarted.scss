@@ -1,6 +1,6 @@
 .getStarted {
   width: 100%;
-  padding: 90px 16px;
+  padding: 93px 20px;
   background-image: repeating-linear-gradient(
     -45deg,
     var(--blockLines),
@@ -14,13 +14,18 @@
   gap: 28px;
   text-align: center;
   @include mq('768') {
-    padding: 59px;
-    gap: 40px;
+    padding: 61px 59px 55px;
+    gap: 39px;
 
   }
   &__title {
-    max-width: 623px;
+    max-width: 425px;
+    letter-spacing: -0.8px;
     margin: 0 auto;
+  }
+  .btn {
+    width: 100%;
+    max-width: 259px;
   }
 
 }
