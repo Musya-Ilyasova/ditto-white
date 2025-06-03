@@ -41,7 +41,6 @@
 
   &:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
   }
 
   &:active {
@@ -66,19 +65,11 @@
   }
 
   &:hover {
-    background: var(--primaryBtnColor);
-    color: var(--primaryBtnBg);
-    box-shadow: 0 0 9px 0px var(--primaryBtnBg);
-    border: 1px solid var(--primaryBtnBg);
-
-
-    .icon {
-      stroke: var(--primaryBtnBg);
-    }
+    background: var(--primaryBtnBgHover);
   }
 
   &:active {
-    box-shadow: 0 0 9px 0px var(--primaryBtnColor);
+    background: var(--primaryBtnBgActive);
   }
 }
 
@@ -87,15 +78,106 @@
   color: var(--secondaryBtnColor);
   border: 1px solid var(--secondaryBtnBr);
   position: relative;
-  transition: all 0.3s ease;
+  opacity: 1;
+  transition: opacity 0.3s ease;
 
   &:hover {
-    background: var(--secondaryBtnColor);
-    color: var(--secondaryBtnBg);
-    box-shadow: 0 0 9px 0px var(--secondaryBtnColor);
+    opacity: 0.8;
   }
 
   &:active {
-    box-shadow: 0 0 9px 0px var(--secondaryBtnColor);
+    opacity: 0.8;
   }
 }
+
+.btn_gradient {
+  // border: 1px solid var(--gradientBtnBr);
+  position: relative;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  overflow: visible;
+  padding: 0;
+  @include mq('768') {
+    padding: 0;
+  }
+  .gradient {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    bottom: 1px;
+    left: 1px;
+    background: inherit;
+    border-radius: 6px;
+    background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+    background-size: 400% 100%;
+    border: none;
+    padding: 0;
+    margin: 0;
+    animation: gradient-button 8s ease-in-out infinite;
+    &::after {
+      content: "";
+      position: absolute;
+      background-size: inherit;
+      background-image: inherit;
+      animation: inherit;
+      left: 0;
+      right: 0;
+      top: 2px;
+      height: 100%;
+      filter: blur(.5rem);
+    }
+  }
+  .text {
+    background: var(--gradientBtnBg);
+    color: var(--gradientBtnColor);
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    padding: 0 12px;
+    position: relative;
+    z-index: 1;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
+
+@keyframes gradient-button {
+  50% {
+    background-position: 140% 50%;
+    transform: skew(-2deg);
+  }
+
+}
+
+
+
+// .collaboration-button_highlightBackground__kh_oj {
+//     position: absolute;
+//     top: 1px;
+//     right: 1px;
+//     bottom: 1px;
+//     left: 1px;
+//     background: inherit;
+//     border-radius: 6px;
+//     /* background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0); */
+//     background-size: 400% 100%;
+//     border: none;
+//     padding: 0;
+//     margin: 0;
+//     animation: collaboration-button_backgroundAnim__BC9W2 8s ease-in-out infinite;
+// }
+
+    // background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
+//
+//     50% {
+//     background-position: 140% 50%;
+//     transform: skew(-2deg);
+// }

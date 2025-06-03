@@ -4,13 +4,13 @@
   &__content {
     width: 100%;
     padding: 90px 16px 87px;
-    background-image: repeating-linear-gradient(
-      -45deg,
-      var(--blockLines),
-      var(--blockLines) 0.5px,
-      transparent 1px,
-      transparent 8px
-    );
+    // background-image: repeating-linear-gradient(
+    //   -45deg,
+    //   var(--blockLines),
+    //   var(--blockLines) 0.5px,
+    //   transparent 1px,
+    //   transparent 8px
+    // );
     display: flex;
     flex-direction: column;
     align-items: center;

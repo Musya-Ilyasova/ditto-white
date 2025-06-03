@@ -1,13 +1,13 @@
 
 
 .stats-list {
-  background-image: repeating-linear-gradient(
-    -45deg,
-    var(--blockLines),
-    var(--blockLines) 0.5px,
-    transparent 1px,
-    transparent 8px
-  );
+  // background-image: repeating-linear-gradient(
+  //   -45deg,
+  //   var(--blockLines),
+  //   var(--blockLines) 0.5px,
+  //   transparent 1px,
+  //   transparent 8px
+  // );
   display: flex;
   flex-direction: column;
   @include mq('768') {

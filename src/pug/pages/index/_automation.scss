@@ -109,13 +109,13 @@
     height: auto;
   }
   &__left {
-    background-image: repeating-linear-gradient(
-      -45deg,
-      var(--blockLines),
-      var(--blockLines) 0.5px,
-      transparent 1px,
-      transparent 8px
-    );
+    // background-image: repeating-linear-gradient(
+    //   -45deg,
+    //   var(--blockLines),
+    //   var(--blockLines) 0.5px,
+    //   transparent 1px,
+    //   transparent 8px
+    // );
     border-right: 1px solid var(--globalBr);
     display: none;
     @include mq ('1024') {

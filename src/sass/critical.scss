@@ -19,14 +19,19 @@
   --svgSecurityIconsBr: #CED4DA;
   --svgSecurityIconsGr1: #EAEDF1;
   --svgSecurityIconsGr2: #F8F9FA;
+  --svgHeroCircleBg: #F1FFF5;
 
 
   --primaryBtnBg: #0A0B0C;
   --primaryBtnColor: #FFFFFF;
+  --primaryBtnBr: transparent;
+  --primaryBtnBgHover: #0F1113;
+  --primaryBtnBgActive: #22262A;
   --secondaryBtnBg: #FFFFFF;
-  --secondaryBtnBr: #DEE2E6;
+  --secondaryBtnBr: #F8F9FA;
   --secondaryBtnColor: #212529;
-  --btnHoverWave: rgba(0, 0, 0, 0.04);
+  --gradientBtnBg: #FFFFFF;
+  --gradientBtnColor: #212529;
   --blockLines: #E9ECEF;
   --statsValue: #0A0B0C;
   --ctaItemBg: #FFFFFF;
@@ -80,12 +85,18 @@ body.dark {
   --svgSecurityIconsBr: #495057;
   --svgSecurityIconsGr1: #0A0B0C;
   --svgSecurityIconsGr2: #2A2E31;
+  --svgHeroCircleBg: rgba(31, 53, 38, 1);
 
   --primaryBtnBg: #FFFFFF;
   --primaryBtnColor: #000000;
+  --primaryBtnBr: #DEE2E6;
+  --primaryBtnBgHover: #F8F9FA;
+  --primaryBtnBgActive: #E9ECEF;
   --secondaryBtnBg: #0F1113;
   --secondaryBtnBr: #22262A;
   --secondaryBtnColor: #FFFFFF;
+  --gradientBtnBg: #0F1113;
+  --gradientBtnColor: #FFFFFF;
   --btnHoverWave: rgba(255, 255, 255, 0.06);
   --blockLines: #0F1113;
   --statsValue: #FFFFFF;
@@ -112,7 +123,8 @@ body.dark {
   --blog3Img: url(../img/blog/blogImgDark3.png);
   --blog4Img: url(../img/blog/blogImgDark4.png);
   --blog5Img: url(../img/blog/blogImgDark5.png);
-  --blog6Img: url(../img/blog/blogImgDark6.png);--blogBgHover: #0F1113;
+  --blog6Img: url(../img/blog/blogImgDark6.png);
+  --blogBgHover: #0F1113;
   --footerLogo: #6C757D;
   --footerlinkHover: #a0a9b2;
 }

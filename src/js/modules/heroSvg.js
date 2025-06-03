@@ -40,7 +40,7 @@ const heroSvg = () => {
     outer.setAttribute('stroke', '#7AE99D');
     outer.setAttribute('r', enlarge ? '22' : '13.5');
     if (enlarge) {
-      outer.setAttribute('fill', 'rgba(31, 53, 38, 1)');
+      outer.setAttribute('fill', 'var(--svgHeroCircleBg)');
     } else {
       outer.setAttribute('fill', 'var(--svgIconsBg)');
     }
@@ -111,7 +111,7 @@ const heroSvg = () => {
             activateCircle(group, true); // enlarge
           }
         });
-      }, 400); // задержка для эффекта "позже"
+      }, 800); // задержка для эффекта "позже"
     }, 2000);
 
     // Step 4: Reset everything
@@ -146,7 +146,7 @@ const heroSvg = () => {
   function startLoop() {
     const loop = () => {
       animateFullSet(() => {
-        const delay = Math.random() * 1600 + 3000;
+        const delay = Math.random() * 1600 + 1000;
         setTimeout(loop, delay);
       });
     };
