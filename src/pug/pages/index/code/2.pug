@@ -1,29 +1,22 @@
-.code-block__wrapper
-  .code-block__top
-    span.code-block__title
-      +icon('ts')
-      | javascript
-    button.code-block__copy-btn(type="button")
-      +icon('copy')
-  .code-block__inner
-    .code-block__line-numbers
-      | 1
-      br
-      | 2
-      br
-      | 3
-      br
-      | 4
-      br
-      | 5
-      br
-      | 6
-    pre.code-block__pre
-      code.code-block__code.language-typescript
-        | workflowBuilder
-        |   .onScheduleTrigger({ cron: "0 12 * * *" })
-        |   .withCount(30)
-        |   .withExpiration(1746895996969)
-        |   .setGasLimitChecker({ max_fee: 50,
-        | max_priority_fee: 2 });
+.code-template(data-code-id="tab2")
+  .code-block__line-numbers
+    | 1
+    br
+    | 2
+    br
+    | 3
+    br
+    | 4
+    br
+    | 5
+    br
+    | 6
+  pre.code-block__pre
+    code.code-block__code.language-typescript
+      | workflowBuilder
+      |   .onScheduleTrigger({ cron: "0 12 * * *" })
+      |   .withCount(30)
+      |   .withExpiration(1746895996969)
+      |   .setGasLimitChecker({ max_fee: 50,
+      | max_priority_fee: 2 });
 

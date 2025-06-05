@@ -1,5 +1,5 @@
 section.automation
-  .automation__content.wow.bounceInUp(data-wow-delay="0.2s")
+  .automation__content
     h2.automation__title Ship automation. Not&nbsp;scripts.
     p.automation__text Build powerful, omnichain workflows without writing smart contracts. Ditto provides execution infrastructure designed for developers — fast, programmable, and fully abstracted.
     .automation__btns
@@ -8,7 +8,7 @@ section.automation
         +icon('arrow')
       a.btn.btn_secondary(href=process.env.LINK_RESTAKE target="_blank")
         | Become a Restaker
-  .automation__wrap.wow.bounceInUp(data-wow-delay="0.2s")
+  .automation__wrap
     .automation__tabs
       ul.automation__tab-list
         li.automation__tab-item.active(data-tab="tab1")  01 / Define an Intent
@@ -16,6 +16,24 @@ section.automation
         li.automation__tab-item(data-tab="tab3") 03 / Deploy to Network
         li.automation__tab-item(data-tab="tab4") 04 / Ditto Executes
     .automation__tab-content
+      // Десктопная двухколоночная структура
+      .tab-panel-desktop
+        .tab-panel__left
+          h3.tab-panel__title From intent to execution in 1–2–3
+          .code-block__wrapper
+            .code-block__top
+              span.code-block__title
+                +icon('ts')
+                | typescript
+              button.code-block__copy-btn(type="button")
+                +icon('copy')
+            .code-block__inner(data-main)
+
+        .tab-panel__right-desktop
+          h3.tab-panel__subtitle(data-desktop-subtitle)
+          p.tab-panel__text(data-desktop-text)
+          .tab-panel__img(data-desktop-img)
+
       .tab-panel.active(data-tab="tab1")
         .tab-panel__left
           h3.tab-panel__title From intent to execution in 1–2–3
@@ -49,7 +67,7 @@ section.automation
       .tab-panel(data-tab="tab4")
         .tab-panel__left
           h3.tab-panel__title From intent to execution in 1–2–3
-          include ./code/3
+          include ./code/4
         .tab-panel__right
           h3.tab-panel__subtitle 04 / Ditto Executes
             +icon('chevron')

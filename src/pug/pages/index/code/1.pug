@@ -1,67 +1,60 @@
-.code-block__wrapper
-  .code-block__top
-    span.code-block__title
-      +icon('ts')
-      | typescript
-    button.code-block__copy-btn(type="button")
-      +icon('copy')
-  .code-block__inner
-    .code-block__line-numbers
-      | 1
-      br
-      | 2
-      br
-      | 3
-      br
-      | 4
-      br
-      | 5
-      br
-      | 6
-      br
-      | 7
-      br
-      | 8
-      br
-      | 9
-      br
-      | 10
-      br
-      | 11
-      br
-      | 12
-      br
-      | 13
-      br
-      | 14
-      br
-      | 15
-      br
-      | 16
-      br
-      | 17
-      br
-      | 18
-      br
-      | 19
-    pre.code-block__pre
-      code.code-block__code.language-typescript
-        | const workflowBuilder = createWorkflowBuilder();
-        |
-        | workflowBuilder.withName("TWAP").addJob((job) => {
-        |   job.withBaseParams({ id: "buy-eth-daily",
-        | chainId: 1 }).addStep((step) => {
-        |     step.withName("USDC to ETH Swap").withAction({
-        |       uses: "ditto/approve-and-swap@v2",
-        |       with: {
-        |         token_in:
-        | "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
-        |         token_out:
-        | "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
-        |         amount_in: "100000000",
-        |         spender:
-        | "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
-        |       },
-        |     });
-        |   });
-        | });
+.code-template(data-code-id="tab1")
+  .code-block__line-numbers
+    | 1
+    br
+    | 2
+    br
+    | 3
+    br
+    | 4
+    br
+    | 5
+    br
+    | 6
+    br
+    | 7
+    br
+    | 8
+    br
+    | 9
+    br
+    | 10
+    br
+    | 11
+    br
+    | 12
+    br
+    | 13
+    br
+    | 14
+    br
+    | 15
+    br
+    | 16
+    br
+    | 17
+    br
+    | 18
+    br
+    | 19
+  pre.code-block__pre
+    code.code-block__code.language-typescript
+      | const workflowBuilder = createWorkflowBuilder();
+      |
+      | workflowBuilder.withName("TWAP").addJob((job) => {
+      |   job.withBaseParams({ id: "buy-eth-daily",
+      | chainId: 1 }).addStep((step) => {
+      |     step.withName("USDC to ETH Swap").withAction({
+      |       uses: "ditto/approve-and-swap@v2",
+      |       with: {
+      |         token_in:
+      | "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+      |         token_out:
+      | "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2",
+      |         amount_in: "100000000",
+      |         spender:
+      | "0x68b3465833fb72A70ecDF485E0e4C7bD8665Fc45",
+      |       },
+      |     });
+      |   });
+      | });

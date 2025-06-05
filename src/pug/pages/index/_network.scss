@@ -30,13 +30,6 @@
   &__content {
     @include mq('768') {
       padding: 24px;
-      // background-image: repeating-linear-gradient(
-      //   -45deg,
-      //   var(--blockLines),
-      //   var(--blockLines) 0.5px,
-      //   transparent 1px,
-      //   transparent 8px
-      // );
       border-right: 1px solid var(--globalBr);
       display: flex;
       flex-direction: column;
@@ -72,7 +65,7 @@
     .active {
       stroke: $main;
       & + text {
-        fill: $main;
+        fill: $darkmain;
       }
     }
   }
@@ -115,7 +108,9 @@
       }
     }
     &:not(:last-child) {
-      border-bottom: 1px solid var(--globalBr);
+      @include mq('768') {
+        border-bottom: 1px solid var(--globalBr);
+      }
     }
   }
   &__title {

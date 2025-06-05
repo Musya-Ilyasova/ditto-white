@@ -103,19 +103,13 @@
   @include mq('768') {
     height: 0;
     opacity: 0;
+    display: none; // скрываем на десктопе
   }
   &.active {
     opacity: 1;
     height: auto;
   }
   &__left {
-    // background-image: repeating-linear-gradient(
-    //   -45deg,
-    //   var(--blockLines),
-    //   var(--blockLines) 0.5px,
-    //   transparent 1px,
-    //   transparent 8px
-    // );
     border-right: 1px solid var(--globalBr);
     display: none;
     @include mq ('1024') {
@@ -126,11 +120,13 @@
     flex: 1;
     padding: 0 24px;
     margin-bottom: 12px;
-    @include mq ('768') {
+
+    @include mq('768') {
       padding: 24px;
       margin-bottom: 0;
     }
-    @include mq ('1024') {
+
+    @include mq('1024') {
       padding: 32px 32px 79px;
     }
   }
@@ -234,29 +230,82 @@
       aspect-ratio: 491 / 498;
     }
   }
-  &:first-child .tab-panel__img{
-    background-image: var(--tabs1Img);
+}
+
+.tab-panel[data-tab="tab1"] .tab-panel__img {
+  background-image: var(--tabs1Img);
+}
+.tab-panel[data-tab="tab2"] .tab-panel__img {
+  background-image: var(--tabs2Img);
+}
+.tab-panel[data-tab="tab3"] .tab-panel__img {
+  background-image: var(--tabs3Img);
+}
+.tab-panel[data-tab="tab4"] .tab-panel__img {
+  background-image: var(--tabs4Img);
+}
+
+.tab-panel-desktop {
+  display: none;
+
+  @media (min-width: 768px) {
+    display: flex;
+    width: 100%;
   }
-  &:nth-child(2) .tab-panel__img{
-    background-image: var(--tabs2Img);
+
+  .tab-panel__left {
+    flex: 1;
+    padding: 32px 32px 79px;
   }
-  &:nth-child(3) .tab-panel__img{
-    background-image: var(--tabs3Img);
-  }
-  &:nth-child(4) .tab-panel__img{
-    background-image: var(--tabs4Img);
+
+  .tab-panel__right-desktop {
+    flex: 1;
+    padding: 32px 32px 79px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .tab-panel__subtitle {
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--title);
+    }
+
+    .tab-panel__text {
+      font-size: 16px;
+      line-height: 28px;
+      color: var(--textColor);
+    }
+
+    .tab-panel__img {
+      aspect-ratio: 295 / 250;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      max-height: 500px;
+
+      @media (min-width: 1024px) {
+        aspect-ratio: 491 / 498;
+      }
+    }
   }
 }
 
+
 .code-block {
   &__wrapper {
-    margin-top: 60px;
+    margin-top: 36px;
     max-width: 100%;
     position: relative;
     background: var(--bgColor);
     border-radius: 12px;
     border: 1px solid var(--globalBr);
     overflow: hidden;
+
+
+    @media (max-width: 767px) {
+      display: none;
+    }
   }
 
   &__top {
@@ -271,6 +320,7 @@
     align-items: center;
     gap: 10px;
     font-size: 14px;
+
     .icon {
       width: 14px;
       height: 14px;
@@ -280,6 +330,11 @@
   &__inner {
     display: flex;
     padding: 16px;
+    gap: 16px;
+
+    @media (max-width: 767px) {
+      padding: 0; // будет в таб-панели
+    }
   }
 
   &__line-numbers {
@@ -332,21 +387,25 @@
 
     &:hover {
       background: var(--codeTopBg);
+
       .icon-copy {
         stroke: var(--tabsTitleActiveColor);
       }
     }
+
     &.copied {
       background: var(--primaryBtnBg);
+
       .icon-copy {
         stroke: var(--primaryBtnColor);
       }
     }
   }
+}
 
-  &__copy-text {
-    display: inline-block;
-  }
+
+.code-template {
+  display: none;
 }
 
 // Стили для Prism.js
