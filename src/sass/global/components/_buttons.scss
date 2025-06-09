@@ -39,12 +39,7 @@
     box-shadow: none;
   }
 
-  &:hover {
-    transform: translateY(-1px);
-  }
-
   &:active {
-    transform: translateY(0);
     box-shadow: none;
   }
 }
@@ -79,10 +74,11 @@
   border: 1px solid var(--secondaryBtnBr);
   position: relative;
   opacity: 1;
-  transition: opacity 0.3s ease;
+  transition: all 0.3s ease;
 
   &:hover {
     opacity: 0.8;
+  background: var(--secondaryBtnBgHover);
   }
 
   &:active {
@@ -91,7 +87,6 @@
 }
 
 .btn_gradient {
-  // border: 1px solid var(--gradientBtnBr);
   position: relative;
   opacity: 1;
   transition: opacity 0.3s ease;
@@ -149,35 +144,23 @@
   }
 }
 
+.btn_gradient_second {
+  transition: opacity 0.3s ease;
+  .text {
+    background: var(--gradientBtnSecondBg);
+    color: var(--gradientBtnSecondColor);
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.8;
+  }
+}
+
 @keyframes gradient-button {
   50% {
     background-position: 140% 50%;
     transform: skew(-2deg);
   }
-
 }
-
-
-
-// .collaboration-button_highlightBackground__kh_oj {
-//     position: absolute;
-//     top: 1px;
-//     right: 1px;
-//     bottom: 1px;
-//     left: 1px;
-//     background: inherit;
-//     border-radius: 6px;
-//     /* background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0); */
-//     background-size: 400% 100%;
-//     border: none;
-//     padding: 0;
-//     margin: 0;
-//     animation: collaboration-button_backgroundAnim__BC9W2 8s ease-in-out infinite;
-// }
-
-    // background: linear-gradient(-90deg, #007cf0, #00dfd8, #ff0080, #007cf0);
-//
-//     50% {
-//     background-position: 140% 50%;
-//     transform: skew(-2deg);
-// }

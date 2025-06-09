@@ -81,9 +81,7 @@
 .network-list {
   display: flex;
   flex-direction: column;
-  gap: 40px;
   @include mq('768') {
-    gap: 0;
     width: 50%;
   }
   &__item {
@@ -92,9 +90,11 @@
     gap: 12px;
     transition: background 0.2s ease-in-out;
     cursor: pointer;
+    padding: 20px 24px;
+    border-radius: 8px;
     @include mq('768') {
+      border-radius: 0px;
       gap: 8px;
-      padding: 24px;
     }
     @include mq('1024') {
       gap: 20px;

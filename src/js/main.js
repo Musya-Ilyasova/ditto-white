@@ -3,9 +3,9 @@ import theme from "./modules/theme";
 import initTabs from "./modules/tabs"
 import addCopy from "./modules/copy";
 import { mobMenu, subMenu } from "./modules/menu";
-import wow from "./modules/animated";
 import heroSvg from "./modules/heroSvg";
 import layersSvg from "./modules/layersSvg";
+import scrollAnimations from "./modules/scrollAnimations";
 
 if(document.querySelector('main').classList.contains('index')) {
   loadCss();
@@ -22,11 +22,11 @@ document.addEventListener("DOMContentLoaded",  () => {
   initTabs();
   addCopy();
   mobMenu();
+  scrollAnimations();
   if (window.innerWidth <= 979) {
     subMenu();
   };
   heroSvg();
   layersSvg();
-  wow.init();
 });
 

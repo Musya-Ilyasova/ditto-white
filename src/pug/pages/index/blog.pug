@@ -2,11 +2,11 @@ section.blog
   .blog__content
     h2.blog__title Learn more about how Ditto Network can serve you.
     .blog__btns
+      a.btn.btn_secondary(href=process.env.LINK_DOCS target="_blank")
+        | Read the Docs
       a.btn.btn_primary(href=process.env.LINK_BLOG target="_blank")
         | Read the blog
         +icon('arrow')
-      a.btn.btn_secondary(href=process.env.LINK_DOCS target="_blank")
-        | Read the Docs
   ul.blog-list
     li.blog-list__item
       a.blog-list__link(href=process.env.LINK_BLOG target="_blank")

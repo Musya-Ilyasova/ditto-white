@@ -25,7 +25,7 @@
     transition: stroke-dashoffset 0.4s ease;
     pointer-events: none;
   }
-  &:hover {
+  &:hover, &.is-visible {
     .outer {
       transform: rotate(45deg);
       image {
@@ -95,7 +95,7 @@
   }
 
   // Ховер → проявление (с задержками на круг)
-  &:hover {
+  &:hover, &.is-visible {
     .line-fill_top {
       stroke-dashoffset: 0;
       transition-delay: 0.41s;
@@ -149,7 +149,7 @@
     stroke: url(#gradientRight);
   }
 
-  &:hover {
+  &:hover, &.is-visible {
     .progressBr {
       stroke: $main;
       stroke-dashoffset: 0;
@@ -175,7 +175,7 @@
     transition: stroke-dashoffset 0.6s ease;
   }
 
-  &:hover {
+  &:hover, &.is-visible {
     .module-circle {
       stroke-dashoffset: 0;
       transition-delay: 0s;
@@ -215,7 +215,7 @@
   .line3 { stroke: url(#paint2_linear_33753_32953) }
   .line4 { stroke: url(#paint3_linear_33753_32953) }
 
-  &:hover {
+  &:hover, &.is-visible {
     .smart-ring {
       stroke-dashoffset: 0;
     }
@@ -267,7 +267,7 @@ body.dark {
     fill: transparent;
     transition: fill 0.4s ease-in-out;
   }
-  &:hover {
+  &:hover, &.is-visible {
     .eigen{
       fill: #4A19DE;
     }
@@ -288,7 +288,7 @@ body.dark {
     filter: grayscale(142%);
     transition: filter 0.2s ease;
   }
-  &:hover {
+  &:hover, &.is-visible {
     image {
       filter: grayscale(0);
     }

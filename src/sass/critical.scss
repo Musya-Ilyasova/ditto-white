@@ -9,6 +9,8 @@
   --themeActiveIconStroke: #171717;
   --headerSubmenuBg: #FFFFFF;
   --headerSubmenuTitle: #ADB5BD;
+  --footerLogo: #6C757D;
+  --footerlinkHover: #0A0B0C;
   --svglines: #DEE2E6;
   --svgditto: #0A0B0C;
   --svgIconsBg: #FFFFFF;
@@ -25,13 +27,16 @@
   --primaryBtnBg: #0A0B0C;
   --primaryBtnColor: #FFFFFF;
   --primaryBtnBr: transparent;
-  --primaryBtnBgHover: #0F1113;
+  --primaryBtnBgHover: #495057;
   --primaryBtnBgActive: #22262A;
   --secondaryBtnBg: #FFFFFF;
-  --secondaryBtnBr: #F8F9FA;
+  --secondaryBtnBgHover: #F8F9FA;
+  --secondaryBtnBr: #DEE2E6;
   --secondaryBtnColor: #212529;
   --gradientBtnBg: #FFFFFF;
   --gradientBtnColor: #212529;
+  --gradientBtnSecondBg: #0A0B0C;
+  --gradientBtnSecondColor: #FFFFFF;
   --blockLines: #E9ECEF;
   --statsValue: #0A0B0C;
   --ctaItemBg: #FFFFFF;
@@ -60,8 +65,6 @@
   --blog5Img: url(../img/blog/blogImg5.png);
   --blog6Img: url(../img/blog/blogImg6.png);
   --blogBgHover: #FFFFFF;
-  --footerLogo: #6C757D;
-  --footerlinkHover: #505456;
 
 }
 
@@ -76,6 +79,8 @@ body.dark {
   --themeActiveIconStroke: #FFFFFF;
   --headerSubmenuBg: #0F1113;
   --headerSubmenuTitle: #495057;
+  --footerLogo: #6C757D;
+  --footerlinkHover: #FFFFFF;
   --svglines: #22262A;
   --svgditto: #FFFFFF;
   --svgIconsBg: #0F1113;
@@ -91,13 +96,16 @@ body.dark {
   --primaryBtnBg: #FFFFFF;
   --primaryBtnColor: #000000;
   --primaryBtnBr: #DEE2E6;
-  --primaryBtnBgHover: #F8F9FA;
-  --primaryBtnBgActive: #E9ECEF;
+  --primaryBtnBgHover: #DEE2E6;
+  --primaryBtnBgActive: #F8F9FA;
   --secondaryBtnBg: #0F1113;
+  --secondaryBtnBgHover: #0F1113;
   --secondaryBtnBr: #22262A;
   --secondaryBtnColor: #FFFFFF;
   --gradientBtnBg: #0F1113;
   --gradientBtnColor: #FFFFFF;
+  --gradientBtnSecondBg: #FFFFFF;
+  --gradientBtnSecondColor: #000000;
   --btnHoverWave: rgba(255, 255, 255, 0.06);
   --blockLines: #0F1113;
   --statsValue: #FFFFFF;
@@ -127,8 +135,6 @@ body.dark {
   --blog5Img: url(../img/blog/blogImgDark5.png);
   --blog6Img: url(../img/blog/blogImgDark6.png);
   --blogBgHover: #0F1113;
-  --footerLogo: #6C757D;
-  --footerlinkHover: #a0a9b2;
 }
 
 @import "global/helpers/helpers-critical";

@@ -77,8 +77,14 @@
   .step1, .step2 {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    opacity: 0;
     transition: none;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  @supports (-webkit-hyphens: none) and (not (-ms-ime-align: auto)) {
+    .step1, .step2 {
+      transition: opacity 0.3s ease-in-out;
+    }
   }
 
   circle {
@@ -87,37 +93,31 @@
   }
 
   .step1.active, .step2.active {
-    animation: lineEnter 2s ease-in-out forwards; // Было 1s
+    animation: lineEnter 2s ease-in-out forwards;
+    opacity: 1;
   }
 
   .step1.exit, .step2.exit {
-    animation: lineExit 2s ease-in-out forwards; // Было 1s
-  }
-
-  @keyframes lineEnter {
-    0% {
-      stroke-dashoffset: 1000;
-      opacity: 0;
-    }
-    10% {
-      opacity: 1;
-    }
-    100% {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-  }
-
-  @keyframes lineExit {
-    0% {
-      stroke-dashoffset: 0;
-      opacity: 1;
-    }
-    100% {
-      stroke-dashoffset: -1000;
-      opacity: 0;
-    }
+    animation: lineExit 2s ease-in-out forwards;
+    opacity: 0
   }
 }
 
 
+@keyframes lineEnter {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes lineExit {
+  0% {
+    stroke-dashoffset: 0;
+  }
+  100% {
+    stroke-dashoffset: -999;
+  }
+}
