@@ -68,6 +68,11 @@
       height: 24px;
       fill: var(--featuresIcon);
     }
+    // .icon-puzzlePiece {
+    //   stroke: var(--featuresIcon);
+    //   stroke-width: 2px;
+    //   fill: none;
+    // }
     @include mq('1024') {
       margin-bottom: 40px;
     }

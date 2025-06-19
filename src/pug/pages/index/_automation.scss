@@ -10,10 +10,10 @@
     gap: 16px;
     text-align: center;
     border-bottom: 1px solid var(--globalBr);
-    @media (min-width: 768px) {
+    @include mq('768') {
       padding: 98px 59px;
     }
-    @media (min-width: 1024px) {
+    @include mq('1024') {
       padding: 104px 59px 97px;
       gap: 20px;
     }
@@ -97,6 +97,8 @@
   opacity: 1;
   overflow: hidden;
   transition: opacity 0.5s ease, height 0.5s ease;
+
+
   @media screen and(max-width: 767px) {
     height: auto!important;
   }
@@ -225,7 +227,7 @@
     max-height: 500px;
     margin: 0 auto;
     filter: contrast(100%);
-    @include mq ('1024') {
+    @include mq ('768') {
       margin: 0;
       aspect-ratio: 491 / 498;
     }
@@ -246,11 +248,13 @@
 }
 
 .tab-panel-desktop {
+  width: 100%;
   display: none;
 
-  @media (min-width: 768px) {
+  @include mq('768') {
     display: flex;
     width: 100%;
+
   }
 
   .tab-panel__left {
@@ -284,7 +288,7 @@
       background-size: contain;
       max-height: 500px;
 
-      @media (min-width: 1024px) {
+      @include mq('768') {
         aspect-ratio: 491 / 498;
       }
     }
@@ -301,11 +305,6 @@
     border-radius: 12px;
     border: 1px solid var(--globalBr);
     overflow: hidden;
-
-
-    @media (max-width: 767px) {
-      display: none;
-    }
   }
 
   &__top {
@@ -331,10 +330,6 @@
     display: flex;
     padding: 16px;
     gap: 16px;
-
-    @media (max-width: 767px) {
-      padding: 0; // будет в таб-панели
-    }
   }
 
   &__line-numbers {

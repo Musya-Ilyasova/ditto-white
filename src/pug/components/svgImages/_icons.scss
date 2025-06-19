@@ -288,7 +288,25 @@ body.dark {
     filter: grayscale(142%);
     transition: filter 0.2s ease;
   }
+
+
+  .progressBr {
+    stroke: var(--svglines);
+    stroke-width: 1;
+    $width: 189;
+    $height: 109;
+    $perimeter: ($width + $height) * 2;
+    stroke-dasharray: $perimeter;
+    stroke-dashoffset: $perimeter;
+    transition: stroke 0.3s ease, stroke-dashoffset 1s ease;
+  }
+
   &:hover, &.is-visible {
+    .progressBr {
+      stroke: $main;
+      stroke-dashoffset: 0;
+    }
+
     image {
       filter: grayscale(0);
     }
