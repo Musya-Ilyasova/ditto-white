@@ -5,7 +5,6 @@ const scrollAnimations = () => {
   const targets = document.querySelectorAll('.omnichain, .sign, .conditional, .module, .smart, .security, .tech');
 
   const observer = new IntersectionObserver((entries) => {
-    console.log(entries)
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('is-visible');

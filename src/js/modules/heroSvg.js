@@ -74,7 +74,6 @@ const heroSvg = () => {
   }
 
   function resetAll() {
-    console.log('Полный сброс состояния');
     animations.forEach(anim => {
       if (anim.step1) {
         removeLineClass(anim.step1, 'active');
@@ -112,11 +111,9 @@ const heroSvg = () => {
 
   async function animateFullSet(onComplete) {
     if (isAnimating) {
-      console.log('Анимация уже выполняется, пропуск');
       return;
     }
     isAnimating = true;
-    console.log('Начало анимации');
 
     resetAll();
 
@@ -178,7 +175,6 @@ const heroSvg = () => {
 
       // Финальный сброс
       resetAll();
-      console.log('Анимация завершена');
       isAnimating = false;
 
       if (typeof onComplete === 'function') onComplete();

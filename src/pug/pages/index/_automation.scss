@@ -329,7 +329,6 @@
   &__inner {
     display: flex;
     padding: 16px;
-    gap: 16px;
   }
 
   &__line-numbers {
@@ -350,6 +349,7 @@
     overflow-x: auto;
     background: transparent !important;
     flex: 1;
+    white-space: pre-wrap!important;
   }
 
   &__code {

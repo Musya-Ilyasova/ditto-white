@@ -20,6 +20,7 @@ const theme = () => {
       document.body.classList.add('light');
       lightBtn.classList.add('active');
     }
+    document.dispatchEvent(new CustomEvent('theme:change'));
   }
 
   const savedTheme = localStorage.getItem('theme') || 'auto';

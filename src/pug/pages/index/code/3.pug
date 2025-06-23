@@ -15,24 +15,15 @@
     | 7
     br
     | 8
-    br
-    | 9
-    br
-    | 10
-    br
-    | 11
   pre.code-block__pre
     code.code-block__code.language-typescript
-      | const keplerClient = createKeplerClient(https://
-      | kepler-rpc.ditto.network");
+      | const dittoWorflowBuilder = createDittoDeployerClient
+      | (https://master-rpc.ditto.network");
       |
       | const workflow = await
-      | workflowBuilder.buildAndSign();
+      | dittoWorflowBuilder.buildAndSign(workflowData);
       |
-      | const keplerClient = createKeplerClient("https://
-      | kepler-rpc.ditto.network");
-      | const result = await
-      | keplerClient.signAndBroadcast({ msg: workflow });
+      | const deployment = await workflow;
       | });
 
 

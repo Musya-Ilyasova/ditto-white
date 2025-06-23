@@ -17,22 +17,16 @@
     | 8
     br
     | 9
-    br
-    | 10
-    br
-    | 11
   pre.code-block__pre
     code.code-block__code.language-typescript
-      | const keplerClient = createKeplerClient(https://
-      | kepler-rpc.ditto.network");
+      | import { DittoClient } from "@ditto/sdk";
       |
-      | const workflow = await
-      | workflowBuilder.buildAndSign();
-      |
-      | const keplerClient = createKeplerClient("https://
-      | kepler-rpc.ditto.network");
-      | const result = await
-      | keplerClient.signAndBroadcast({ msg: workflow });
-      | });
+      | (async () => {
+      |    const { chainIds, executions } = await new
+      | DittoClient({ apiKey: process.env.DITTO_API_KEY })
+      |    .workflows.getStatus("QmXyz123...");
+      |    console.log(`Chains ${chainIds.join(",")} · Runs
+      | ${executions}`);
+      | })();
 
 

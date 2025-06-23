@@ -4,17 +4,17 @@ const initTabs = () => {
   const mobTabs = document.querySelectorAll('.tab-panel__subtitle');
   const mobPanels = document.querySelectorAll('.tab-panel__mob');
 
-  const mainCodeBlock = document.querySelector('.tab-panel[data-tab="tab1"] .code-block__inner');
-
   const replaceTabContent = (tabId) => {
     const sourcePanel = document.querySelector(`.tab-panel[data-tab="${tabId}"]`);
     if (!sourcePanel) return;
 
     // CODE
     const mainCodeBlock = document.querySelector('.code-block__inner[data-main]');
-    const rawCode = sourcePanel.querySelector('.code-block__inner') || sourcePanel.querySelector('pre');
-    if (mainCodeBlock && rawCode) {
-      mainCodeBlock.innerHTML = rawCode.outerHTML;
+    const sourceTemplate = document.querySelector(`.code-template[data-code-id="${tabId}"]`);
+
+    if (mainCodeBlock && sourceTemplate) {
+      // Клонируем и переносим всё содержимое
+      mainCodeBlock.innerHTML = sourceTemplate.innerHTML;
     }
 
     // SUBTITLE
@@ -38,6 +38,12 @@ const initTabs = () => {
       const bg = getComputedStyle(sourceImg).backgroundImage;
       targetImg.style.backgroundImage = bg;
     }
+    document.addEventListener('theme:change', () => {
+      if (sourceImg && targetImg) {
+        const bg = getComputedStyle(sourceImg).backgroundImage;
+        targetImg.style.backgroundImage = bg;
+      }
+    });
   };
 
 
