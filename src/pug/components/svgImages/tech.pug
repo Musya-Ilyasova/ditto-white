@@ -1,73 +1,97 @@
 svg(width="491" height="306" viewBox="0 0 491 306" fill="none" xmlns="http://www.w3.org/2000/svg").svgImg
   rect(width="491" height="306" fill="var(--bgColor)")
+  path(d="M-3.72529e-06 82H103.217C117.255 82 130.646 87.9011 140.118 98.2614L161.583 121.739C171.055 132.099 184.447 138 198.484 138H245" stroke="url(#paint0_linear_411_11540)" stroke-width="2")
+  line(x1="245" y1="152" y2="152" stroke="var(--bgColor)" stroke-width="2")
+  line(x1="245" y1="152" y2="152" stroke="url(#paint1_linear_411_11540)" stroke-width="2")
+  path(d="M-1.04308e-06 225H88.432C102.002 225 114.989 219.484 124.412 209.72L151.855 181.28C161.278 171.516 174.265 166 187.835 166H245" stroke="var(--bgColor)" stroke-width="2")
+  path(d="M-1.04308e-06 225H88.432C102.002 225 114.989 219.484 124.412 209.72L151.855 181.28C161.278 171.516 174.265 166 187.835 166H245" stroke="url(#paint2_linear_411_11540)" stroke-width="2")
+  path(d="M491 82H387.211C373.209 82 359.848 87.8716 350.379 98.1866L328.689 121.813C319.219 132.128 305.858 138 291.856 138H245" stroke="url(#paint3_linear_133_3054)" stroke-width="2")
+  line(y1="-1" x2="246" y2="-1" transform="matrix(1 0 0 -1 245 151)" stroke="var(--bgColor)" stroke-width="2")
+  line(y1="-1" x2="246" y2="-1" transform="matrix(1 0 0 -1 245 151)" stroke="url(#paint4_linear_411_11541)" stroke-width="2")
+  path(d="M491 225H402.568C388.998 225 376.011 219.484 366.588 209.72L339.145 181.28C329.722 171.516 316.735 166 303.165 166H246" stroke="var(--bgColor)" stroke-width="2")
+  path(d="M491 225H402.568C388.998 225 376.011 219.484 366.588 209.72L339.145 181.28C329.722 171.516 316.735 166 303.165 166H246", stroke="url(#paint5_linear_133_3054)", stroke-width="2")
 
-  rect(x="2.5" y="34.5" width="189" height="109" rx="3.5" fill="var(--svgIconsBg)")
-  rect(x="2.5" y="34.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-  rect.progressBr(x="2.5" y="34.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
+  //greenlines
+  path.line-fill.line-fill_top(d="M245 138H291.856C305.858 138 319.219 132.128 328.689 121.813L350.379 98.1866C359.848 87.8716 373.209 82 387.211 82H491"
+  stroke="url(#paint3_linear_411_11540)" stroke-width="2"
+  stroke-dasharray="400"
+  stroke-dashoffset="400")
+  line.line-fill.line-fill_center(y1="-1" x1='0' x2="246" y2="-1" transform="matrix(1 0 0 -1 245 151)" stroke="url(#paint4_linear_411_11540)" stroke-width="2"
+  stroke-dasharray="400"
+  stroke-dashoffset="400")
+  path.line-fill.line-fill_bottom(d="M246 166H303.165C316.735 166 329.722 171.516 339.145 181.28L366.588 209.72C376.011 219.484 388.998 225 402.568 225H491"
+  stroke="url(#paint5_linear_411_11540)" stroke-width="2"
+  stroke-dasharray="400"
+  stroke-dashoffset="400")
 
-  image(x="34.5" y="66" width="48" height="48" xlink:href="/img/icons/python.svg")
+  rect(x="210" y="117" width="70" height="70" rx="35" fill="var(--bgColor)" stroke="url(#paint6_linear_133_3054)" stroke-width="2")
 
-  text(
-    x="95"
-    y="95"
-    fill="var(--textColor)"
-    font-size="18"
-    font-weight="500"
-    font-family='DM Sans'
-  ) Python
+  circle.top(
+    cx="245" cy="152"
+    r="35"
+    fill="transparent"
+    stroke="#7AE99D"
+    stroke-width="2"
+    stroke-dasharray="110 110"
+    stroke-dashoffset="110"
+    transform="rotate(-90 245 152)"
+  )
 
-  rect(x="210.5" y="34.5" width="189" height="109" rx="3.5" fill="var(--svgIconsBg)")
-
-  rect(x="210.5" y="34.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-  rect.progressBr(x="210.5" y="34.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-  image(x="231" y="66" width="48" height="48" xlink:href="/img/icons/js.svg")
-
-  text(
-    x="291"
-    y="95"
-    fill="var(--textColor)"
-    font-size="18"
-    font-weight="500"
-    font-family='DM Sans'
-  ) JavaScript
-
-
-  rect(x="2.5" y="196.5" width="189" height="109" rx="3.5" fill="var(--svgIconsBg)")
-
-  rect(x="2.5" y="196.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-  rect.progressBr(x="2.5" y="196.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-  image(x="34.5" y="227" width="48" height="48" xlink:href="/img/icons/go.svg")
-
-  text(
-    x="95"
-    y="257"
-    fill="var(--textColor)"
-    font-size="18"
-    font-weight="500"
-    font-family='DM Sans'
-  ) Golang
+  // Нижняя половина круга (начинает с правой стороны)
+  circle.bottom(
+    cx="245" cy="152"
+    r="35"
+    fill="transparent"
+    stroke="#7AE99D"
+    stroke-width="2"
+    stroke-dasharray="110 110"
+    stroke-dashoffset="0"
+    transform="rotate(90 245 152)"
+  )
 
 
 
-  rect(x="210.5" y="196.5" width="189" height="109" rx="3.5" fill="var(--svgIconsBg)")
+  g.icon-ditto(transform="translate(234, 140)")
+    svg(width="24" height="24" viewBox="0 0 26 25" fill="none" xmlns="http://www.w3.org/2000/svg")
+    path(d="M9.40618 19.321C9.39405 19.321 9.41831 19.321 9.40618 19.321L16.2074 19.3211C21.4224 19.3211 25.65 14.9814 25.65 9.62823C25.65 4.68755 22.0393 0.610252 17.3829 0.0111829C16.675 -0.0798902 16.0352 0.394945 15.7938 1.08409L14.2708 5.43282H16.2074C18.4646 5.43282 20.2945 7.31117 20.2945 9.62823C20.2945 11.9453 18.4646 13.8236 16.2074 13.8236H12.5209C11.8075 13.8236 11.1708 14.2832 10.9294 14.9723L9.40618 19.321Z", fill="var(--svgditto)")
+    path(d="M14.2708 5.43282H9.44258C4.22759 5.43282 0 9.77245 0 15.1257C0 19.2876 2.55534 22.8368 6.14335 24.2104C6.93046 24.5117 7.75971 24.0216 8.04394 23.2101L9.40618 19.321C7.16569 19.3009 5.35549 17.4303 5.35549 15.1257C5.35549 12.8086 7.18534 10.9302 9.44258 10.9302H11.1561C11.8695 10.9302 12.5061 10.4707 12.7475 9.7816L14.2708 5.43282Z", fill="var(--svgditto)")
+  defs
+    linearGradient#paint0_linear_411_11540(x1="98.0996" y1="54" x2="29.878" y2="54" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
+    linearGradient#paint1_linear_411_11540(x1="98.0996" y1="151.5" x2="29.878" y2="151.5" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
+    linearGradient#paint2_linear_411_11540(x1="98.0996" y1="254.5" x2="29.878" y2="254.5" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
+    //greenLines
+    linearGradient#paint5_linear_411_11540(x1="392.9" y1="254.5" x2="461.122" y2="254.5" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
 
-  rect(x="210.5" y="196.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-  rect.progressBr(x="210.5" y="196.5" width="189" height="109" rx="3.5" stroke="var(--svglines)")
-
-
-  image(x="256.5" y="228" width="48" height="48" xlink:href="/img/icons/rust.svg")
+    linearGradient#paint4_linear_411_11540(x1="147.5" y1="-0.5" x2="216" y2="-0.5" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
 
 
-  text(
-    x="316.5"
-    y="257"
-    fill="var(--textColor)"
-    font-size="18"
-    font-weight="500"
-    font-family='DM Sans'
-  ) Rust
+    linearGradient#paint3_linear_411_11540(x1="392.5" y1="54" x2="461" y2="54" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="#7AE99D")
+      stop(offset="1" stop-color="var(--bgColor)")
+
+    //grayLines
+    linearGradient#paint6_linear_133_3054(x1="281" y1="152" x2="209" y2="152" gradientUnits="userSpaceOnUse")
+      stop(stop-color="var(--svglines)")
+      stop(offset="1" stop-color="#86E8A6")
+
+    linearGradient#paint5_linear_133_3054(x1="392.9" y1="254.5" x2="461.122" y2="254.5" gradientUnits="userSpaceOnUse")
+      stop(stop-color="var(--svglines)")
+      stop(offset="1" stop-color="var(--bgColor)")
+
+    linearGradient#paint4_linear_411_11541(x1="147.5" y1="-0.5" x2="216" y2="-0.5" gradientUnits="userSpaceOnUse")
+      stop(offset="0" stop-color="var(--svglines)")
+      stop(offset="1" stop-color="var(--bgColor)")
+
+    linearGradient#paint3_linear_133_3054(x1="392.5" y1="54" x2="461" y2="54" gradientUnits="userSpaceOnUse")
+      stop(stop-color="var(--svglines)")
+      stop(offset="1" stop-color="var(--bgColor)")

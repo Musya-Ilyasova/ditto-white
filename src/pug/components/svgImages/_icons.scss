@@ -284,34 +284,62 @@ body.dark {
 }
 
 .tech {
-  image {
-    filter: grayscale(142%);
-    transition: filter 0.2s ease;
+  // линии
+  .line-fill {
+    pointer-events: none;
+    transition: stroke-dashoffset 0.6s ease;
   }
 
-
-  .progressBr {
-    stroke: var(--svglines);
-    stroke-width: 1;
-    $width: 189;
-    $height: 109;
-    $perimeter: ($width + $height) * 2;
-    stroke-dasharray: $perimeter;
-    stroke-dashoffset: $perimeter;
-    transition: stroke 0.3s ease, stroke-dashoffset 1s ease;
+  .line-fill_top {
+    transition-delay: 0.0s;
+    stroke-dashoffset: 400;
+  }
+  .line-fill_center {
+    transition-delay: 0.0s;
+    stroke-dashoffset: 370;
+  }
+  .line-fill_bottom {
+    transition-delay: 0.0s;
+    stroke-dashoffset: 400;
   }
 
+  // круг
+  .top, .bottom {
+    transition: stroke-dashoffset 0.4s ease;
+    stroke-dasharray: 110 110;
+    transition-delay: 0.6s;
+  }
+  // начальные состояния
+  .top {
+    stroke-dashoffset: 110;
+  }
+  .bottom {
+    stroke-dashoffset: 0;
+  }
+
+  // Ховер → проявление (с задержками на круг)
   &:hover, &.is-visible {
-    .progressBr {
-      stroke: $main;
+    .line-fill_top {
       stroke-dashoffset: 0;
+      transition-delay: 0.41s;
+    }
+    .line-fill_center {
+      stroke-dashoffset: 0;
+      transition-delay: 0.41s;
+    }
+    .line-fill_bottom {
+      stroke-dashoffset: 0;
+      transition-delay: 0.41s;
     }
 
-    image {
-      filter: grayscale(0);
+    .top {
+      stroke-dashoffset: 55;
+      transition-delay: 0s;
     }
 
+    .bottom {
+      stroke-dashoffset: 55;
+      transition-delay: 0s;
+    }
   }
-
 }
-

@@ -188,7 +188,7 @@ const heroSvg = () => {
   async function startLoop() {
     const loop = async () => {
       await animateFullSet();
-      const delayMs = Math.random() * 3000 + 2000; // Задержка 5000–8000ms
+      const delayMs = Math.random() * 1000 + 1000; // Задержка 5000–8000ms
       await delay(delayMs);
       loop();
     };
