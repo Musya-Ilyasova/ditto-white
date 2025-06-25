@@ -74,50 +74,67 @@
 }
 
 .hero-svg {
-  .step1, .step2 {
+
+  /* ─── слой «рисуется» ───────────────────────────── */
+  .draw {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
-    transition: none;
-    opacity: 0;
-    transition: opacity 2s ease-in-out;
-  }
-  @supports (-webkit-hyphens: none) and (not (-ms-ime-align: auto)) {
-    .step1, .step2 {
-      transition: opacity 0.3s ease-in-out;
-    }
-  }
-
-  circle {
-    // circle-переходы тоже замедляем
-    transition: r 0.6s ease-in-out, fill 0.6s ease-in-out, stroke 0.6s ease-in-out;
-  }
-
-  .step1.active, .step2.active {
-    animation: lineEnter 2s ease-in-out forwards;
     opacity: 1;
+    transition: none;
+  }
+  .draw.active {                     /* рисуем линию */
+    animation: lineEnter 2s ease-in-out forwards;
+  }
+  .draw.exit {                       /* скрываем мгновенно */
+    opacity: 0;
   }
 
-  .step1.exit, .step2.exit {
-    animation: lineExit 2s ease-in-out forwards;
-    opacity: 0
+  /* ─── слой «уходит» ─────────────────────────────── */
+  .leave {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    opacity: 0;                      /* пока невидим */
+    transition: none;
+  }
+  .draw.exit + .leave {              /* включаем, когда сосед .draw уже exit */
+    opacity: 1;
+    animation: lineDisappear 1s ease-in-out forwards;
+  }
+
+  /* ─── круги без изменений ───────────────────────── */
+  circle {
+    transition: r .6s ease-in-out, fill .6s ease-in-out, stroke .6s ease-in-out;
   }
 }
 
-
+/* «вход» (остался прежним) */
 @keyframes lineEnter {
-  0% {
-    stroke-dashoffset: 1000;
-  }
-  100% {
-    stroke-dashoffset: 0;
-  }
+  from { stroke-dashoffset: 1000; }
+  to   { stroke-dashoffset: 0; }
 }
 
-@keyframes lineExit {
-  0% {
-    stroke-dashoffset: 0;
-  }
-  100% {
-    stroke-dashoffset: -999;
-  }
+/* «выход» по положительному offset */
+@keyframes lineDisappear {
+  from { stroke-dashoffset: 0; }
+  to   { stroke-dashoffset: var(--pathLen, 1000); }
 }
+
+
+
+// @keyframes lineEnter {
+//   0% {
+//     stroke-dashoffset: 1000;
+//   }
+//   100% {
+//     stroke-dashoffset: 0;
+//   }
+// }
+
+// @keyframes lineExit {
+//   0% {
+//     stroke-dashoffset: 0;
+//   }
+//   100% {
+//     stroke-dashoffset: -999;
+//   }
+// }

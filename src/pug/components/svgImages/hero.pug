@@ -15,19 +15,70 @@ svg(width="1112" height="551" viewBox="0 0 1112 551" fill="none" xmlns="http://w
     path(d="M68.4697 292.476L1044 292.476" stroke="var(--globalBr)")
     path(d="M170.434 159.877L941.81 159.877" stroke="var(--globalBr)")
 
-    //greenLines
+    //greenLines  ───────────── вход + выход ─────────────
 
-    path.step1.anim2-line1(d="M556.451 5C610.304 5 657.335 120.995 681.738 292" stroke="url(#paint0_linear_33748_12065)" stroke-width="3")
-    path.step1.anim5-line1(d="M556.451 5C391.199 5 247.359 120.995 172.771 292" stroke="url(#paint1_linear_33748_12065)" stroke-width="3")
-    path.step1.anim4-line1(d="M556.451 5C473.455 5 398.09 64.0504 342.63 160" stroke="url(#paint2_linear_33748_12065)" stroke-width="3")
-    path.step1.anim3-line1(d="M556.5 5V420.5H416" stroke="url(#paint3_linear_33748_12065)" stroke-width="3")
-    path.step1.anim1-line1(d="M556.451 5C691.526 5 804.982 182.332 837 421.719H956" stroke="url(#paint4_linear_33748_12065)" stroke-width="3")
-    path.step1(d="M1112 551V550H0V551V552H1112V551Z" fill="var(--globalBr)" mask="url(#path-1-inside-1_33748_12065)")
+    // --- anim2
+    path.step1.draw.anim2-line1(
+      d="M556.451 5C610.304 5 657.335 120.995 681.738 292"
+      stroke="url(#paint0_linear_33748_12065)" stroke-width="3")
+    path.step1.leave.anim2-line1(
+      d="M681.738 292C657.335 120.995 610.304 5 556.451 5"
+      stroke="url(#paint0_linear_33748_12065)" stroke-width="3")
 
-    path.step2.anim1-line2(d="M970.957 420.5C961.95 375.357 948.66 332.432 931.681 292.5H693.5" stroke="url(#paint0_linear_33749_12227)" stroke-width="3")
+    // --- anim5
+    path.step1.draw.anim5-line1(
+      d="M556.451 5C391.199 5 247.359 120.995 172.771 292"
+      stroke="url(#paint1_linear_33748_12065)" stroke-width="3")
+    path.step1.leave.anim5-line1(
+      d="M172.771 292C247.359 120.995 391.199 5 556.451 5"
+      stroke="url(#paint1_linear_33748_12065)" stroke-width="3")
 
-    path.step2.anim3-line2(d="M401.49 421.5C408.981 320.342 424.51 230.274 445.574 160H343" stroke="url(#paint1_linear_33749_12227)" stroke-width="3")
-    path.step2.anim5-line2(d="M188 292.5H286.088C301.104 243.521 320.119 199.044 342.341 160.5" stroke="url(#paint2_linear_33749_12227)" stroke-width="3")
+    // --- anim4
+    path.step1.draw.anim4-line1(
+      d="M556.451 5C473.455 5 398.09 64.0504 342.63 160"
+      stroke="url(#paint2_linear_33748_12065)" stroke-width="3")
+    path.step1.leave.anim4-line1(
+      d="M342.63 160C398.09 64.0504 473.455 5 556.451 5"
+      stroke="url(#paint2_linear_33748_12065)" stroke-width="3")
+
+    // --- anim3
+    path.step1.draw.anim3-line1(
+      d="M556.5 5V420.5H416"
+      stroke="url(#paint3_linear_33748_12065)" stroke-width="3")
+    path.step1.leave.anim3-line1(
+      d="M416 420.5H556.5V5"
+      stroke="url(#paint3_linear_33748_12065)" stroke-width="3")
+
+    // --- anim1
+    path.step1.draw.anim1-line1(
+      d="M556.451 5C691.526 5 804.982 182.332 837 421.719H956"
+      stroke="url(#paint4_linear_33748_12065)" stroke-width="3")
+    path.step1.leave.anim1-line1(
+      d="M956 421.719H837C804.982 182.332 691.526 5 556.451 5"
+      stroke="url(#paint4_linear_33748_12065)" stroke-width="3")
+
+    // ---------- step 2 ----------
+    path.step2.draw.anim1-line2(
+      d="M970.957 420.5C961.95 375.357 948.66 332.432 931.681 292.5H693.5"
+      stroke="url(#paint0_linear_33749_12227)" stroke-width="3")
+    path.step2.leave.anim1-line2(
+      d="M693.5 292.5H931.681C948.66 332.432 961.95 375.357 970.957 420.5"
+      stroke="url(#paint0_linear_33749_12227)" stroke-width="3")
+
+    path.step2.draw.anim3-line2(
+      d="M401.49 421.5C408.981 320.342 424.51 230.274 445.574 160H343"
+      stroke="url(#paint1_linear_33749_12227)" stroke-width="3")
+    path.step2.leave.anim3-line2(
+      d="M343 160H445.574C424.51 230.274 408.981 320.342 401.49 421.5"
+      stroke="url(#paint1_linear_33749_12227)" stroke-width="3")
+
+    path.step2.draw.anim5-line2(
+      d="M188 292.5H286.088C301.104 243.521 320.119 199.044 342.341 160.5"
+      stroke="url(#paint2_linear_33749_12227)" stroke-width="3")
+    path.step2.leave.anim5-line2(
+      d="M342.341 160.5C320.119 199.044 301.104 243.521 286.088 292.5H188"
+      stroke="url(#paint2_linear_33749_12227)" stroke-width="3")
+
 
     //circles
 

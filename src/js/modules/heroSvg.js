@@ -33,6 +33,12 @@ const heroSvg = () => {
     },
   ];
 
+  document.querySelectorAll('.leave').forEach(el => {
+    const len = el.getTotalLength();
+    el.style.setProperty('--pathLen', len);     // для keyframes
+    el.style.strokeDasharray = len;             // целиком «залитая» линия
+  });
+
   let isAnimating = false;
 
   function activateCircle(elGroup, enlarge = false) {
@@ -60,17 +66,13 @@ const heroSvg = () => {
   }
 
   function applyLineClass(selector, className) {
-    const el = document.querySelector(selector);
-    if (el) {
-      el.classList.add(className);
-    }
+    document.querySelectorAll(selector)
+      .forEach(el => el.classList.add(className));
   }
 
   function removeLineClass(selector, className) {
-    const el = document.querySelector(selector);
-    if (el) {
-      el.classList.remove(className);
-    }
+    document.querySelectorAll(selector)
+      .forEach(el => el.classList.remove(className));
   }
 
   function resetAll() {
