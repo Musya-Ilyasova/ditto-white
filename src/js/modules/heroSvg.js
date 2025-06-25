@@ -145,7 +145,7 @@ const heroSvg = () => {
           applyLineClass(anim.step2, 'active');
         }
       });
-      await delay(2500); // 2.5с для lineEnter (2с + буфер)
+      await delay(2000); // 2.5с для lineEnter (2с + буфер)
 
       // Шаг 4: Активировать circle2
       animations.forEach(anim => {
@@ -171,15 +171,12 @@ const heroSvg = () => {
           deactivateCircle(group2);
         }
       });
-      await delay(2500); // 2.5с для lineExit (2с + буфер)
-
-      // Финальный сброс
+      await delay(1500);
       resetAll();
       isAnimating = false;
 
       if (typeof onComplete === 'function') onComplete();
     } catch (error) {
-      console.error('Ошибка в анимации:', error);
       resetAll();
       isAnimating = false;
     }
@@ -188,7 +185,7 @@ const heroSvg = () => {
   async function startLoop() {
     const loop = async () => {
       await animateFullSet();
-      const delayMs = Math.random() * 1000 + 1000; // Задержка 5000–8000ms
+      const delayMs = 0;
       await delay(delayMs);
       loop();
     };
