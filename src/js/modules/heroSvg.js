@@ -124,7 +124,7 @@ const heroSvg = () => {
           applyLineClass(anim.step1, 'active');
         }
       });
-      await delay(2500);
+      await delay(1900);
 
       // Шаг 2: Активировать circle1
       animations.forEach(anim => {
@@ -133,7 +133,7 @@ const heroSvg = () => {
           activateCircle(group, false);
         }
       });
-      await delay(1000); // 1с для переходов circle (0.6с + буфер)
+      await delay(600); // 1с для переходов circle (0.6с + буфер)
 
       // Шаг 3: Деактивировать step1, активировать step2
       animations.forEach(anim => {
@@ -145,7 +145,7 @@ const heroSvg = () => {
           applyLineClass(anim.step2, 'active');
         }
       });
-      await delay(2000); // 2.5с для lineEnter (2с + буфер)
+      await delay(1900); // 2.5с для lineEnter (2с + буфер)
 
       // Шаг 4: Активировать circle2
       animations.forEach(anim => {
@@ -154,7 +154,7 @@ const heroSvg = () => {
           activateCircle(group, true);
         }
       });
-      await delay(1000); // 1с для переходов circle (0.6с + буфер)
+      await delay(600); // 1с для переходов circle (0.6с + буфер)
 
       // Шаг 5: Деактивировать всё
       animations.forEach(anim => {
@@ -171,7 +171,7 @@ const heroSvg = () => {
           deactivateCircle(group2);
         }
       });
-      await delay(1500);
+      await delay(1000);
       resetAll();
       isAnimating = false;
 
