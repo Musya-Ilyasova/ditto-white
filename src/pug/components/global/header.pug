@@ -14,7 +14,7 @@ header.header
       nav
         ul.menu-list
           li.menu-list__item
-            span.menu-list__title Participate
+            button.menu-list__title(aria-controls='submenu-1') Participate
               +icon('chevron')
             ul.menu-submenu(data-title='Participate')
               li.menu-submenu__item
@@ -27,7 +27,7 @@ header.header
                 a.menu-submenu__link(href=process.env.LINK_RESTAKE target="_blank") Restakers
                   +icon('arrow')
           li.menu-list__item
-            span.menu-list__title Solutions
+            button.menu-list__title(aria-controls='submenu-2') Solutions
               +icon('chevron')
             ul.menu-submenu.big(data-title='Solutions')
               li.menu-submenu__item
@@ -49,7 +49,7 @@ header.header
                 a.menu-submenu__link(href=process.env.LINK_WEB3_DEVOPS_TEAMS target="_blank") For Web3 DevOps teams
                   +icon('arrow')
           li.menu-list__item
-            span.menu-list__title Resources
+            button.menu-list__title(aria-controls='submenu-3') Resources
               +icon('chevron')
             ul.menu-submenu.big(data-title='Resources')
               li.menu-submenu__item

@@ -1,4 +1,11 @@
-mixin icon(name,mod)
+mixin icon(name, mod, label, hidden)
 	- mod = mod || ''
-	svg(class="icon icon-" + name + ' ' + mod)
-		use(xlink:href="img/sprite/sprite.svg#" + name)
+	if typeof label === 'undefined'
+		svg(class="icon icon-" + name + ' ' + mod, role="img", aria-hidden="true")
+			use(xlink:href="img/sprite/sprite.svg#" + name)
+	else
+		svg(class="icon icon-" + name + ' ' + mod, role="img", aria-label=label, aria-hidden=(hidden === true ? 'true' : 'false'))
+			use(xlink:href="img/sprite/sprite.svg#" + name)
+
+
+
