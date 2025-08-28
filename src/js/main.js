@@ -6,6 +6,7 @@ import { mobMenu, subMenu } from "./modules/menu";
 import heroSvg from "./modules/heroSvg";
 import layersSvg from "./modules/layersSvg";
 import scrollAnimations from "./modules/scrollAnimations";
+import updateExecutedNumbers from "./modules/updateExecutedNumbers";
 
 if(document.querySelector('main').classList.contains('index')) {
   loadCss();
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded",  () => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
+  updateExecutedNumbers();
   theme();
   initTabs();
   addCopy();
