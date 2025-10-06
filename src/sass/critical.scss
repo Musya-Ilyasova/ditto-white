@@ -1,6 +1,7 @@
 :root {
   --bgColor: #F8F9FA;
   --globalBr: #DEE2E6;
+  --globalBrRgb: 222, 226, 230;
   --title: #0A0B0C;
   --textColor: #6C757D;
   --themeBtnWrapperBr: #DEE2E6;
@@ -66,11 +67,35 @@
   --blog6Img: url(../img/blog/blogImg6.png);
   --blogBgHover: #FFFFFF;
 
+  --pageMark: #E9ECEF;
+  --advantagesListItemBg: #DEE2E6;
+  --advantagesListItemBgHover: #FFFFFF;
+  --advantagesProgressBg: #E9ECEF;
+  --advantagesProgressActiveBr: #7AE99D;
+  --advantagesProgressActiveBg: #F1FFF5;
+  --advantagesImage: url(../img/advantages.webp);
+
+  --featuresSliderBtnBg: #ffffff;
+  --featuresSliderBtnBgHover: #212529;
+  --featuresSliderBtnArrow: #212529;
+  --featuresSliderBtnArrowHover: #E9ECEF;
+
+  --faqListHover: #ffffff;
+
+  --contactsBgColor: #ffffff;
+  --contactsLeftImage: url(../img/contacts/contacts-left.webp);
+  --contactsRightImage: url(../img/contacts/contacts-right.webp);
+  --contactsRightImageMob: url(../img/contacts/contacts-right-mob.webp);
+
+  --subPageHeroBgMid: #CED4DA;
+
+
 }
 
 body.dark {
   --bgColor: #0A0B0C;
   --globalBr: #22262A;
+  --globalBrRgb: 34, 38, 42;
   --title: #FFFFFF;
   --textColor: #6C757D;
   --themeBtnWrapperBr: #22262A;
@@ -135,6 +160,29 @@ body.dark {
   --blog5Img: url(../img/blog/blogImgDark5.png);
   --blog6Img: url(../img/blog/blogImgDark6.png);
   --blogBgHover: #0F1113;
+
+  --pageMark: #0F1113;
+  --advantagesListItemBg: #0A0B0C;
+  --advantagesListItemBgHover: #0F1113;
+
+  --advantagesProgressBg: #22262A;
+  --advantagesProgressActiveBr: #7AE99D;
+  --advantagesProgressActiveBg: rgba(31, 53, 38, 1);
+  --advantagesImage: url(../img/advantages-dark.webp);
+
+  --featuresSliderBtnBg: #0F1113;
+  --featuresSliderBtnBgHover: #ffffff;
+  --featuresSliderBtnArrow: #ffffff;
+  --featuresSliderBtnArrowHover: #0F1113;
+
+  --faqListHover: #0F1113;
+
+  --contactsBgColor: #0F1113;
+  --contactsLeftImage: url(../img/contacts/contacts-left-dark.webp);
+  --contactsRightImage: url(../img/contacts/contacts-right-dark.webp);
+  --contactsRightImageMob: url(../img/contacts/contacts-right-mob-dark.webp);
+
+  --subPageHeroBgMid: #495057;
 }
 
 @import "global/helpers/helpers-critical";
@@ -145,3 +193,5 @@ body.dark {
 @import "../pug/components/global/_footer";
 @import "../pug/pages/index/_1-screen";
 
+@import "../pug/pages/smartContract/_1-screen";
+@import "../pug/pages/smartContract/_about";

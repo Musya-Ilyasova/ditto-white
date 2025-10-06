@@ -1,0 +1,20 @@
+include ../mixins/mixins
+doctype html
+html(lang="en")
+  include ../components/global/head
+  body.subPage
+    include ../components/global/header
+    //main
+    main
+      .container
+        div
+          include ../pages/assetVault/1-screen
+          include ../pages/assetVault/about
+        include ../pages/assetVault/advantages
+        include ../pages/assetVault/featuresSlider
+        div
+          include ../pages/assetVault/contacts
+          include ../pages/assetVault/faq
+        include ../pages/assetVault/cta
+    include ../components/global/footer
+    include ../components/global/scripts

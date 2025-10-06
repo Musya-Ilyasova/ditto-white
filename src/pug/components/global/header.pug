@@ -26,28 +26,52 @@ header.header
               li.menu-submenu__item
                 a.menu-submenu__link(href=process.env.LINK_RESTAKE target="_blank") Restakers
                   +icon('arrow')
-          li.menu-list__item
+          li.menu-list__item.expand
             button.menu-list__title(aria-controls='submenu-2') Solutions
               +icon('chevron')
             ul.menu-submenu.big(data-title='Solutions')
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_AI_AGENTS_BUILDERS target="_blank") For AI Agents builders
-                  +icon('arrow')
+                a.menu-submenu__link(href='/smart-contract.html')
+                  .expand-item
+                    +icon('lightning')
+                    .expand-item__content
+                      span.expand-item__title Smart Contract Automation
+                      span.expand-item__descrb Automate crypto &amp; DeFi transactions without servers, cron jobs, or custom scripts.
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_DAPPS_BUILDERS target="_blank") For dApps builders
-                  +icon('arrow')
+                a.menu-submenu__link(href='/asset-vault.html')
+                  .expand-item
+                    +icon('shield')
+                    .expand-item__content
+                      span.expand-item__title Asset &amp; Vault Management
+                      span.expand-item__descrb Launch automated, policy-controlled on-chain vaults and yield strategies in weeks, not months. scripts.
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_ASSET_MANAGERS target="_blank") For Asset Managers
-                  +icon('arrow')
+                a.menu-submenu__link(href='#')
+                  .expand-item
+                    +icon('replace')
+                    .expand-item__content
+                      span.expand-item__title Crypto transfers
+                      span.expand-item__descrb Streamline crypto payments with built-in fee routing and seamless revenue sharing.
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_FINTECH_APPS target="_blank") For Fintech Apps
-                  +icon('arrow')
+                a.menu-submenu__link(href='#')
+                  .expand-item
+                    +icon('wallet')
+                    .expand-item__content
+                      span.expand-item__title Smart Wallets &amp; DeFi Integration
+                      span.expand-item__descrb Build fintech &amp; Web3 apps using Ditto's account abstraction SDK as building blocks.
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_ADVANCED_DEFI_USERS target="_blank") For advanced DeFi users
-                  +icon('arrow')
+                a.menu-submenu__link(href='#')
+                  .expand-item
+                    +icon('settings')
+                    .expand-item__content
+                      span.expand-item__title No-Code Blockchain Automation
+                      span.expand-item__descrb Connect DeFi automation to n8n, Zapier, and other no-code platforms seamlessly.
               li.menu-submenu__item
-                a.menu-submenu__link(href=process.env.LINK_WEB3_DEVOPS_TEAMS target="_blank") For Web3 DevOps teams
-                  +icon('arrow')
+                a.menu-submenu__link(href='#')
+                  .expand-item
+                    +icon('wand')
+                    .expand-item__content
+                      span.expand-item__title Blockchain Backend for AI Agents
+                      span.expand-item__descrb Add secure, automated DeFi workflows to AI &amp; crypto agents instantly.
           li.menu-list__item
             button.menu-list__title(aria-controls='submenu-3') Resources
               +icon('chevron')
@@ -68,6 +92,8 @@ header.header
                 a.menu-submenu__link(href=process.env.SOC_GITHUB target="_blank") GitHub
                   +icon('arrow')
       .header__btns
+        a.btn.btn_secondary(href='#' target="_blank")
+          | Talk to sales
         a.btn.btn_secondary(href=process.env.LINK_DOCS target="_blank")
           | Docs
         a.btn.btn_primary(href=process.env.LINK_DITTO_BUILD target="_blank")

@@ -13,3 +13,10 @@
   }
 }
 
+.subPage {
+  .container {
+    @include mq('768') {
+      gap: 32px;
+    }
+  }
+}

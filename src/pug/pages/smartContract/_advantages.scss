@@ -1,0 +1,108 @@
+.advantages {
+  display: flex;
+  flex-direction: column;
+  @include mq('768') {
+    flex-direction: row;
+    gap: 16px;
+    border: none;
+    height: 807px;
+  }
+  &__title {
+    font-weight: 500;
+    @include mq('768') {
+      max-width: 400px;
+    }
+  }
+  &__left {
+    padding: 32px 20px;
+    border-bottom: 1px solid var(--globalBr);
+    height: 423px;
+    position: relative;
+    background-image: var(--advantagesImage);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @include mq('768') {
+      border: 1px solid var(--globalBr);
+      width: 50%;
+      height: 100%;
+      background-position: center;
+      padding: 32px 26px;
+    }
+  }
+  &__right {
+    @include mq('768') {
+      width: 50%;
+      border: 1px solid var(--globalBr);
+      overflow-y: scroll;
+      height: 100%;
+      scrollbar-width: none;
+    }
+  }
+}
+
+.advantages-list {
+  display: grid;
+  grid-auto-rows: 1fr;
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+  &__title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    line-height: 1.45;
+    font-weight: 500;
+  }
+  &__text {
+    font-size: 16px;
+    line-height: 1.45;
+    @include mq('768') {
+      font-size: 18px;
+      line-height: 28px;
+    }
+  }
+  &__item {
+    padding: 32px 19px 29px;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    @include mq('768') {
+      padding: 39px 31px 44px;
+      gap: 40px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--globalBr);
+    }
+    &.active, &:hover {
+      @include mq('768') {
+        background: var(--advantagesListItemBgHover);
+      }
+    }
+  }
+}
+
+.advantages-progress {
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  list-style: none;
+  @include mq('768') {
+    display: flex;
+  }
+  li {
+    width: 5px;
+    height: auto;
+    flex-grow: 1;
+    background: var(--advantagesProgressBg);
+    border: 1px solid var(--advantagesProgressBg);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &.active, &:hover {
+      background: var(--advantagesProgressActiveBg);
+      border: 1px solid var(--advantagesProgressActiveBr);
+    }
+  }
+}

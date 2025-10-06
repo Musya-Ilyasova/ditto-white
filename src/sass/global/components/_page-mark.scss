@@ -1,0 +1,31 @@
+.page-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background-color: var(--pageMark);
+  position: relative;
+  color: var(--textColor);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 25px;
+  width: fit-content;
+  padding: 0 6px;
+  border-radius: 4px;
+  margin: 0 auto;
+  @include mq('768') {
+    font-size: 14px;
+    line-height: 36px;
+    padding: 0 12px;
+  }
+
+  &::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: $main;
+  }
+
+
+}

@@ -7,10 +7,14 @@ import heroSvg from "./modules/heroSvg";
 import layersSvg from "./modules/layersSvg";
 import scrollAnimations from "./modules/scrollAnimations";
 import updateExecutedNumbers from "./modules/updateExecutedNumbers";
+import advantagesListScroll from "./modules/advantagesListScroll";
+import featuresSlider from "./modules/featuresSlider";
+import faqAccordion from "./modules/faqAccordion";
 
-if(document.querySelector('main').classList.contains('index')) {
+if(document.querySelector('body')) {
   loadCss();
 }
+
 
 document.addEventListener("DOMContentLoaded",  () => {
   let vh = window.innerHeight * 0.01;
@@ -19,16 +23,23 @@ document.addEventListener("DOMContentLoaded",  () => {
     vh = window.innerHeight * 0.01;
     document.documentElement.style.setProperty('--vh', `${vh}px`);
   });
-  updateExecutedNumbers();
   theme();
-  initTabs();
-  addCopy();
   mobMenu();
-  scrollAnimations();
   if (window.innerWidth <= 979) {
     subMenu();
   };
-  heroSvg();
-  layersSvg();
+  if(document.querySelector('body').classList.contains('index')) {
+    // updateExecutedNumbers(); вернуть
+    initTabs();
+    addCopy();
+    scrollAnimations();
+    heroSvg();
+    layersSvg();
+  };
+  if(document.querySelector('body').classList.contains('subPage')) {
+    advantagesListScroll();
+    featuresSlider();
+    faqAccordion();
+  }
 });
 

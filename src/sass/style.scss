@@ -1,5 +1,11 @@
 @import "global/helpers/helpers";
 
+@import "../pug/pages/smartContract/_advantages";
+@import "../pug/pages/smartContract/_featuresSlider";
+@import "../pug/pages/smartContract/_contacts";
+@import "../pug/pages/smartContract/_faq";
+@import "../pug/pages/smartContract/_cta";
+
 @import "../pug/pages/index/_stats";
 @import "../pug/pages/index/_features";
 @import "../pug/pages/index/_automation";

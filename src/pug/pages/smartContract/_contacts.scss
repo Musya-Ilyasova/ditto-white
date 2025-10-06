@@ -1,0 +1,109 @@
+.contacts {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  @include mq('768') {
+    flex-direction: row;
+  }
+  &__left,&__right {
+    border: 1px solid var(--globalBr);
+    padding: 32px 19px;
+    height: 315px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    @include mq('768') {
+      padding: 32px;
+      width: 50%;
+      height: 599px;
+    }
+    @include mq('1024') {
+      height: 599px;
+    }
+  }
+  &__left {
+    background-color: var(--contactsBgColor);
+    @include mq('768') {
+      background-image: var(--contactsLeftImage);
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+    }
+  }
+  &__right {
+    justify-content: flex-end;
+    border-top: none;
+    position: relative;
+    background-image: var(--contactsRightImageMob);
+      background-size: cover;
+      background-position: top right;
+      background-repeat: no-repeat;
+    @include mq('768') {
+      border-top: 1px solid var(--globalBr);
+      border-left: none;
+      background-image: var(--contactsRightImage);
+        background-size: cover;
+        background-position: top right;
+        background-repeat: no-repeat;
+    }
+  }
+  &__title {
+    letter-spacing: -1px;
+    margin-bottom: 13px;
+    @include mq('768') {
+      margin-bottom: 20px;
+
+    }
+  }
+  &__text {
+    font-weight: 500;
+    max-width: 400px;
+    @include mq('768') {
+      font-size: 18px;
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 16px;
+    @include mq('768') {
+      margin-top: auto;
+    }
+  }
+
+  .btn {
+    margin-top: 23px;
+    font-size: 16px;
+    line-height: 48px;
+    height: 48px;
+    padding: 0 24px;
+    @include mq('768') {
+      margin-top: auto;
+    }
+  }
+
+}
+
+.btn_ditto {
+  font-size: 0;
+  display: none;
+  margin-top: auto;
+  margin-left: auto;
+  padding: 20px;
+  width: 64px;
+  height: 64px;
+  background: var(--svgIconsBg);
+  border-radius: 50%;
+  border: 1px solid $main;
+  position: relative;
+  right: -10px;
+  bottom: -10px;
+  @include mq('768') {
+    display: block;
+  }
+  .icon {
+    fill: var(--title);
+    width: 100%;
+    height: 100%;
+  }
+}

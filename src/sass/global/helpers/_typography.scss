@@ -26,6 +26,17 @@ h2 {
   }
 }
 
+.subPage__title {
+  color: var(--title);
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -1px;
+  font-size: 28px;
+  @include mq('768') {
+    line-height: 1.42;
+  }
+}
+
 .hidden {
   visibility: hidden;
   opacity: 0;

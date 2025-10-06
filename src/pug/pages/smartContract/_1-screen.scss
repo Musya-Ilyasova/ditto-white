@@ -1,0 +1,170 @@
+//.fr-screen
+.subPage {
+  .fr-screen {
+    justify-content: flex-start;
+    padding-top: 106px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-bottom: 20vh;
+    min-height: 0;
+
+    @include mq('768') {
+      min-height: 721px;
+      height: auto;
+      padding-top: 178px;
+    }
+    @include mq('980') {
+      min-height: 774px;
+    }
+    @include mq('1440') {
+      min-height: 746px;
+    }
+
+    &__content {
+      max-width: 755px;
+      position: relative;
+      z-index: 1;
+
+      @include mq('768') {
+        gap: 17px;
+      }
+    }
+
+    &__title {
+      letter-spacing: -0.7px;
+      font-size: 32px;
+      line-height: 1.2;
+
+      @include mq('768') {
+        font-size: 48px;
+        line-height: 72px;
+        letter-spacing: 0;
+      }
+    }
+
+    &__text {
+      padding: 0;
+    }
+
+    &__btns {
+      padding-top: 8px;
+    }
+
+    .btn {
+      padding: 0 24px;
+    }
+
+    &__img {
+      position: relative;
+      aspect-ratio: 581 / 277;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 277px;
+      @include mq('768') {
+        height: 100%;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background:
+          repeating-linear-gradient(90deg,
+            transparent,
+            transparent 25px,
+            rgba(var(--globalBrRgb), 0.3) 25px,
+            rgba(var(--globalBrRgb), 0.3) 26px),
+          repeating-linear-gradient(0deg,
+            transparent,
+            transparent 25px,
+            rgba(var(--globalBrRgb), 0.3) 25px,
+            rgba(var(--globalBrRgb), 0.3) 26px);
+        mask: linear-gradient(to bottom,
+            transparent 0%,
+            transparent 20%,
+            black 40%,
+            black 100%);
+        @include mq('768') {
+          background:
+            repeating-linear-gradient(90deg,
+              transparent,
+              transparent 47px,
+              rgba(var(--globalBrRgb), 0.3) 47px,
+              rgba(var(--globalBrRgb), 0.3) 48px),
+            repeating-linear-gradient(0deg,
+              transparent,
+              transparent 47px,
+              rgba(var(--globalBrRgb), 0.3) 47px,
+              rgba(var(--globalBrRgb), 0.3) 48px);
+          mask: linear-gradient(to bottom,
+              transparent 0%,
+              transparent 10%,
+              black 30%,
+              black 100%);
+        }
+        @include mq('980') {
+          background:
+            repeating-linear-gradient(90deg,
+              transparent,
+              transparent 62px,
+              rgba(var(--globalBrRgb), 0.3) 62px,
+              rgba(var(--globalBrRgb), 0.3) 63px),
+            repeating-linear-gradient(0deg,
+              transparent,
+              transparent 62px,
+              rgba(var(--globalBrRgb), 0.3) 62px,
+              rgba(var(--globalBrRgb), 0.3) 63px);
+          mask: linear-gradient(to bottom,
+              transparent 0%,
+              transparent 10%,
+              black 30%,
+              black 100%);
+        }
+        @include mq('1440') {
+          background:
+            repeating-linear-gradient(90deg,
+              transparent,
+              transparent 54px,
+              rgba(var(--globalBrRgb), 0.3) 54px,
+              rgba(var(--globalBrRgb), 0.3) 55px),
+            repeating-linear-gradient(0deg,
+              transparent,
+              transparent 54px,
+              rgba(var(--globalBrRgb), 0.3) 54px,
+              rgba(var(--globalBrRgb), 0.3) 55px);
+          mask: linear-gradient(to bottom,
+              transparent 0%,
+              transparent 10%,
+              black 30%,
+              black 100%);
+        }
+      }
+    }
+  }
+
+  .subPageHero {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 540px;
+    margin: 0;
+    z-index: 0;
+    @include mq('768') {
+      min-width: 980px;
+    }
+    @include mq('980') {
+      min-width: 1280px;
+    }
+    @include mq('1440') {
+      min-width: 1120px;
+    }
+  }
+
+}
