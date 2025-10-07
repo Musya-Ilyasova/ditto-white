@@ -1,3 +1,7 @@
+@use "sass:math";
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .header {
   padding: 20px 0 26px;
   border-bottom: 1px solid var(--globalBr);
@@ -8,14 +12,14 @@
   width: 100%;
   background: var(--bgColor);
   z-index: 1000;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     padding: 25px 0;
   }
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     padding: 21px 0 24px;
   }
   .container {
-    @include mq('1280') {
+    @include mediaquery.mq('1280') {
       padding: 0;
       max-width: 1113px;
     }
@@ -28,7 +32,7 @@
     position: relative;
     z-index: 100;
     margin-top: 7px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       width: 89px;
       height: 25px;
       margin-top: 3px;
@@ -51,10 +55,10 @@
     flex-direction: column;
     margin-top: 24px;
     gap: 12px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 4px;
     }
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       flex-direction: row;
       margin-top: 0px;
       width: fit-content;
@@ -64,10 +68,10 @@
     width: 100%;
     height: 47px;
     line-height: 47px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 0 12px;
     }
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       min-width: 0;
       width: fit-content;
       height: 36px;
@@ -92,7 +96,7 @@
   padding: 7px 4px;
   z-index: 100;
 
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     display: none;
   }
 
@@ -178,7 +182,7 @@
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   border-top: 1px solid var(--globalBr);
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     position: relative;
     transform: translateX(0);
     border-top: 0;
@@ -194,7 +198,7 @@
   }
   &.show {
     transform: translateX(0);
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       transform: translateX(100%);
     }
   }
@@ -204,7 +208,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     flex-direction: row;
     align-items: center;
     position: relative;
@@ -227,7 +231,7 @@
       }
     }
 
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       padding-right: 32px;
       &:hover {
         .menu-submenu {
@@ -270,12 +274,12 @@
     padding: 0;
     padding-bottom: 24px;
     text-transform: uppercase;
-    @include line-height(24, 14);
+    @include line-height.line-height(24, 14);
     cursor: pointer;
     background: transparent;
     border: none;
 
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       font-size: 16px;
       border-bottom: none;
       padding-bottom: 0;
@@ -298,7 +302,7 @@
         transform: rotate(-180deg);
         transform-origin: center;
       }
-      @include mq('980') {
+      @include mediaquery.mq('980') {
         color: var(--title);
       }
     }
@@ -329,7 +333,7 @@
   transition: max-height 0.2s ease-in-out;
   pointer-events: none;
   border-top: 1px solid var(--globalBr);
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     position: absolute;
     top: calc(100% + 28px);
     border: 1px solid var(--globalBr);
@@ -351,7 +355,7 @@
     }
   }
   &.big {
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       width: 637px;
       .menu-submenu__item:nth-child(-n + 3) {
         margin-right: 28px;
@@ -363,7 +367,7 @@
     transition: opacity 0.2s ease-in-out;
     transition-delay: 0.2s;
     border-bottom: 1px solid var(--globalBr);
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       transition-delay: 0s;
       &:nth-child(3n) {
         border-bottom: none;
@@ -380,9 +384,9 @@
     align-items: center;
     padding: 10px 0;
     font-size: 14px;
-    @include line-height(24, 14);
+    @include line-height.line-height(24, 14);
     transition: color 0.2s ease-in-out;
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       min-width: 270px;
     }
     &:hover {
@@ -403,7 +407,7 @@
     position: absolute;
     font-weight: 500;
     font-size: 12px;
-    @include line-height(24, 12);
+    @include line-height.line-height(24, 12);
     text-transform: uppercase;
     top: 31px;
     left: 31px;
@@ -413,7 +417,7 @@
 }
 
 .expand {
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     &.menu-list__item:hover {
       .menu-submenu {
         padding-top: 24px;
@@ -427,15 +431,15 @@
     }
   }
   .big {
-    @include mq('980') {
+    @include mediaquery.mq('980') {
       width: 750px;
 
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       width: 850px;
 
     }
-    @include mq('1280') {
+    @include mediaquery.mq('1280') {
       width: 965px;
 
     }
@@ -456,13 +460,13 @@
       display: flex;
       flex-direction: column;
       gap: 2px;
-        @include mq('980') {
+        @include mediaquery.mq('980') {
           max-width: 255px;
         }
-        @include mq('1024') {
+        @include mediaquery.mq('1024') {
           max-width: 400px;
         }
-        @include mq('1280') {
+        @include mediaquery.mq('1280') {
           max-width: 442px;
         }
     }
@@ -477,7 +481,7 @@
       font-size: 12px;
       line-height: 16px;
       letter-spacing: 0.4px;
-      @include mq('980') {
+      @include mediaquery.mq('980') {
         max-width: 350px;
 
       }
@@ -489,7 +493,7 @@
 
 
 .subPage .header {
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     padding: 21px 0 24px;
 
   }

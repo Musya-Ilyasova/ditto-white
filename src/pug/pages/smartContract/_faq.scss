@@ -1,6 +1,8 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .faq {
   border: none;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     display: flex;
   }
   &__title {
@@ -8,7 +10,7 @@
     font-size: 28px;
     letter-spacing: -1px;
     line-height: 1.4;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 40px;
       line-height: 48px;
     }
@@ -16,7 +18,7 @@
   &__left, &__right {
     border: 1px solid var(--globalBr);
     padding: 32px 19px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 32px 20px;
       width: 50%;
       display: flex;
@@ -25,7 +27,7 @@
   }
   &__left {
     border-top: none;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       background-image: repeating-linear-gradient(
         -45deg,
         var(--blockLines),
@@ -38,14 +40,14 @@
   &__right {
     padding: 0;
     border-top: none;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 0;
       border-left: none;
     }
   }
   .btn {
     display: none;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       display: block;
       margin-top: auto;
     }
@@ -69,7 +71,7 @@
         max-height: 500px;
         opacity: 1;
         padding-top: 16px;
-        @include mq('768') {
+        @include mediaquery.mq('768') {
           padding-top: 42px;
         }
       }
@@ -83,7 +85,7 @@
     justify-content: space-between;
     cursor: pointer;
     padding: 30px 19px 0;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 33px 32px 0;
     }
     .icon {
@@ -99,7 +101,7 @@
     font-weight: 700;
     line-height: 1.4;
     max-width: 80%;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
       max-width: 85%;
     }
@@ -112,7 +114,7 @@
     padding: 0 19px;
     line-height: 1.45;
     opacity: 0;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
       padding: 0 32px;
       line-height: 28px;

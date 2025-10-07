@@ -1,3 +1,5 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .featuresSlider {
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +17,7 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 1px solid var(--globalBr);
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 30px 28px 32px;
       border-bottom: none;
     }
@@ -37,7 +39,7 @@
     padding: 0;
     border-radius: 4px;
     transition: background 0.2s ease-in-out;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       width: 48px;
       height: 48px;
 
@@ -73,7 +75,7 @@
 
 .featuresSlider-list {
   height: 823px;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     height: max-content;
     align-items: stretch
   }
@@ -82,7 +84,7 @@
     border-top: 1px solid var(--globalBr);
     cursor: pointer;
     transition: background 0.2s ease-in-out;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 31px 30px;
       height: auto !important;
     }
@@ -97,7 +99,7 @@
     line-height: 1.4;
     font-size: 16px;
     max-width: 400px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-weight: 700;
       font-size: 18px;
       line-height: 1.55;
@@ -107,7 +109,7 @@
   &__text {
     line-height: 1.45;
     font-size: 16px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
       line-height: 1.55;
       display: block;
@@ -159,11 +161,11 @@
     }
   }
   &__item {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       border-left: 1px solid var(--globalBr);
     }
     &:last-child {
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         border-right: 1px solid var(--globalBr);
       }
     }

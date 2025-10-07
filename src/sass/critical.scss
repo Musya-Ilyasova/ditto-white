@@ -1,3 +1,15 @@
+@use "global/helpers/helpers-critical";
+@use "global/libs/libs";
+@use "global/components/components";
+@use "../pug/components/svgImages/_icons";
+@use "../pug/components/global/_header";
+@use "../pug/components/global/_footer";
+
+@use "../pug/pages/index/_1-screen" as index1;
+
+@use "../pug/pages/smartContract/_1-screen" as index2;
+@use "../pug/pages/smartContract/_about";
+
 :root {
   --bgColor: #F8F9FA;
   --globalBr: #DEE2E6;
@@ -184,14 +196,3 @@ body.dark {
 
   --subPageHeroBgMid: #495057;
 }
-
-@import "global/helpers/helpers-critical";
-@import "global/libs/libs";
-@import "global/components/components";
-
-@import "../pug/components/global/_header";
-@import "../pug/components/global/_footer";
-@import "../pug/pages/index/_1-screen";
-
-@import "../pug/pages/smartContract/_1-screen";
-@import "../pug/pages/smartContract/_about";

@@ -1,3 +1,4 @@
+@use "../../../sass/global/helpers/variables";
 .svgImg {
   width: 100%;
   height: auto;
@@ -151,7 +152,7 @@
 
   &:hover, &.is-visible {
     .progressBr {
-      stroke: $main;
+      stroke: variables.$main;
       stroke-dashoffset: 0;
     }
     .line-left, .line-right  {

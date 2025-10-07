@@ -1,3 +1,5 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .btn {
   width: 100%;
   text-align: center;
@@ -21,7 +23,7 @@
   white-space: nowrap;
   position: relative; // для псевдоэлемента анимации
   overflow: hidden; // чтобы "волна" не выходила за пределы
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     font-size: 16px;
     height: 48px;
     line-height: 48px;
@@ -92,7 +94,7 @@
   transition: opacity 0.3s ease;
   overflow: visible;
   padding: 0;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     padding: 0;
   }
   .gradient {

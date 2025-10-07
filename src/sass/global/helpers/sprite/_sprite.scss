@@ -1,171 +1,173 @@
+@use "sass:math";
+
 .icon {
-	display: inline-block;
-	width: 1em;
-	height: 1em;
-	fill: currentColor;
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
 }
 
 .icon-arrow {
-	font-size:(24/10)*1rem;
-	width:(25/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(25, 24) * 1em;
 }
 .icon-bolt {
-	font-size:(42/10)*1rem;
-	width:(42/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(42, 42) * 1em;
 }
 .icon-box {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-briefcase {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-chart {
-	font-size:(44/10)*1rem;
-	width:(44/44)*1em;
+  font-size: math.div(44, 10) * 1rem;
+  width: math.div(44, 44) * 1em;
 }
 .icon-chevron {
-	font-size:(24/10)*1rem;
-	width:(25/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(25, 24) * 1em;
 }
 .icon-circleArrow {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-circleCheck {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-cloud {
-	font-size:(42/10)*1rem;
-	width:(42/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(42, 42) * 1em;
 }
 .icon-code {
-	font-size:(42/10)*1rem;
-	width:(43/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(43, 42) * 1em;
 }
 .icon-copy {
-	font-size:(21/10)*1rem;
-	width:(20/21)*1em;
+  font-size: math.div(21, 10) * 1rem;
+  width: math.div(20, 21) * 1em;
 }
 .icon-credit {
-	font-size:(42/10)*1rem;
-	width:(43/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(43, 42) * 1em;
 }
 .icon-dark {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+  font-size: math.div(16, 10) * 1rem;
+  width: math.div(16, 16) * 1em;
 }
 .icon-dashboard {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-discord {
-	font-size:(13/10)*1rem;
-	width:(12/13)*1em;
+  font-size: math.div(13, 10) * 1rem;
+  width: math.div(12, 13) * 1em;
 }
 .icon-ditto {
-	font-size:(25/10)*1rem;
-	width:(26/25)*1em;
+  font-size: math.div(25, 10) * 1rem;
+  width: math.div(26, 25) * 1em;
 }
 .icon-edit {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-gear {
-	font-size:(256/10)*1rem;
-	width:(256/256)*1em;
+  font-size: math.div(256, 10) * 1rem;
+  width: math.div(256, 256) * 1em;
 }
 .icon-gear2 {
-	font-size:(44/10)*1rem;
-	width:(44/44)*1em;
+  font-size: math.div(44, 10) * 1rem;
+  width: math.div(44, 44) * 1em;
 }
 .icon-git {
-	font-size:(13/10)*1rem;
-	width:(12/13)*1em;
+  font-size: math.div(13, 10) * 1rem;
+  width: math.div(12, 13) * 1em;
 }
 .icon-globe {
-	font-size:(50/10)*1rem;
-	width:(50/50)*1em;
+  font-size: math.div(50, 10) * 1rem;
+  width: math.div(50, 50) * 1em;
 }
 .icon-grid {
-	font-size:(44/10)*1rem;
-	width:(44/44)*1em;
+  font-size: math.div(44, 10) * 1rem;
+  width: math.div(44, 44) * 1em;
 }
 .icon-light {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+  font-size: math.div(16, 10) * 1rem;
+  width: math.div(16, 16) * 1em;
 }
 .icon-lightning {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-lock {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-logo {
-	font-size:(25/10)*1rem;
-	width:(89/25)*1em;
+  font-size: math.div(25, 10) * 1rem;
+  width: math.div(89, 25) * 1em;
 }
 .icon-medium {
-	font-size:(13/10)*1rem;
-	width:(12/13)*1em;
+  font-size: math.div(13, 10) * 1rem;
+  width: math.div(12, 13) * 1em;
 }
 .icon-pc {
-	font-size:(16/10)*1rem;
-	width:(16/16)*1em;
+  font-size: math.div(16, 10) * 1rem;
+  width: math.div(16, 16) * 1em;
 }
 .icon-puzzle {
-	font-size:(42/10)*1rem;
-	width:(43/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(43, 42) * 1em;
 }
 .icon-puzzlePiece {
-	font-size:(256/10)*1rem;
-	width:(256/256)*1em;
+  font-size: math.div(256, 10) * 1rem;
+  width: math.div(256, 256) * 1em;
 }
 .icon-replace {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-settings {
-	font-size:(24/10)*1rem;
-	width:(25/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(25, 24) * 1em;
 }
 .icon-shield {
-	font-size:(24/10)*1rem;
-	width:(24/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(24, 24) * 1em;
 }
 .icon-shield2 {
-	font-size:(42/10)*1rem;
-	width:(43/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(43, 42) * 1em;
 }
 .icon-shieldCheck {
-	font-size:(44/10)*1rem;
-	width:(44/44)*1em;
+  font-size: math.div(44, 10) * 1rem;
+  width: math.div(44, 44) * 1em;
 }
 .icon-shieldSearch {
-	font-size:(42/10)*1rem;
-	width:(42/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(42, 42) * 1em;
 }
 .icon-ts {
-	font-size:(15/10)*1rem;
-	width:(14/15)*1em;
+  font-size: math.div(15, 10) * 1rem;
+  width: math.div(14, 15) * 1em;
 }
 .icon-wallet {
-	font-size:(24/10)*1rem;
-	width:(25/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(25, 24) * 1em;
 }
 .icon-wallet2 {
-	font-size:(42/10)*1rem;
-	width:(42/42)*1em;
+  font-size: math.div(42, 10) * 1rem;
+  width: math.div(42, 42) * 1em;
 }
 .icon-wand {
-	font-size:(24/10)*1rem;
-	width:(25/24)*1em;
+  font-size: math.div(24, 10) * 1rem;
+  width: math.div(25, 24) * 1em;
 }
 .icon-x {
-	font-size:(13/10)*1rem;
-	width:(12/13)*1em;
+  font-size: math.div(13, 10) * 1rem;
+  width: math.div(12, 13) * 1em;
 }

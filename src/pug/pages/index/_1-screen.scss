@@ -1,4 +1,5 @@
 //.fr-screen
+@use "../../../sass/global/helpers/mixins/mediaquery";
 
 .fr-screen {
   padding-top: 116px;
@@ -9,19 +10,19 @@
   align-items: center;
   justify-content: flex-end;
   gap: 43px;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     padding-top: 119px;
     height: 100vh;
     gap: 76px;
     // max-height: 950px;
   }
-  @include mq('980') {
+  @include mediaquery.mq('980') {
     max-height: 1050px;
   }
-  @include mq('1024') {
+  @include mediaquery.mq('1024') {
     max-height: 1080px;
   }
-  @include mq('1440') {
+  @include mediaquery.mq('1440') {
     min-height: 1080px;
   }
   &__content {
@@ -30,7 +31,7 @@
     flex-direction: column;
     gap: 14px;
     max-width: 660px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 16px;
     }
   }
@@ -41,7 +42,7 @@
     align-items: center;
     flex-direction: column;
     gap: 12px;
-    @include mq('375') {
+    @include mediaquery.mq('375') {
       padding-top: 15px;
       flex-direction: row;
       gap: 16px;
@@ -51,7 +52,7 @@
     padding: 0 10px;
     font-weight: 500;
     letter-spacing: 0;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
       padding: 0 80px;
     }
@@ -61,7 +62,7 @@
     height: fit-content;
     aspect-ratio: 343/169;
     overflow: hidden;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
 
     }
 

@@ -1,13 +1,15 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
 .footer {
   width: 100%;
   background: var(--bgColor);
   border-top: 1px solid var(--globalBr);
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     border: none;
   }
 
   .btn-theme {
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       margin-right: 10px;
     }
   }
@@ -25,7 +27,7 @@
   }
 
   &__block {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       border-top: 1px solid var(--globalBr);
     }
   }
@@ -35,7 +37,7 @@
     flex-direction: column-reverse;
     gap: 16px;
     padding: 10px 0;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
@@ -43,7 +45,7 @@
       border-left: 1px solid var(--globalBr);
       border-right: 1px solid var(--globalBr);
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       padding: 27px 32px;
     }
   }
@@ -53,12 +55,12 @@
     display: flex;
     flex-direction: column;
 
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 29px 32px;
       border-left: 1px solid var(--globalBr);
       border-right: 1px solid var(--globalBr);
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       padding: 52px 30px;
       flex-direction: row;
       justify-content: space-between;
@@ -68,7 +70,7 @@
     color: var(--title);
     font-weight: 500;
     font-size: 18px;
-    @include line-height(28px, 18px);
+    @include line-height.line-height(28px, 18px);
     margin-bottom: 20px;
     display: block;
   }
@@ -77,24 +79,24 @@
     display: flex;
     flex-direction: column;
     gap: 36px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       flex-direction: row;
       gap: 40px;
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       margin-top: 0;
     }
   }
   &__linksblock {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       flex: 1;
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       flex: none;
       width: 200px;
     }
     &:last-child {
-      @include mq('1024') {
+      @include mediaquery.mq('1024') {
         width: auto;
         min-width: 107px;
       }
@@ -106,7 +108,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
-  @include mq('1024') {
+  @include mediaquery.mq('1024') {
     gap: 8px;
   }
   &__link {
@@ -114,7 +116,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 6px;
     }
     &:hover {

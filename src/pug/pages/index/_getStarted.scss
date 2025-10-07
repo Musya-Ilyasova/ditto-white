@@ -1,3 +1,5 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .getStarted {
   width: 100%;
   padding: 93px 20px;
@@ -13,7 +15,7 @@
   align-items: center;
   gap: 28px;
   text-align: center;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     padding: 61px 59px 55px;
     gap: 39px;
 

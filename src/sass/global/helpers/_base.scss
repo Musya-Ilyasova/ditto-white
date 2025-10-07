@@ -1,3 +1,6 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/variables";
+
 html {
   -ms-overflow-style: scrollbar;
 }
@@ -13,13 +16,13 @@ html {
   height: 100%;
   min-width: 300px;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  //scrollbar-color: $red $gray-dark; // for firefox
+  //scrollbar-color: variables.$red $gray-dark; // for firefox
 }
 
 body {
-  font-family: $font-family-main;
-  font-size: $font-size-main;
-  @include line-height(24, 16);
+  font-family: variables.$font-family-main;
+  font-size: variables.$font-size-main;
+  @include line-height.line-height(24, 16);
   font-weight: 400;
   color: var(--textColor);
   //Flexbox
@@ -32,10 +35,10 @@ body {
   background: var(--bgColor);
 
   /*&::-webkit-scrollbar {
-    background-color: $gray-dark;
+    background-color: variables.$gray-dark;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: $red;
+    background-color: variables.$red;
   }*/
   &.overflow {
     overflow: hidden;

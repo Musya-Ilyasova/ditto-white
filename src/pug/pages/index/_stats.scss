@@ -1,3 +1,5 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
 
 
 .stats-list {
@@ -10,7 +12,7 @@
   // );
   display: flex;
   flex-direction: column;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     flex-direction: row;
   }
 
@@ -24,7 +26,7 @@
     &:not(:last-child) {
       border-bottom: 1px solid var(--globalBr);
     }
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       text-align: left;
       padding: 32px 24px;
       flex: 1;
@@ -33,27 +35,27 @@
         border-bottom: none;
       }
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       gap: 30px;
       padding: 43px 32px 43px;
     }
   }
   &__title {
     font-size: 12px;
-    @include line-height(24, 12);
+    @include line-height.line-height(24, 12);
     text-transform: uppercase;
     font-weight: 500;
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       font-size: 16px;
     }
   }
   &__value {
     font-size: 28px;
     font-weight: 500;
-    @include line-height(40, 28);
+    @include line-height.line-height(40, 28);
     color: var(--statsValue);
     letter-spacing: -1px;
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       font-size: 40px;
     }
   }

@@ -1,5 +1,5 @@
 import pkg from 'gulp';
-import { pug, pugBuild, sass, sassBuild, scripts, scriptsBuild, img, imgUpload, webpImage, svg, copy, clear} from './gulp/config/allTasks.js'
+import { pug, pugBuild, styles, stylesBuild, scripts, scriptsBuild, img, imgUpload, webpImage, svg, copy, clear} from './gulp/config/allTasks.js'
 import browserSync from 'browser-sync';
 import dotenv from 'dotenv';
 
@@ -20,7 +20,7 @@ global.app = {
 
 export const observe = () => {
   watch("src/pug/**/*.pug", series(pug));
-  watch(["src/sass/**/*.scss", "src/pug/**/*.scss"], series(sass));
+  watch(["src/sass/**/*.scss", "src/pug/**/*.scss"], series(styles));
   watch("src/js/**/*.js", series(scripts));
   watch("src/img/**/*", series(img));
   watch("src/upload/**/*", series(imgUpload));
@@ -45,7 +45,7 @@ export const serve = () => {
 
 export default series(
   parallel(copy, img, imgUpload, webpImage, svg),
-  parallel(scripts, sass, pug ),
+  parallel(scripts, styles, pug ),
   parallel(observe, serve)
 );
 
@@ -56,6 +56,6 @@ export default series(
 export const build = series(
   clear,
   parallel( copy, img, imgUpload, webpImage, svg),
-  parallel( scripts, scriptsBuild, sassBuild ),
+  parallel( scripts, scriptsBuild, stylesBuild ),
   parallel( pugBuild )
 );

@@ -1,12 +1,5 @@
-// import from pug
-@import "../pug/components/global/_header";
-@import "../pug/components/global/_footer";
-@import "../pug/components/svgImages/_icons";
-
-
 // other
-@import "buttons";
-@import "container";
-@import "btn-theme";
-@import "page-mark";
-@import "../pug/components/modals/_pages";
+@use "buttons";
+@use "container";
+@use "btn-theme";
+@use "page-mark";

@@ -1,3 +1,5 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .blog {
   display: flex;
   flex-wrap: wrap;
@@ -16,7 +18,7 @@
     align-items: center;
     gap: 30px;
     text-align: center;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 59px;
       gap: 39px;
     }
@@ -34,13 +36,13 @@
     gap: 13px;
     width: 100%;
     padding: 0 26px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       flex-direction: row;
       gap: 16px;
     }
     .btn {
       width: 100%;
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         width: fit-content;
       }
     }
@@ -50,7 +52,7 @@
 .blog-list {
   display: flex;
   flex-direction: column;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     flex-direction: row;
     flex-wrap: wrap;
   }
@@ -60,7 +62,7 @@
     border-top: 1px solid var(--globalBr);
     cursor: pointer;
     transition: background 0.2s ease-in-out;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       width: 50%;
       padding: 30px 32px 34px;
     }
@@ -75,7 +77,7 @@
     line-height: 28px;
     font-size: 16px;
     max-width: 400px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-weight: 700;
     }
 
@@ -83,7 +85,7 @@
   &__text {
     line-height: 28px;
     font-size: 18px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       margin-top: 2px;
       display: block;
     }
@@ -92,7 +94,7 @@
     padding-left: 68px;
     position: relative;
     margin-top: 20px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       margin-top: 17px;
 
     }
@@ -109,7 +111,7 @@
     }
   }
   &__item:first-child {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 1;
       border-right: 1px solid var(--globalBr);
     }
@@ -118,7 +120,7 @@
     }
   }
   &__item:nth-child(2) {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 2;
       border-right: 1px solid var(--globalBr);
     }
@@ -127,7 +129,7 @@
     }
   }
   &__item:nth-child(3) {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 3;
       border-right: 1px solid var(--globalBr);
     }
@@ -136,7 +138,7 @@
     }
   }
   &__item:nth-child(4) {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 1;
     }
     .blog-list__content::before {
@@ -144,7 +146,7 @@
     }
   }
   &__item:nth-child(5) {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 2;
     }
     .blog-list__content::before {
@@ -152,7 +154,7 @@
     }
   }
   &__item:nth-child(6) {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       order: 3;
     }
     .blog-list__content::before {

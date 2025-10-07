@@ -1,3 +1,6 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .automation {
   display: flex;
   flex-wrap: wrap;
@@ -10,10 +13,10 @@
     gap: 16px;
     text-align: center;
     border-bottom: 1px solid var(--globalBr);
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 98px 59px;
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       padding: 104px 59px 97px;
       gap: 20px;
     }
@@ -24,7 +27,7 @@
     line-height: 40px;
     font-size: 28px;
     letter-spacing: -1px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       line-height: 40px;
       font-size: 40px;
     }
@@ -32,7 +35,7 @@
   &__text {
     max-width: 478px;
     margin: 0 auto;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
 
     }
@@ -44,12 +47,12 @@
     flex-direction: column;
     gap: 12px;
     margin-top: 12px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       flex-direction: row;
       gap: 16px;
     }
 
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 16px;
       margin-top: 9px;
     }
@@ -61,7 +64,7 @@
     padding: 0;
     border-bottom: 1px solid var(--globalBr);
     display: none;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       display: flex;
     }
   }
@@ -84,7 +87,7 @@
   &__tab-content {
     padding-top: 36px;
     padding-bottom: 24px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding-top: 0;
       padding-bottom: 0;
     }
@@ -99,10 +102,10 @@
   transition: opacity 0.5s ease, height 0.5s ease;
 
 
-  @media screen and(max-width: 767px) {
+  @media screen and (max-width: 767px) {
     height: auto!important;
   }
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     height: 0;
     opacity: 0;
     display: none; // скрываем на десктопе
@@ -114,7 +117,7 @@
   &__left {
     border-right: 1px solid var(--globalBr);
     display: none;
-    @include mq ('1024') {
+    @include mediaquery.mq ('1024') {
       display: block;
     }
   }
@@ -123,25 +126,25 @@
     padding: 0 24px;
     margin-bottom: 12px;
 
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 24px;
       margin-bottom: 0;
     }
 
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       padding: 32px 32px 79px;
     }
   }
 
   &__title {
     font-size: 28px;
-    @include line-height(40, 28);
+    @include line-height.line-height(40, 28);
     color: var(--title);
     font-weight: 500;
     letter-spacing: -1px;
   }
   &__text {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       font-size: 18px;
       line-height: 28px;
     }
@@ -182,11 +185,11 @@
       width: 25px;
       height: 25px;
     }
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       color: var(--title);
       margin-bottom: 40px;
       font-size: 16px;
-      @include line-height(24, 16);
+      @include line-height.line-height(24, 16);
       border: none;
       pointer-events: none;
       justify-content: flex-start;
@@ -207,13 +210,13 @@
       max-height: 700px;
       padding-top: 28px;
       margin-bottom: 18px;
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         margin-bottom: 0;
         max-height: none;
         padding-top: 0;
       }
     }
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       opacity: 1;
       max-height: none;
       padding-top: 0;
@@ -227,7 +230,7 @@
     max-height: 500px;
     margin: 0 auto;
     filter: contrast(100%);
-    @include mq ('768') {
+    @include mediaquery.mq ('768') {
       margin: 0;
       aspect-ratio: 491 / 498;
     }
@@ -251,7 +254,7 @@
   width: 100%;
   display: none;
 
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     display: flex;
     width: 100%;
 
@@ -288,7 +291,7 @@
       background-size: contain;
       max-height: 500px;
 
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         aspect-ratio: 491 / 498;
       }
     }

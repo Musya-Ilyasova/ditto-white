@@ -1,28 +1,32 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
+@use "../../../sass/global/helpers/variables";
+
 h1 {
-  font-size: $font-size-h1;
+  font-size: variables.$font-size-h1;
   font-weight: 500;
-  @include line-height(40, 28);
+  @include line-height.line-height(40, 28);
   color: var(--title);
   letter-spacing: -1px;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     font-weight: 600;
     font-size: 38px;
     letter-spacing: -1.2px;
   }
-  @include mq('1024') {
+  @include mediaquery.mq('1024') {
     font-size: 60px;
-    @include line-height(72, 60);
+    @include line-height.line-height(72, 60);
   }
 
 }
 
 h2 {
   color: var(--title);
-  font-size: $font-size-h2;
-  @include line-height(34, 20);
-  @include mq('768') {
+  font-size: variables.$font-size-h2;
+  @include line-height.line-height(34, 20);
+  @include mediaquery.mq('768') {
     font-size: 28px;
-    @include line-height(40, 28);
+    @include line-height.line-height(40, 28);
   }
 }
 
@@ -32,7 +36,7 @@ h2 {
   line-height: 1.4;
   letter-spacing: -1px;
   font-size: 28px;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     line-height: 1.42;
   }
 }

@@ -1,8 +1,11 @@
+@use "../../../sass/global/helpers/mixins/line-height";
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .features-list {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: auto;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     grid-template-columns: repeat(2, 50%);
     grid-template-rows: auto;
   }
@@ -13,7 +16,7 @@
     &:not(:last-child) {
       border-bottom: 1px solid var(--globalBr);
     }
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 36px 24px;
       &:nth-child(1),&:nth-child(3),&:nth-child(6) {
         border-right: 1px solid var(--globalBr);
@@ -22,35 +25,35 @@
         border-bottom: none;
       }
     }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       padding: 64px 32px 56px;
     }
     &_security {
       padding: 36px 24px 54px;
-      @include mq('1024') {
+      @include mediaquery.mq('1024') {
         padding-bottom: 50px;
       }
       .btn {
         margin-top: 28px;
-        @include mq('768') {
+        @include mediaquery.mq('768') {
           margin-top: 37px;
 
         }
       }
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         flex-direction: row;
         grid-area: 3/1/4/3;
       }
       .features-list__img {
         margin-top: 6px;
-        @include mq('768') {
+        @include mediaquery.mq('768') {
           order: 1;
           margin-top: 0;
         }
       }
       .features-list__content {
         margin-top: 27px;
-        @include mq('768') {
+        @include mediaquery.mq('768') {
           margin-top: 0;
         }
       }
@@ -73,31 +76,31 @@
     //   stroke-width: 2px;
     //   fill: none;
     // }
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       margin-bottom: 40px;
     }
   }
   &__title {
     color: var(--title);
     font-size: 20px;
-    @include line-height(34,20);
+    @include line-height.line-height(34,20);
     font-weight: 500;
     letter-spacing: -1px;
     margin-bottom: 12px;
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       font-size: 28px;
-      @include line-height(40,28);
+      @include line-height.line-height(40,28);
       margin-bottom: 20px;
     }
   }
   &__text {
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       font-size: 18px;
     }
   }
   &__img {
     margin-top: 32px;
-    @include mq('1024') {
+    @include mediaquery.mq('1024') {
       margin-top: 40px;
     }
   }

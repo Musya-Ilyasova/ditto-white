@@ -1,21 +1,24 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+@use "../../../sass/global/helpers/variables";
+
 .container {
   position: relative;
   width: 100%;
-  max-width: $max-width;
+  max-width: variables.$max-width;
   padding: 0 16px;
   margin: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
 
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     padding: 0 20px;
   }
 }
 
 .subPage {
   .container {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 32px;
     }
   }

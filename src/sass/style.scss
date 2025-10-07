@@ -1,19 +1,19 @@
-@import "global/helpers/helpers";
+@use "global/helpers/helpers";
 
-@import "../pug/pages/smartContract/_advantages";
-@import "../pug/pages/smartContract/_featuresSlider";
-@import "../pug/pages/smartContract/_contacts";
-@import "../pug/pages/smartContract/_faq";
-@import "../pug/pages/smartContract/_cta";
+@use "../pug/pages/smartContract/_advantages";
+@use "../pug/pages/smartContract/_featuresSlider";
+@use "../pug/pages/smartContract/_contacts";
+@use "../pug/pages/smartContract/_faq";
+@use "../pug/pages/smartContract/_cta";
 
-@import "../pug/pages/index/_stats";
-@import "../pug/pages/index/_features";
-@import "../pug/pages/index/_automation";
-@import "../pug/pages/index/_cta";
-@import "../pug/pages/index/_network";
-@import "../pug/pages/index/_benefits";
-@import "../pug/pages/index/_blog";
-@import "../pug/pages/index/_getStarted";
+@use "../pug/pages/index/_stats";
+@use "../pug/pages/index/_features";
+@use "../pug/pages/index/_automation";
+@use "../pug/pages/index/_cta" as cta2;
+@use "../pug/pages/index/_network";
+@use "../pug/pages/index/_benefits";
+@use "../pug/pages/index/_blog";
+@use "../pug/pages/index/_getStarted";
 
 
 

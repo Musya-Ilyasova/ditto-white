@@ -1,13 +1,15 @@
+@use "../../../sass/global/helpers/mixins/mediaquery";
+
 .about {
   display: flex;
   flex-direction: column;
   border-top: none;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     flex-direction: row;
   }
   &__title {
     margin-bottom: 22px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       margin-bottom: 40px;
     }
   }
@@ -16,7 +18,7 @@
   }
   &__left, &__right {
     padding: 31px 19px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       width: 50%;
     }
   }
@@ -29,14 +31,14 @@
       transparent 1px,
       transparent 6px
     );
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       border-bottom: none;
       border-right: 1px solid var(--globalBr);
       padding: 32px 28px 39px;
     }
   }
   &__right {
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       padding: 32px 32px 39px;
     }
 
@@ -48,7 +50,7 @@
   display: flex;
   flex-direction: column;
   gap: 24px;
-  @include mq('768') {
+  @include mediaquery.mq('768') {
     gap: 48px;
   }
   &__item {
@@ -60,7 +62,7 @@
     line-height: 1.45;
     color: var(--textColor);
     padding-right: 30px;
-    @include mq('768') {
+    @include mediaquery.mq('768') {
       gap: 10px;
       font-size: 18px;
     }
@@ -68,14 +70,14 @@
       content: "/ 0"counter(item) " " attr(data-text);
       font-size: 14px;
       line-height: 24px;
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         font-size: 16px;
       }
     }
     span {
       font-size: 14px;
       line-height: 24px;
-      @include mq('768') {
+      @include mediaquery.mq('768') {
         font-size: 16px;
       }
 
