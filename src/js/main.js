@@ -29,7 +29,7 @@ document.addEventListener("DOMContentLoaded",  () => {
     subMenu();
   };
   if(document.querySelector('body').classList.contains('index')) {
-    // updateExecutedNumbers(); вернуть
+    updateExecutedNumbers();
     initTabs();
     addCopy();
     scrollAnimations();

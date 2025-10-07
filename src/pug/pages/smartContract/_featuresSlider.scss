@@ -154,9 +154,6 @@
     }
   }
   &__item:nth-child(6) {
-    @include mq('768') {
-      border-right: 1px solid var(--globalBr);
-    }
     .featuresSlider-list__content::before {
       background-image: var(--blog6Img);
     }
@@ -164,6 +161,11 @@
   &__item {
     @include mq('768') {
       border-left: 1px solid var(--globalBr);
+    }
+    &:last-child {
+      @include mq('768') {
+        border-right: 1px solid var(--globalBr);
+      }
     }
   }
 }

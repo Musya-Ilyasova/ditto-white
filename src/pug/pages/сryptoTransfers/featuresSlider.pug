@@ -1,0 +1,42 @@
+section.featuresSlider
+  .featuresSlider__content
+    h2.subPage__title.featuresSlider__title Key Features
+    .featuresSlider__btns
+      button.featuresSlider-btn.featuresSlider-btn_left
+        | left
+        +icon('arrow')
+      button.featuresSlider-btn.featuresSlider-btn_right
+        | Right
+        +icon('arrow')
+  .swiper.featuresSlider-swiper
+    ul.featuresSlider-list.swiper-wrapper
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title Built-in  Routing based on different triggers
+            span.featuresSlider-list__text Collect digital assets and auto-route them to treasury, ops wallets, or partners based on configurable rules (bps, asset, chain, wallet tags).
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title Batch Payment Processing
+            span.featuresSlider-list__text Send tokens to thousands of wallets automatically on schedule or based on custom triggers. Perfect for reward distributions, team payments, contributor compensation, and large-scale token operations.
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title Cross-Chain Settlement
+            span.featuresSlider-list__text Abstract bridging and settlement. Execute operations across networks with a single unified interface. Ditto handles the complexity of multi-chain coordination.
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title Decentralized executors with Guarantees
+            span.featuresSlider-list__text Globally distributed operators, slashing, and restaked security reduce single-point failures. Each run is timestamped, MEV-aware, and audit-ready.
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title AA-Native &amp; Dev-Friendly
+            span.featuresSlider-list__text Account Abstraction sessions and paymasters for gas-free experiences. Ship via SDKs, white-label widgets, or API; integrate approvals and webhooks in minutes.
+      li.featuresSlider-list__item.swiper-slide
+        a.featuresSlider-list__link(href=process.env.LINK_BLOG target="_blank")
+          .featuresSlider-list__content
+            span.featuresSlider-list__title Non-Custodial Architecture
+            span.featuresSlider-list__text All payment operations work in a fully non-custodial manner. Funds remain under your control with flexible integration options, including Ditto account abstraction wallets or your existing SAFE vaults.
