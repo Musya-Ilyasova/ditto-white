@@ -31,21 +31,21 @@ header.header
               +icon('chevron')
             ul.menu-submenu.big(data-title='Solutions')
               li.menu-submenu__item
-                a.menu-submenu__link(href='/smart-contract.html')
+                a.menu-submenu__link(href=process.env.SMART_CONTRACT)
                   .expand-item
                     +icon('lightning')
                     .expand-item__content
                       span.expand-item__title Smart Contract Automation
                       span.expand-item__descrb Automate crypto &amp; DeFi transactions without servers, cron jobs, or custom scripts.
               li.menu-submenu__item
-                a.menu-submenu__link(href='/asset-vault.html')
+                a.menu-submenu__link(href=process.env.ASSET_VAULT)
                   .expand-item
                     +icon('shield')
                     .expand-item__content
                       span.expand-item__title Asset &amp; Vault Management
                       span.expand-item__descrb Launch automated, policy-controlled on-chain vaults and yield strategies in weeks, not months. scripts.
               li.menu-submenu__item
-                a.menu-submenu__link(href='/сrypto-transfers.html')
+                a.menu-submenu__link(href=process.env.CRYPTO_TRANSFERS)
                   .expand-item
                     +icon('replace')
                     .expand-item__content
