@@ -3,14 +3,16 @@ section.cta
   p.cta__text What will you automate next?
   ul.cta-list
     li.cta-list__item
-      a.btn.btn_gradient(href=process.env.SMART_CONTRACT target="_blank")
+      a.btn.btn_secondary(href=process.env.SMART_CONTRACT target="_blank")
         span.gradient
         span.text
           | Smart Contract Automation
-          +icon('arrow')
     li.cta-list__item
-      a.btn.btn_secondary(href=process.env.ASSET_VAULT target="_blank")
-        | Asset &amp; Vault Mgmt
+      a.btn.btn_gradient(href=process.env.ASSET_VAULT)
+        span.gradient
+        span.text
+          | Asset &amp; Vault Mgmt
+          +icon('arrow')
     li.cta-list__item
       a.btn.btn_secondary(href=process.env.CRYPTO_TRANSFERS target="_blank")
         | Crypto transfers
